@@ -1,0 +1,5 @@
+up left corner(50,35), screw(65,45)
+down left corner(50,165),(65,155)
+up right corner(250,35),screw(235,45)
+down right corner(250,165),(235,155)
+origin(150,100)

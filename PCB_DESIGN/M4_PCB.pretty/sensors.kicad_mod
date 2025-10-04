@@ -1,0 +1,167 @@
+(footprint "sensors"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "70ded6de-747b-4b56-b993-e6007b51bae6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "sensors"
+		(at 0 4.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0a8ce99f-db35-4b80-9b01-5d943c50cc9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2b42590e-01a6-4095-8908-97bd1c86b203")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "91f2dace-14df-46d1-8e5a-432e9bdb977d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d909745-37fd-4bea-85b7-c16f490bf91f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5.5 -4.5)
+		(end -5.5 3.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "ed8c82b6-e561-4ea5-a4c7-725e646d1f37")
+	)
+	(fp_line
+		(start -5.5 -4.5)
+		(end 5.5 -4.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d9394906-65fa-49d0-a9a7-e3e80eea6a76")
+	)
+	(fp_line
+		(start -5.5 3.5)
+		(end 5.5 3.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7481b6da-c1af-4aef-89ed-53bf35a060f9")
+	)
+	(fp_line
+		(start 5.5 -4.5)
+		(end 5.5 3.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "bd58b81b-dc8a-47e7-a364-27849b3617f3")
+	)
+	(fp_text user "GND"
+		(at -4.2 6.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "45126f08-be68-4116-bc90-2835ce297ff1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "Sensors_Voltage"
+		(at -5.1 -5.3 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "4e6d7f6b-68e4-4ac0-9eb2-966bfc65678d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "3.3V"
+		(at 1.5 6.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8bf09f2a-aa39-4641-9344-6cfeaa1f360a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 2.5 0)
+		(size 1.98 3.96)
+		(drill 1.32)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9a6db6f7-8443-4e53-bae8-f2995d99ddb7")
+	)
+	(pad "2" thru_hole oval
+		(at -2.5 0)
+		(size 1.98 3.96)
+		(drill 1.32)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "bd2d56b7-d1a6-433a-a076-26f2b6546f25")
+	)
+)
