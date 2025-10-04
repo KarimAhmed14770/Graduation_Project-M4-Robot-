@@ -1,0 +1,109 @@
+/**
+@file: MCAL_RCC.h
+@author: M4_TEAM 
+@creation_date: date
+*/
+
+#ifndef MCAL_RCC_H
+#define MCAL_RCC_H
+
+/*******************INCLUDES SECTION START************************/
+
+#include "../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h"
+/*******************INCLUDES SECTION END  ************************/
+
+
+
+/*******************MACROS DEFINITION SECTION START***************/
+
+
+
+
+/*******************MACROS DEFINITION SECTION END  ***************/
+
+
+
+
+/*******************MACROS LIKE FUNCTIONS SECTION START***********/
+/********************ENABLE OR DISABLE CLKS*****************/
+#define RCC_AFIO_CLK_ENABLE()			(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_AFIO_EN))
+#define RCC_AFIO_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_AFIO_EN))
+#define RCC_IOPA_CLK_ENABLE()			(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_IOPA_EN))
+#define RCC_IOPA_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_IOPA_EN))
+#define RCC_IOPB_CLK_ENABLE()			(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_IOPB_EN))
+#define RCC_IOPB_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_IOPB_EN))
+#define RCC_IOPC_CLK_ENABLE()			(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_IOPC_EN))
+#define RCC_IOPC_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_IOPC_EN))
+#define RCC_TIM1_CLK_ENABLE()			(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_TIM1_EN))
+#define RCC_TIM1_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_TIM1_EN))
+#define RCC_SPI1_CLK_ENABLE()			(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_SPI1_EN))
+#define RCC_SPI1_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_SPI1_EN))
+#define RCC_USART1_CLK_ENABLE()		(SET_BIT_K(RCC_APB2ENR,RCC_APB2ENR_USART1_EN))
+#define RCC_USART1_CLK_DISABLE()	(CLEAR_BIT_K(RCC_APB2ENR,RCC_APB2ENR_USART1_EN))
+#define	RCC_TIM2_CLK_ENABLE()			(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_TIM2_EN))
+#define	RCC_TIM2_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_TIM2_EN))
+#define	RCC_TIM3_CLK_ENABLE()			(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_TIM3_EN))
+#define	RCC_TIM3_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_TIM3_EN))
+#define	RCC_TIM4_CLK_ENABLE()			(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_TIM4_EN))
+#define	RCC_TIM4_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_TIM4_EN))
+#define	RCC_USART2_CLK_ENABLE()		(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_USART2_EN))
+#define	RCC_USART2_CLK_DISABLE()	(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_USART2_EN))
+#define	RCC_USART3_CLK_ENABLE()		(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_USART3_EN))
+#define	RCC_USART3_CLK_DISABLE()	(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_USART3_EN))
+#define	RCC_I2C1_CLK_ENABLE()			(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_I2C1_EN))
+#define	RCC_I2C1_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_I2C1_EN))
+#define	RCC_I2C2_CLK_ENABLE()			(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_I2C2_EN))
+#define	RCC_I2C2_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_I2C2_EN))
+#define RCC_SPI2_CLK_ENABLE()			(SET_BIT_K(RCC_APB1ENR,RCC_APB1ENR_SPI2_EN))
+#define RCC_SPI2_CLK_DISABLE()		(CLEAR_BIT_K(RCC_APB1ENR,RCC_APB1ENR_SPI2_EN))
+
+
+/*******************MACROS LIKE FUNCTIONS SECTION END  ***********/
+
+
+
+
+/*******************DATA TYPES DECLARATION SECTION START**********/
+
+/*******************DATA TYPES DECLARATION SECTION END  **********/
+
+
+
+
+/*******************FUCNCTIONS PROTOTYPES (APIS) SECTION START****/
+
+/*******************FUCNCTIONS PROTOTYPES (APIS) SECTION END  ****/
+
+
+
+
+/*******************FUNCTION DOCUMENTATION EXAMPLE****************/
+
+/*
+@name: function_name
+@param: function parameters
+@description:function_description
+@return:function output
+*/
+
+
+/*******************FUNCTION DOCUMENTATION EXAMPLE*******************************************************************************/
+
+
+
+/*******************EDIT DETAILS SECTION START**********************************************************************************/
+//EXAMPLE:
+/**EDIT 1
+@name: karim
+@edit_date: 9/3/2024 ,2:39 pm
+@details:changed function XXX , line XXX from XXX to XXX
+@status: problem solved 
+*/
+
+
+/*******************EDIT DETAILS SECTION END  **********************************************************************************/
+
+
+
+#endif
+

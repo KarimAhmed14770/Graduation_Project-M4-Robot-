@@ -1,0 +1,305 @@
+/**
+@file: MCAL_TIMER2.c
+@author: M4_TEAM
+@creation_date: date
+*/
+
+
+/********************************INCLUDES SECTION START****************************************/
+#include "MCAL_TIMER2.h"
+/********************************INCLUDES SECTION END******************************************/
+
+
+
+/********************************DATA TYPES DEFINITIONS SECTION START**************************/
+static uint32_t prescaler_value=TIMER2_CLKIN_FREQ;
+static uint32_t preload_value;
+static uint8_t  timer2_resolution;//in us
+static uint32_t timer2_max_count;//in us
+/********************************DATA TYPES DEFINITIONS SECTION END****************************/
+
+
+
+
+/********************************HELPER FUNCTIONS PROTOTYPES SECTION START*********************/
+static Std_ReturnType_t set_timer2_mode(timer2_config_t *timer2_ptr);
+static Std_ReturnType_t set_timer2_prescaler_preload(timer2_config_t *timer2_ptr);
+static Std_ReturnType_t Enable_timer2_interrupt();
+static Std_ReturnType_t Disable_timer2_interrupt();
+/********************************HELPER FUNCTIONS PROTOTYPES SECTION END***********************/
+
+
+
+
+
+/********************************FUNCTIONS DEFINITIONS(APIS) SECTION START*********************/
+Std_ReturnType_t timer2_init(timer2_config_t *timer2_ptr){
+    Std_ReturnType_t retval=E_OK;
+    if(NULL==timer2_ptr)
+    {
+        retval=E_NOT_OK;
+    }
+    else
+    {
+        /******************enable timer2 clock*********/
+        RCC_TIM2_CLK_ENABLE();
+        /******************DISABLE timer2**************/
+        TIMER2_DISABLE();
+        /******************DISABLE timer2 int**************/
+        retval=Disable_timer2_interrupt();
+        /**************set timer as Count UP *********/
+        TIMER2_SET_UP_COUNTER();
+        /*******set update request only from oveflow**/
+        TIMER2_URS_OVERFLOW();
+        /************set mode************************/
+        retval=set_timer2_mode(timer2_ptr);
+        /*************update prescaler****************/
+        retval=set_timer2_prescaler_preload(timer2_ptr);
+        /***********Enable Interrupts****************/
+        retval=Enable_timer2_interrupt();
+        /***********Enable timer2********************/
+        TIMER2_ENABLE();
+        
+    }
+    return retval;
+}
+Std_ReturnType_t timer2_deinit(timer2_config_t *timer2_ptr){
+    Std_ReturnType_t retval=E_OK;
+    if(NULL==timer2_ptr)
+    {
+        retval=E_NOT_OK;
+    }
+    else
+    {
+
+    }
+    return retval;
+}
+
+#if TIMER2_MODE==TIMER2_TIMER_MODE
+Std_ReturnType_t timer2_timeBase_write(uint32_t time_base){
+
+}
+#endif
+
+#if TIMER2_MODE==TIMER2_PWM_MODE
+Std_ReturnType_t timer2_PWM_write(uint32_t frequency,uint32_t duty_cycle){
+
+}
+#endif
+/********************************FUNCTIONS DEFINITIONS (APIS) SECTION END**********************/
+
+
+
+
+/********************************HELPER FUNCTIONS DEFINITIONS SECTION START********************/
+static Std_ReturnType_t set_timer2_mode(timer2_config_t *timer2_ptr){
+    Std_ReturnType_t retval=E_OK;
+    if(NULL==timer2_ptr)
+    {
+        retval=E_NOT_OK;
+    }
+    else
+    {
+       #if TIMER2_MODE==TIMER2_TIMER_MODE
+            if(timer2_ptr->mode==TIMER2_TIMER){
+                TIMER2_TIMER_MODE_ENABLE();
+                TIMER2_AUTO_RELOAD_ENABLE();
+            }
+            else{
+                retval=E_NOT_OK;
+            }
+        #endif
+
+        #if TIMER2_MODE==TIMER2_COUNTER_MODE
+            if(timer2_ptr->mode==TIMER2_COUNTER){
+                TIMER2_COUNTER_MODE_ENABLE();
+                switch(timer2_ptr->counter_edge){
+                    case COUNTER_RISING_EDGE:
+
+                    break;
+
+                    case COUNTER_FALLING_EDGE:
+
+                    break;
+                    default: retval=E_NOT_OK;
+                }
+            }
+            else{
+                retval=E_NOT_OK;
+            }
+        #endif
+
+        #if TIMER2_MODE==TIMER2_PWM_MODE
+            if(timer2_ptr->mode==TIMER2_PWM){
+
+                /*************888enable autoreload register8******/
+                TIMER2_AUTO_RELOAD_ENABLE();
+
+                /************timer2 ch1 select as an output*/
+                TIMER2_CCP_CH1_SELECT_OUTPUT_MODE();
+
+                /***********timer2 set edge aligned mode****/
+                TIMER2_SELECT_EDGE_ALIGNED_MODE();
+
+                /*****timer2 ch1 enable output******/
+                TIMER2_CH1_ENABLE_OUTPUT();
+
+                /*****timer2 ch1 PWM select******/
+                TIMER2_CH1_SELECT_PWM_MODE();
+
+                /************timer2 ch1 select as an output*/
+                TIMER2_CCP_CH2_SELECT_OUTPUT_MODE();
+
+                /*****timer2 ch1 enable output******/
+                TIMER2_CH2_ENABLE_OUTPUT();
+
+                /*****timer2 ch1 PWM select******/
+                TIMER2_CH2_SELECT_PWM_MODE();
+
+                /************timer2 ch1 select as an output*/
+                TIMER2_CCP_CH3_SELECT_OUTPUT_MODE();
+
+                /*****timer2 ch1 enable output******/
+                TIMER2_CH3_ENABLE_OUTPUT();
+
+                /*****timer2 ch1 PWM select******/
+                TIMER2_CH3_SELECT_PWM_MODE();
+
+                /************timer2 ch1 select as an output*/
+                TIMER2_CCP_CH4_SELECT_OUTPUT_MODE();
+
+                /*****timer2 ch1 enable output******/
+                TIMER2_CH4_ENABLE_OUTPUT();
+
+                /*****timer2 ch1 PWM select******/
+                TIMER2_CH4_SELECT_PWM_MODE();
+            }
+            else{
+                retval=E_NOT_OK;
+            }
+        #endif
+
+
+    }
+    return retval;
+}
+
+static Std_ReturnType_t set_timer2_prescaler_preload(timer2_config_t *timer2_ptr){
+    Std_ReturnType_t retval=E_OK;
+    if(NULL==timer2_ptr)
+    {
+        retval=E_NOT_OK;
+    }
+    else
+    {
+      #if TIMER2_TIMER_FEATURE==TIMER2_TIMER_MODE
+            if(timer2_ptr->mode==TIMER2_TIMER){
+                timer2_resolution=1;
+                timer2_max_count=TIMER2_COUNT_REG_MAX*timer2_resolution;
+                while(timer2_max_count<timer2_ptr->time_base_us)
+                {
+                    timer2_resolution++;
+                    prescaler_value=TIMER2_CLKIN_FREQ*timer2_resolution;
+                    timer2_max_count=TIMER2_COUNT_REG_MAX*timer2_resolution;
+                }
+                preload_value=timer2_ptr->time_base_us/timer2_resolution;
+                TIM2_PSC=prescaler_value;
+                TIM2_ARR=preload_value;
+            }
+            else{
+                retval=E_NOT_OK;
+            }
+        #endif
+
+        #if TIMER2_COUNTER_FEATURE==TIMER2_COUNTER_MODE
+            if(timer2_ptr->mode==TIMER2_COUNTER){
+
+            }
+            else{
+                retval=E_NOT_OK;
+            }
+        #endif
+
+        #if TIMER2_PWM_FEATURE==TIMER2_PWM_MODE
+            if(timer2_ptr->mode==TIMER2_PWM){
+
+            }
+            else{
+                retval=E_NOT_OK;
+            }
+        #endif
+    }
+    return retval;
+}
+
+static Std_ReturnType_t Enable_timer2_interrupt(){
+    Std_ReturnType_t retval=E_OK;
+    #if TIMER2_INTERRUPT_FEATURE==TIMER_FEATURE_ENABLE
+            TIMER2_UPDATE_INTERRUPT_ENABLE();
+        #if TIMER2_TIMER_FEATURE==TIMER2_PWM_MODE
+            TIMER2_CC1_INTERRUPT_ENABLE();
+            TIMER2_CC2_INTERRUPT_ENABLE();
+            TIMER2_CC3_INTERRUPT_ENABLE();
+            TIMER2_CC4_INTERRUPT_ENABLE();
+        #endif
+        SET_BIT(NVIC_ISER0,28);
+    #endif
+
+    return retval;
+}
+
+static Std_ReturnType_t Disable_timer2_interrupt(){
+    Std_ReturnType_t retval=E_OK;
+    #if TIMER2_INTERRUPT_FEATURE==TIMER_FEATURE_DISABLE
+        #if TIMER2_TIMER_FEATURE==TIMER2_TIMER_MODE
+            TIMER2_UPDATE_INTERRUPT_DISABLE();
+        #endif
+        #if TIMER2_TIMER_FEATURE==TIMER2_PWM_MODE
+            TIMER2_CC1_INTERRUPT_DISABLE();
+            TIMER2_CC2_INTERRUPT_DISABLE();
+            TIMER2_CC3_INTERRUPT_DISABLE();
+            TIMER2_CC4_INTERRUPT_DISABLE();
+        #endif
+        SET_BIT(NVIC_ISER0,28);
+    #endif
+
+    return retval;
+}
+/********************************HELPER FUNCTIONS DEFINITIONS SECTION END**********************/
+
+
+
+
+
+/********************************FUNCTION DOCUMENTATION EXAMPLE*******************/
+
+/*
+@name: function_name
+@param: function parameters
+@sequence:
+@description:function_description
+@return:function output
+*/
+
+
+/********************************FUNCTION DOCUMENTATION EXAMPLE*******************/
+
+
+
+/********************************EDIT DETAILS SECTION START***********************/
+//EXAMPLE:
+/**EDIT 1
+@name: karim
+@edit_date: 9/3/2024 ,2:39 pm
+@details:changed function XXX , line XXX from XXX to XXX
+@status: problem solved 
+*/
+
+
+/******************************************************EDIT DETAILS SECTION END  **********************************************************************************/
+
+
+
+
+/**/

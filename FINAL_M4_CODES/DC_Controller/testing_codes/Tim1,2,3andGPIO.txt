@@ -1,0 +1,91 @@
+/******************TIMER2,3,4 TESTING CODES********************/
+
+#include "MCAL_Layer/GPIO/MCAL_GPIO.h"
+#include "MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER2.h"
+
+
+/******************* HOW TO USE GPIO*************************/
+//1)declare pin and initialize it
+//a)output pin
+Pin_Config_t output_pin={
+.port_index=PORTC,
+.pin_index=PIN13,
+.mode=OUTPUT_MODE_50,
+.conf=OUTPUT_PP,	
+.logic=LOW
+};
+Std_ReturnType_t err_status;
+
+/*****************888HOW TO USE TIMERS************************/
+//TIM2 and timer2 are configured as pwm from the file mcal_timers_gen_cfg, TIM2 is configured as a timer
+volatile uint8_t counter;
+
+//to initialize TIM2 as a time base unit
+#if TIMER2_MODE==TIMER_TIMER_MODE
+void TIM2_callback(void);//this is a function that is executed after each time_base inidicated in the object
+
+timer2_config_t time_base={
+.TIM2_OF_InterruptHandler=TIM2_callback,
+	.time_base_us=1000000
+};
+#endif
+void delay(void);
+#if TIMER2_MODE==TIMER_PWM_MODE
+timer2_config_t time_base={
+.channel=TIMER2_CH1,
+.PWM_frequency=20000,
+.duty_cycle=500
+};
+#endif
+volatile uint32_t time_counter; //will increment each time base in the callback function
+int main(){
+//INITIALIZE GPIO PINS
+	err_status=gpio_pin_init(&output_pin);//this is the function that initializes the pin
+	err_status=timer2_init(&time_base);
+	
+while(1)
+{
+	#if TIMER2_MODE==TIMER_PWM_MODE
+		timer2_PWM_write(&time_base,500);
+		delay();
+	delay();
+	delay();
+	delay();
+	
+	timer2_PWM_write(&time_base,1500);
+	delay();
+	delay();
+	delay();
+	delay();
+	timer2_PWM_write(&time_base,2500);
+	delay();
+	delay();
+	delay();
+	delay();
+	timer2_PWM_write(&time_base,1500);
+	delay();
+	delay();
+	delay();
+	delay();
+	
+	#endif
+}
+}
+
+#if TIMER2_MODE==TIMER_TIMER_MODE
+
+void TIM2_callback(void)
+{
+	counter++;
+		err_status=gpio_pin_toggle(&output_pin);
+	if(counter==6)
+	{
+		timer2_timeBase_write(10000);
+	}
+}
+#endif
+void delay(){
+	for(int i=0;i<1000000;i++)
+	{
+	}
+}

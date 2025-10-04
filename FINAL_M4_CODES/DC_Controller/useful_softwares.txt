@@ -1,0 +1,8 @@
+uint16_t map_range(float value);
+uint16_t map_range(float value) {
+  // Calculate the scaled value within the new range (500-2500)
+  float scaled_value = (value / 180.0) ;
+  scaled_value*= (2500.0 - 500.0);
+  scaled_value+=500;
+  return (uint16_t) scaled_value;
+}

@@ -1,0 +1,66 @@
+
+#include "MCAL_Layer/ADC/MCAL_ADC.h"
+
+
+#define VREF 3.3
+#define ADC_MAX_VALUE 4095  // Assuming a 12-bit ADC
+
+
+
+// Global variables for debugging
+uint16_t adcValue;
+double voltage;
+double batteryVoltage;
+
+void setup_adc(ADC_Index_t adc_index);
+double read_battery_voltage(ADC_Index_t adc_index);
+
+
+int main() {
+    // Initialize ADC1 and ADC2
+    setup_adc(ADC1_INDEX);
+    setup_adc(ADC2_INDEX);
+
+    while (1) {
+        read_battery_voltage(ADC1_INDEX);
+        // To read from ADC2, uncomment the next line:
+        // read_battery_voltage(ADC2_INDEX);
+
+        // Print the battery voltage read from ADC1
+        //printf("Battery Voltage (ADC1): %.3f V\n", batteryVoltage);
+        // If using ADC2, uncomment the next line to print the voltage:
+        // printf("Battery Voltage (ADC2): %.3f V\n", batteryVoltage);
+
+        // Delay to avoid flooding the console with messages, adjust as necessary
+        for (volatile uint32_t i = 0; i < 1000000; i++);
+    }
+
+
+}
+
+
+void setup_adc(ADC_Index_t adc_index) {
+    // Configuration for the ADC
+    ADC_Config_t adcConfig;
+    adcConfig.adc_index = adc_index;
+    adcConfig.channel = ADC_CHANNEL_9;  // PB1 corresponds to ADC_CHANNEL_9
+    adcConfig.resolution = ADC_RESOLUTION_12BIT;
+    adcConfig.sampling_time = 0x7;  // Maximum sampling time
+
+    adc_init(&adcConfig);
+    adc_start_conversion(adc_index, adcConfig.channel);
+}
+
+
+
+double read_battery_voltage(ADC_Index_t adc_index) {
+    adc_read_value(adc_index, ADC_CHANNEL_9, &adcValue);
+
+    // Calculate the input voltage
+    voltage = (adcValue * VREF) / ADC_MAX_VALUE;
+
+    // Calculate the battery voltage using the voltage divider
+    batteryVoltage = voltage * ((82 + 10) / 10);
+
+    return batteryVoltage;
+}

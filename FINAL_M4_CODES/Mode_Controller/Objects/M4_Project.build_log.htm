@@ -1,0 +1,1825 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Karim Ahmed, Bonty, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DARMSTL.DLL
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+F:\studiess\mechatronics engineering\GRADUATION PROJECT STUDIES\FINAL_M4_CODES\Mode_Controller\M4_Project.uvprojx
+Project File Date:  06/18/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+MCAL_Layer/RCC_CLOCK/MCAL_RCC.c(1): warning: In file included from...
+MCAL_Layer/RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+MCAL_Layer/RCC_CLOCK/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/RCC_CLOCK/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/RCC_CLOCK/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/RCC_CLOCK/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+3 warnings generated.
+compiling MCAL_RCC.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(213): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  213 |     Std_ReturnType_t retval=E_OK;
+      |                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(297): warning: non-void function does not return a value [-Wreturn-type]
+  297 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(411): warning: no newline at end of file [-Wnewline-eof]
+  411 | /**/
+      |     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(321): warning: unused function 'Disable_timer3_interrupt' [-Wunused-function]
+  321 | static Std_ReturnType_t Disable_timer3_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+7 warnings generated.
+compiling MCAL_TIMER3.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(162): warning: padding struct 'timer4_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  162 |                 uint32_t duty_cycle;
+      |                          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(162): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  162 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(201): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  201 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(252): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  252 |                 TIMER4_CH1_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(65): note: expanded from macro 'TIMER4_CH1_SELECT_PWM_MODE'
+   65 | #define TIMER4_CH1_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(262): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  262 |                 TIMER4_CH2_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(83): note: expanded from macro 'TIMER4_CH2_SELECT_PWM_MODE'
+   83 | #define TIMER4_CH2_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(271): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  271 |                 TIMER4_CH3_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(102): note: expanded from macro 'TIMER4_CH3_SELECT_PWM_MODE'
+  102 | #define TIMER4_CH3_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(281): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  281 |                 TIMER4_CH4_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(119): note: expanded from macro 'TIMER4_CH4_SELECT_PWM_MODE'
+  119 | #define TIMER4_CH4_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(286): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  286 |                                                                 default:retval=E_NOT_OK;
+      |                                                                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(293): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  293 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(408): warning: no newline at end of file [-Wnewline-eof]
+  408 | /**/
+      |     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(315): warning: unused function 'Disable_timer4_interrupt' [-Wunused-function]
+  315 | static Std_ReturnType_t Disable_timer4_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+14 warnings generated.
+compiling MCAL_TIMER4.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  196 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(151): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  151 | uint64_t timer1_millis()
+      |                       ^
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(151): warning: no previous prototype for function 'timer1_millis' [-Wmissing-prototypes]
+  151 | uint64_t timer1_millis()
+      |          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+  196 | uint64_t timer1_millis();
+      |          ^             
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(229): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  229 |     Std_ReturnType_t retval=E_OK;
+      |                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(313): warning: non-void function does not return a value [-Wreturn-type]
+  313 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(22): warning: no previous extern declaration for non-static variable 'timer1_millis_counter' [-Wmissing-variable-declarations]
+   22 | uint8_t timer1_millis_counter;
+      |         ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   22 | uint8_t timer1_millis_counter;
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(23): warning: no previous extern declaration for non-static variable '_miLLis__' [-Wmissing-variable-declarations]
+   23 | uint64_t _miLLis__;
+      |          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   23 | uint64_t _miLLis__;
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(335): warning: unused function 'Disable_timer1_interrupt' [-Wunused-function]
+  335 | static Std_ReturnType_t Disable_timer1_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+11 warnings generated.
+compiling MCAL_TIMER1.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(168): warning: padding struct 'timer2_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  168 |                 uint32_t duty_cycle;
+      |                          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(163): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  163 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(202): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  202 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(253): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  253 |                 TIMER2_CH1_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(66): note: expanded from macro 'TIMER2_CH1_SELECT_PWM_MODE'
+   66 | #define TIMER2_CH1_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(263): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  263 |                 TIMER2_CH2_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(84): note: expanded from macro 'TIMER2_CH2_SELECT_PWM_MODE'
+   84 | #define TIMER2_CH2_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(272): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  272 |                 TIMER2_CH3_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(103): note: expanded from macro 'TIMER2_CH3_SELECT_PWM_MODE'
+  103 | #define TIMER2_CH3_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(282): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  282 |                 TIMER2_CH4_SELECT_PWM_MODE();   
+      |                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(120): note: expanded from macro 'TIMER2_CH4_SELECT_PWM_MODE'
+  120 | #define TIMER2_CH4_SELECT_PWM_MODE()                ({\
+      |                                                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(287): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  287 |                                                                 default:retval=E_NOT_OK;
+      |                                                                 ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(294): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  294 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(316): warning: unused function 'Disable_timer2_interrupt' [-Wunused-function]
+  316 | static Std_ReturnType_t Disable_timer2_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+13 warnings generated.
+compiling MCAL_TIMER2.c...
+main.c(2): warning: In file included from...
+./MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+./MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+./MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+./MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+./MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+./MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+main.c(5): warning: In file included from...
+./HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+./HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+./HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  196 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+main.c(6): warning: In file included from...
+./main.h(75): warning: no newline at end of file [-Wnewline-eof]
+   75 | #endif
+      |       ^
+main.c(18): warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+   18 |         .clock_phase=FIRST_EDGE,
+      |                      ^~~~~~~~~~
+main.c(17): note: previous initialization is here
+   17 |         .clock_phase=IDLE_LOW,
+      |                      ^~~~~~~~
+main.c(15): warning: no previous extern declaration for non-static variable 'spi2' [-Wmissing-variable-declarations]
+   15 | Spi2_t spi2={
+      |        ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   15 | Spi2_t spi2={
+      | ^
+main.c(26): warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+   26 |         .clock_phase=FIRST_EDGE,
+      |                      ^~~~~~~~~~
+main.c(25): note: previous initialization is here
+   25 |         .clock_phase=IDLE_LOW,
+      |                      ^~~~~~~~
+main.c(23): warning: no previous extern declaration for non-static variable 'spi1' [-Wmissing-variable-declarations]
+   23 | Spi1_t spi1={
+      |        ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   23 | Spi1_t spi1={
+      | ^
+main.c(39): warning: no previous extern declaration for non-static variable 'MOBILE_TO_DRONE' [-Wmissing-variable-declarations]
+   39 | uint8_t MOBILE_TO_DRONE=0;
+      |         ^
+main.c(39): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   39 | uint8_t MOBILE_TO_DRONE=0;
+      | ^
+main.c(40): warning: no previous extern declaration for non-static variable 'DRONE_TO_MOBILE' [-Wmissing-variable-declarations]
+   40 | uint8_t DRONE_TO_MOBILE=0;
+      |         ^
+main.c(40): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   40 | uint8_t DRONE_TO_MOBILE=0;
+      | ^
+main.c(41): warning: no previous extern declaration for non-static variable 'ARMS_FROM_0_TO_90' [-Wmissing-variable-declarations]
+   41 | uint8_t ARMS_FROM_0_TO_90=0;
+      |         ^
+main.c(41): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   41 | uint8_t ARMS_FROM_0_TO_90=0;
+      | ^
+main.c(42): warning: no previous extern declaration for non-static variable 'BOX_FROM_0_TO_90' [-Wmissing-variable-declarations]
+   42 | uint8_t BOX_FROM_0_TO_90=0;
+      |         ^
+main.c(42): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   42 | uint8_t BOX_FROM_0_TO_90=0;
+      | ^
+main.c(43): warning: no previous extern declaration for non-static variable 'ARMS_FROM_90_TO_0' [-Wmissing-variable-declarations]
+   43 | uint8_t ARMS_FROM_90_TO_0=0;
+      |         ^
+main.c(43): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   43 | uint8_t ARMS_FROM_90_TO_0=0;
+      | ^
+main.c(44): warning: no previous extern declaration for non-static variable 'BOX_FROM_90_TO_0' [-Wmissing-variable-declarations]
+   44 | uint8_t BOX_FROM_90_TO_0=0;
+      |         ^
+main.c(44): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   44 | uint8_t BOX_FROM_90_TO_0=0;
+      | ^
+main.c(64): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+   60 | Servo_t FLB={
+      |             ~
+   61 |         .pwm_timer=TIMER4_PWM, //B9
+   62 |         .pwm_channel=PWM_CH4,
+   63 |         .is_reverse=1,
+   64 |         .gear_ratio=1.7,
+      |                     ^~~
+main.c(60): warning: no previous extern declaration for non-static variable 'FLB' [-Wmissing-variable-declarations]
+   60 | Servo_t FLB={
+      |         ^
+main.c(60): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   60 | Servo_t FLB={
+      | ^
+main.c(5): warning: In file included from...
+./HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(81): warning: padding struct 'Servo_t' with 6 bytes to align 'starting_pos' [-Wpadded]
+   81 |         double                                  starting_pos;
+      |                                                 ^
+./HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(85): warning: padding struct 'Servo_t' with 1 byte to align 'gear_ratio' [-Wpadded]
+   85 |         float                                                   gear_ratio;
+      |                                                                 ^
+main.c(72): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+   68 | Servo_t FRB={
+      |             ~
+   69 |         .pwm_timer=TIMER4_PWM, //B6
+   70 |         .pwm_channel=PWM_CH1,
+   71 |         .is_reverse=0,
+   72 |         .gear_ratio=1.7,
+      |                     ^~~
+main.c(68): warning: no previous extern declaration for non-static variable 'FRB' [-Wmissing-variable-declarations]
+   68 | Servo_t FRB={
+      |         ^
+main.c(68): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   68 | Servo_t FRB={
+      | ^
+main.c(77): warning: no previous extern declaration for non-static variable 'FRA' [-Wmissing-variable-declarations]
+   77 | Servo_t FRA={
+      |         ^
+main.c(77): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   77 | Servo_t FRA={
+      | ^
+main.c(86): warning: no previous extern declaration for non-static variable 'FLA' [-Wmissing-variable-declarations]
+   86 | Servo_t FLA={
+      |         ^
+main.c(86): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   86 | Servo_t FLA={
+      | ^
+main.c(96): warning: no previous extern declaration for non-static variable 'BRA' [-Wmissing-variable-declarations]
+   96 | Servo_t BRA={
+      |         ^
+main.c(96): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   96 | Servo_t BRA={
+      | ^
+main.c(109): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+  105 | Servo_t BRB={
+      |             ~
+  106 |         .pwm_timer=TIMER2_PWM, //A3
+  107 |         .pwm_channel=PWM_CH4,
+  108 |                 .is_reverse=1,
+  109 |         .gear_ratio=1.7,
+      |                     ^~~
+main.c(105): warning: no previous extern declaration for non-static variable 'BRB' [-Wmissing-variable-declarations]
+  105 | Servo_t BRB={
+      |         ^
+main.c(105): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  105 | Servo_t BRB={
+      | ^
+main.c(117): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+  113 | Servo_t BLB={
+      |             ~
+  114 |         .pwm_timer=TIMER2_PWM, //A0
+  115 |         .pwm_channel=PWM_CH1,
+  116 |         .is_reverse=0,
+  117 |         .gear_ratio=1.7,
+      |                     ^~~
+main.c(113): warning: no previous extern declaration for non-static variable 'BLB' [-Wmissing-variable-declarations]
+  113 | Servo_t BLB={
+      |         ^
+main.c(113): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  113 | Servo_t BLB={
+      | ^
+main.c(122): warning: no previous extern declaration for non-static variable 'BLA' [-Wmissing-variable-declarations]
+  122 | Servo_t BLA={
+      |         ^
+main.c(122): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  122 | Servo_t BLA={
+      | ^
+main.c(139): warning: no previous extern declaration for non-static variable 'usart_char' [-Wmissing-variable-declarations]
+  139 | char usart_char=0x88;
+      |      ^
+main.c(139): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  139 | char usart_char=0x88;
+      | ^
+main.c(145): warning: no previous extern declaration for non-static variable 'ledc13' [-Wmissing-variable-declarations]
+  145 | Pin_Config_t ledc13={
+      |              ^
+main.c(145): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  145 | Pin_Config_t ledc13={
+      | ^
+main.c(152): warning: no previous extern declaration for non-static variable 'ledc14' [-Wmissing-variable-declarations]
+  152 | Pin_Config_t ledc14={
+      |              ^
+main.c(152): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  152 | Pin_Config_t ledc14={
+      | ^
+main.c(159): warning: no previous extern declaration for non-static variable 'ledc15' [-Wmissing-variable-declarations]
+  159 | Pin_Config_t ledc15={
+      |              ^
+main.c(159): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  159 | Pin_Config_t ledc15={
+      | ^
+main.c(175): warning: no previous extern declaration for non-static variable 'value' [-Wmissing-variable-declarations]
+  175 |         uint8_t value=60;
+      |                 ^
+main.c(175): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  175 |         uint8_t value=60;
+      |         ^
+main.c(181): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  181 | int main()
+      |         ^
+      |          void
+main.c(219): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  219 |                         TL_joystick=((Rc_Data[TL_JOYSTICK_L8])|(Rc_Data[TL_JOYSTICK_H8])<<8);
+      |                                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(220): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  220 |                         TR_joystick=((Rc_Data[TR_JOYSTICK_L8])|(Rc_Data[TR_JOYSTICK_H8])<<8);
+      |                                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(221): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  221 |                         BR_joystick=((Rc_Data[BR_JOYSTICK_L8])|(Rc_Data[BR_JOYSTICK_H8])<<8);
+      |                                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(222): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  222 |                         BL_joystick=((Rc_Data[BL_JOYSTICK_L8])|(Rc_Data[BL_JOYSTICK_H8])<<8);
+      |                                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(223): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  223 |                         POT_value=((Rc_Data[POT_VALUE_L8])|(Rc_Data[POT_VALUE_H8])<<8);
+      |                                  ~ ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(228): warning: code will never be executed [-Wunreachable-code]
+  228 |         if(RC_Mode==MOBILE_ROBOT)
+      |            ^~~~~~~
+main.c(262): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  262 |                 if(FLA.curr_pos<(FLA_90*FLA.gear_ratio))
+      |                                        ~~~~~^~~~~~~~~~
+main.c(264): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  264 |                         uint8_t temp=FLA.curr_pos+1;
+      |                                 ~~~~ ~~~~~~~~~~~~^~
+main.c(267): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  267 |                 if(map_to_range(0,180,180,0,FRA.curr_pos)<(FRA_90*FRA.gear_ratio))
+      |                                                                  ~~~~~^~~~~~~~~~
+main.c(269): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  269 |                         uint8_t temp=map_to_range(0,180,180,0,FRA.curr_pos)+1;
+      |                                 ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+main.c(272): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  272 |                 if(BRA.curr_pos<(BRA_90*BRA.gear_ratio))
+      |                                        ~~~~~^~~~~~~~~~
+main.c(274): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  274 |                         uint8_t temp=BRA.curr_pos+1;
+      |                                 ~~~~ ~~~~~~~~~~~~^~
+main.c(277): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  277 |                 if(map_to_range(0,180,180,0,BLA.curr_pos)<(BLA_90*BLA.gear_ratio))
+      |                                                                  ~~~~~^~~~~~~~~~
+main.c(279): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  279 |                         uint8_t temp=map_to_range(0,180,180,0,BLA.curr_pos)+1;
+      |                                 ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+main.c(283): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  283 |                         &&(map_to_range(0,180,180,0,BLA.curr_pos)>=(BLA_90*BLA.gear_ratio)) &&(BRA.curr_pos>=(BRA_90*BRA.gear_ratio)))
+      |                                                                                                                     ~~~~~^~~~~~~~~~
+main.c(283): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  283 |                         &&(map_to_range(0,180,180,0,BLA.curr_pos)>=(BLA_90*BLA.gear_ratio)) &&(BRA.curr_pos>=(BRA_90*BRA.gear_ratio)))
+      |                                                                           ~~~~~^~~~~~~~~~
+main.c(282): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  282 |                 if(FLA.curr_pos>=(FLA_90*FLA.gear_ratio) &&(map_to_range(0,180,180,0,FRA.curr_pos)>=(FRA_90*FRA.gear_ratio))
+      |                                                                                                            ~~~~~^~~~~~~~~~
+main.c(282): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  282 |                 if(FLA.curr_pos>=(FLA_90*FLA.gear_ratio) &&(map_to_range(0,180,180,0,FRA.curr_pos)>=(FRA_90*FRA.gear_ratio))
+      |                                         ~~~~~^~~~~~~~~~
+main.c(294): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  294 |                         uint8_t temp=BRA.curr_pos-1;
+      |                                 ~~~~ ~~~~~~~~~~~~^~
+main.c(299): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  299 |                         uint8_t temp=FLA.curr_pos-1;
+      |                                 ~~~~ ~~~~~~~~~~~~^~
+main.c(304): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  304 |                         uint8_t temp=map_to_range(0,180,180,0,FRA.curr_pos)-1;
+      |                                 ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+main.c(309): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  309 |                         uint8_t temp=map_to_range(0,180,180,0,BLA.curr_pos)-1;
+      |                                 ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+main.c(313): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  313 |                 if(FLA.curr_pos==0 &&((map_to_range(0,180,180,0,FRA.curr_pos)))==0
+      |                    ~~~~~~~~~~~~^ ~
+main.c(313): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  313 |                 if(FLA.curr_pos==0 &&((map_to_range(0,180,180,0,FRA.curr_pos)))==0
+      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^ ~
+main.c(314): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  314 |                         &&(map_to_range(0,180,180,0,BLA.curr_pos))==0 &&(BRA.curr_pos==0))
+      |                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^ ~
+main.c(314): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  314 |                         &&(map_to_range(0,180,180,0,BLA.curr_pos))==0 &&(BRA.curr_pos==0))
+      |                                                                          ~~~~~~~~~~~~^ ~
+main.c(322): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  322 |                 if(FRB.curr_pos<(FRB_90*FRB.gear_ratio))
+      |                                        ~~~~~^~~~~~~~~~
+main.c(324): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  324 |                         uint8_t temp=FRB.curr_pos+1;
+      |                                 ~~~~ ~~~~~~~~~~~~^~
+main.c(329): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  329 |                 if(map_to_range(0,180,180,0,FLB.curr_pos)<(FLB_90*FLB.gear_ratio))
+      |                                                                  ~~~~~^~~~~~~~~~
+main.c(331): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  331 |                         uint8_t temp=map_to_range(0,180,180,0,FLB.curr_pos)+1;
+      |                                 ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+main.c(334): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  334 |                 if(BLB.curr_pos<(BLB_90*BLB.gear_ratio))
+      |                                        ~~~~~^~~~~~~~~~
+main.c(336): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  336 |                         uint8_t temp=BLB.curr_pos+1;
+      |                                 ~~~~ ~~~~~~~~~~~~^~
+main.c(339): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  339 |                 if(map_to_range(0,180,180,0,BRB.curr_pos)<(BRB_90*BRB.gear_ratio))
+      |                                                                  ~~~~~^~~~~~~~~~
+main.c(341): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint8_t' (aka 'unsigned char') [-Wfloat-conversion]
+  341 |                         uint8_t temp=map_to_range(0,180,180,0,BRB.curr_pos)+1;
+      |                                 ~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+main.c(345): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  345 |                         &&(map_to_range(0,180,180,0,BRB.curr_pos)>=(BRB_90*BRB.gear_ratio)) &&(BLB.curr_pos>=(BLB_90*BLB.gear_ratio)))
+      |                                                                                                                     ~~~~~^~~~~~~~~~
+main.c(345): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  345 |                         &&(map_to_range(0,180,180,0,BRB.curr_pos)>=(BRB_90*BRB.gear_ratio)) &&(BLB.curr_pos>=(BLB_90*BLB.gear_ratio)))
+      |                                                                           ~~~~~^~~~~~~~~~
+main.c(344): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  344 |                 if(FRB.curr_pos>=(FRB_90*FRB.gear_ratio) &&(map_to_range(0,180,180,0,FLB.curr_pos)>=(FLB_90*FLB.gear_ratio))
+      |                                                                                                            ~~~~~^~~~~~~~~~
+main.c(344): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  344 |                 if(FRB.curr_pos>=(FRB_90*FRB.gear_ratio) &&(map_to_range(0,180,180,0,FLB.curr_pos)>=(FLB_90*FLB.gear_ratio))
+      |                                         ~~~~~^~~~~~~~~~
+main.c(361): warning: no newline at end of file [-Wnewline-eof]
+  361 |                 */
+      |                   ^
+main.c(12): warning: no previous extern declaration for non-static variable 'prev_millis' [-Wmissing-variable-declarations]
+   12 | uint64_t prev_millis;
+      |          ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   12 | uint64_t prev_millis;
+      | ^
+main.c(13): warning: no previous extern declaration for non-static variable 'curr_millis' [-Wmissing-variable-declarations]
+   13 | uint64_t curr_millis;
+      |          ^
+main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   13 | uint64_t curr_millis;
+      | ^
+main.c(46): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+   46 | uint8_t counter;
+      |         ^
+main.c(46): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   46 | uint8_t counter;
+      | ^
+main.c(56): warning: no previous extern declaration for non-static variable 'MODE_' [-Wmissing-variable-declarations]
+   56 | MOde_t MODE_;
+      |        ^
+main.c(56): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   56 | MOde_t MODE_;
+      | ^
+main.c(137): warning: no previous extern declaration for non-static variable 'Rc_Data' [-Wmissing-variable-declarations]
+  137 | uint8_t Rc_Data[13];//data recieved from the flight controller
+      |         ^
+main.c(137): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  137 | uint8_t Rc_Data[13];//data recieved from the flight controller
+      | ^
+main.c(138): warning: no previous extern declaration for non-static variable 'Used_Data' [-Wmissing-variable-declarations]
+  138 | uint16_t Used_Data[8];
+      |          ^
+main.c(138): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  138 | uint16_t Used_Data[8];
+      | ^
+main.c(140): warning: no previous extern declaration for non-static variable 'delay_counter' [-Wmissing-variable-declarations]
+  140 | uint8_t delay_counter;
+      |         ^
+main.c(140): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  140 | uint8_t delay_counter;
+      | ^
+main.c(167): warning: no previous extern declaration for non-static variable 'RC_Mode' [-Wmissing-variable-declarations]
+  167 |         uint8_t RC_Mode;
+      |                 ^
+main.c(167): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  167 |         uint8_t RC_Mode;
+      |         ^
+main.c(168): warning: no previous extern declaration for non-static variable 'Servos_Mode' [-Wmissing-variable-declarations]
+  168 |         uint8_t Servos_Mode;
+      |                 ^
+main.c(168): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  168 |         uint8_t Servos_Mode;
+      |         ^
+main.c(169): warning: no previous extern declaration for non-static variable 'TL_joystick' [-Wmissing-variable-declarations]
+  169 |         uint16_t TL_joystick;
+      |                  ^
+main.c(169): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  169 |         uint16_t TL_joystick;
+      |         ^
+main.c(170): warning: no previous extern declaration for non-static variable 'TR_joystick' [-Wmissing-variable-declarations]
+  170 |         uint16_t TR_joystick;
+      |                  ^
+main.c(170): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  170 |         uint16_t TR_joystick;
+      |         ^
+main.c(171): warning: no previous extern declaration for non-static variable 'BR_joystick' [-Wmissing-variable-declarations]
+  171 |         uint16_t BR_joystick;
+      |                  ^
+main.c(171): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  171 |         uint16_t BR_joystick;
+      |         ^
+main.c(172): warning: no previous extern declaration for non-static variable 'BL_joystick' [-Wmissing-variable-declarations]
+  172 |         uint16_t BL_joystick;
+      |                  ^
+main.c(172): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  172 |         uint16_t BL_joystick;
+      |         ^
+main.c(173): warning: no previous extern declaration for non-static variable 'POT_value' [-Wmissing-variable-declarations]
+  173 |         uint16_t POT_value;
+      |                  ^
+main.c(173): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  173 |         uint16_t POT_value;
+      |         ^
+main.c(174): warning: no previous extern declaration for non-static variable 'test' [-Wmissing-variable-declarations]
+  174 |         uint8_t test;
+      |                 ^
+main.c(174): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  174 |         uint8_t test;
+      |         ^
+main.c(179): warning: no previous extern declaration for non-static variable 'curr_pos' [-Wmissing-variable-declarations]
+  179 | uint8_t curr_pos;
+      |         ^
+main.c(179): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  179 | uint8_t curr_pos;
+      | ^
+main.c(180): warning: no previous extern declaration for non-static variable 'tim1_counter' [-Wmissing-variable-declarations]
+  180 | uint8_t tim1_counter;
+      |         ^
+main.c(180): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  180 | uint8_t tim1_counter;
+      | ^
+main.c(215): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  215 |                 if(Rc_Data[CONNECTIVITY_TEST_F]==69 &&Rc_Data[CONNECTIVITY_TEST_L]==96)
+      |                    ^~~~~~~
+main.c(215): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  215 |                 if(Rc_Data[CONNECTIVITY_TEST_F]==69 &&Rc_Data[CONNECTIVITY_TEST_L]==96)
+      |                                                       ^~~~~~~
+main.c(218): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  218 |                         RC_Mode=Rc_Data[MODE];
+      |                                 ^~~~~~~
+main.c(219): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  219 |                         TL_joystick=((Rc_Data[TL_JOYSTICK_L8])|(Rc_Data[TL_JOYSTICK_H8])<<8);
+      |                                       ^~~~~~~
+main.c(219): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  219 |                         TL_joystick=((Rc_Data[TL_JOYSTICK_L8])|(Rc_Data[TL_JOYSTICK_H8])<<8);
+      |                                                                 ^~~~~~~
+main.c(220): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  220 |                         TR_joystick=((Rc_Data[TR_JOYSTICK_L8])|(Rc_Data[TR_JOYSTICK_H8])<<8);
+      |                                       ^~~~~~~
+main.c(220): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  220 |                         TR_joystick=((Rc_Data[TR_JOYSTICK_L8])|(Rc_Data[TR_JOYSTICK_H8])<<8);
+      |                                                                 ^~~~~~~
+main.c(221): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  221 |                         BR_joystick=((Rc_Data[BR_JOYSTICK_L8])|(Rc_Data[BR_JOYSTICK_H8])<<8);
+      |                                       ^~~~~~~
+main.c(221): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  221 |                         BR_joystick=((Rc_Data[BR_JOYSTICK_L8])|(Rc_Data[BR_JOYSTICK_H8])<<8);
+      |                                                                 ^~~~~~~
+main.c(222): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  222 |                         BL_joystick=((Rc_Data[BL_JOYSTICK_L8])|(Rc_Data[BL_JOYSTICK_H8])<<8);
+      |                                       ^~~~~~~
+main.c(222): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  222 |                         BL_joystick=((Rc_Data[BL_JOYSTICK_L8])|(Rc_Data[BL_JOYSTICK_H8])<<8);
+      |                                                                 ^~~~~~~
+main.c(223): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  223 |                         POT_value=((Rc_Data[POT_VALUE_L8])|(Rc_Data[POT_VALUE_H8])<<8);
+      |                                     ^~~~~~~
+main.c(223): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  223 |                         POT_value=((Rc_Data[POT_VALUE_L8])|(Rc_Data[POT_VALUE_H8])<<8);
+      |                                                             ^~~~~~~
+104 warnings generated.
+compiling main.c...
+MCAL_Layer/GPIO/MCAL_GPIO.c(9): warning: In file included from...
+MCAL_Layer/GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(81): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+   81 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(120): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  120 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(135): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  135 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(150): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  150 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(154): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  154 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(197): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  197 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(236): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  236 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(252): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  252 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(268): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  268 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(272): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  272 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(324): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  324 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(379): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  379 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(405): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  405 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(431): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  431 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(435): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  435 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(464): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  464 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(490): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  490 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(516): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  516 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(520): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  520 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(622): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  622 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(707): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  707 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(735): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  735 |                 default:retval=E_NOT_OK ;
+      |                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(720): warning: unused function 'gpio_port_initialize' [-Wunused-function]
+  720 | static Std_ReturnType_t  gpio_port_initialize(Port_INDEX_t port)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+26 warnings generated.
+compiling MCAL_GPIO.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  196 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(34): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   34 | extern timer2_config_t timer2_ch1={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(34): warning: no previous extern declaration for non-static variable 'timer2_ch1' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   34 | extern timer2_config_t timer2_ch1={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(12): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(168): warning: padding struct 'timer2_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  168 |                 uint32_t duty_cycle;
+      |                          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(38): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   38 | extern timer2_config_t timer2_ch2={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(38): warning: no previous extern declaration for non-static variable 'timer2_ch2' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   38 | extern timer2_config_t timer2_ch2={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(42): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   42 | extern timer2_config_t timer2_ch3={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(42): warning: no previous extern declaration for non-static variable 'timer2_ch3' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(42): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   42 | extern timer2_config_t timer2_ch3={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(46): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   46 | extern timer2_config_t timer2_ch4={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(46): warning: no previous extern declaration for non-static variable 'timer2_ch4' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(46): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   46 | extern timer2_config_t timer2_ch4={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(72): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   72 | extern timer4_config_t timer4_ch1={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(72): warning: no previous extern declaration for non-static variable 'timer4_ch1' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(72): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   72 | extern timer4_config_t timer4_ch1={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(14): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(162): warning: padding struct 'timer4_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  162 |                 uint32_t duty_cycle;
+      |                          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(76): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   76 | extern timer4_config_t timer4_ch2={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(76): warning: no previous extern declaration for non-static variable 'timer4_ch2' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(76): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   76 | extern timer4_config_t timer4_ch2={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(80): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   80 | extern timer4_config_t timer4_ch3={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(80): warning: no previous extern declaration for non-static variable 'timer4_ch3' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(80): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   80 | extern timer4_config_t timer4_ch3={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(84): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   84 | extern timer4_config_t timer4_ch4={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(84): warning: no previous extern declaration for non-static variable 'timer4_ch4' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(84): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   84 | extern timer4_config_t timer4_ch4={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(92): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   92 | extern timer1_config_t tim1={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(92): warning: no previous extern declaration for non-static variable 'tim1' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(92): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   92 | extern timer1_config_t tim1={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(110): warning: 'extern' variable has an initializer [-Wextern-initializer]
+  110 | extern timer3_config_t tim3={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(110): warning: no previous extern declaration for non-static variable 'tim3' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(110): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  110 | extern timer3_config_t tim3={
+      |        ^
+26 warnings generated.
+compiling MCAL_TIMERS.c...
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(9): warning: In file included from...
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(11): warning: In file included from...
+MCAL_Layer/INTERRUPT/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/INTERRUPT/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/INTERRUPT/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/INTERRUPT/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/INTERRUPT/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(15): warning: no previous extern declaration for non-static variable 'EXTI0_InterruptHandler' [-Wmissing-variable-declarations]
+   15 | void (*EXTI0_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   15 | void (*EXTI0_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(16): warning: no previous extern declaration for non-static variable 'EXTI1_InterruptHandler' [-Wmissing-variable-declarations]
+   16 | void (*EXTI1_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   16 | void (*EXTI1_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(17): warning: no previous extern declaration for non-static variable 'EXTI2_InterruptHandler' [-Wmissing-variable-declarations]
+   17 | void (*EXTI2_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   17 | void (*EXTI2_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(18): warning: no previous extern declaration for non-static variable 'EXTI3_InterruptHandler' [-Wmissing-variable-declarations]
+   18 | void (*EXTI3_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   18 | void (*EXTI3_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(19): warning: no previous extern declaration for non-static variable 'EXTI4_InterruptHandler' [-Wmissing-variable-declarations]
+   19 | void (*EXTI4_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   19 | void (*EXTI4_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(20): warning: no previous extern declaration for non-static variable 'EXTI5_InterruptHandler' [-Wmissing-variable-declarations]
+   20 | void (*EXTI5_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   20 | void (*EXTI5_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(21): warning: no previous extern declaration for non-static variable 'EXTI6_InterruptHandler' [-Wmissing-variable-declarations]
+   21 | void (*EXTI6_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   21 | void (*EXTI6_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(22): warning: no previous extern declaration for non-static variable 'EXTI7_InterruptHandler' [-Wmissing-variable-declarations]
+   22 | void (*EXTI7_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   22 | void (*EXTI7_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(23): warning: no previous extern declaration for non-static variable 'EXTI8_InterruptHandler' [-Wmissing-variable-declarations]
+   23 | void (*EXTI8_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   23 | void (*EXTI8_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(24): warning: no previous extern declaration for non-static variable 'EXTI9_InterruptHandler' [-Wmissing-variable-declarations]
+   24 | void (*EXTI9_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   24 | void (*EXTI9_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(25): warning: no previous extern declaration for non-static variable 'EXTI10_InterruptHandler' [-Wmissing-variable-declarations]
+   25 | void (*EXTI10_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   25 | void (*EXTI10_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(26): warning: no previous extern declaration for non-static variable 'EXTI11_InterruptHandler' [-Wmissing-variable-declarations]
+   26 | void (*EXTI11_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   26 | void (*EXTI11_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(27): warning: no previous extern declaration for non-static variable 'EXTI12_InterruptHandler' [-Wmissing-variable-declarations]
+   27 | void (*EXTI12_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   27 | void (*EXTI12_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(28): warning: no previous extern declaration for non-static variable 'EXTI13_InterruptHandler' [-Wmissing-variable-declarations]
+   28 | void (*EXTI13_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   28 | void (*EXTI13_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(29): warning: no previous extern declaration for non-static variable 'EXTI14_InterruptHandler' [-Wmissing-variable-declarations]
+   29 | void (*EXTI14_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   29 | void (*EXTI14_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(30): warning: no previous extern declaration for non-static variable 'EXTI15_InterruptHandler' [-Wmissing-variable-declarations]
+   30 | void (*EXTI15_InterruptHandler)(void)=NULL;
+      |        ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   30 | void (*EXTI15_InterruptHandler)(void)=NULL;
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(9): warning: In file included from...
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(309): warning: padding struct 'Exti_Config_t' with 2 bytes to align 'InterruptHandler' [-Wpadded]
+  309 |         void (*InterruptHandler)(void);
+      |                ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(216): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  216 |                                         default: retval=E_NOT_OK;
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(224): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  224 |                                         EXTI0_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(136): note: expanded from macro 'EXTI0_PORTB_SELECT'
+  136 | #define EXTI0_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(228): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  228 |                                         EXTI1_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(146): note: expanded from macro 'EXTI1_PORTB_SELECT'
+  146 | #define EXTI1_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(232): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  232 |                                         EXTI2_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(156): note: expanded from macro 'EXTI2_PORTB_SELECT'
+  156 | #define EXTI2_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(236): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  236 |                                         EXTI3_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(166): note: expanded from macro 'EXTI3_PORTB_SELECT'
+  166 | #define EXTI3_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(240): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  240 |                                         EXTI4_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(176): note: expanded from macro 'EXTI4_PORTB_SELECT'
+  176 | #define EXTI4_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(244): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  244 |                                         EXTI5_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(186): note: expanded from macro 'EXTI5_PORTB_SELECT'
+  186 | #define EXTI5_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(248): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  248 |                                         EXTI6_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(196): note: expanded from macro 'EXTI6_PORTB_SELECT'
+  196 | #define EXTI6_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(252): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  252 |                                         EXTI7_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(206): note: expanded from macro 'EXTI7_PORTB_SELECT'
+  206 | #define EXTI7_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(256): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  256 |                                         EXTI8_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(216): note: expanded from macro 'EXTI8_PORTB_SELECT'
+  216 | #define EXTI8_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(260): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  260 |                                         EXTI9_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(226): note: expanded from macro 'EXTI9_PORTB_SELECT'
+  226 | #define EXTI9_PORTB_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(264): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  264 |                                         EXTI10_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(236): note: expanded from macro 'EXTI10_PORTB_SELECT'
+  236 | #define EXTI10_PORTB_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(268): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  268 |                                         EXTI11_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(246): note: expanded from macro 'EXTI11_PORTB_SELECT'
+  246 | #define EXTI11_PORTB_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(272): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  272 |                                         EXTI12_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(256): note: expanded from macro 'EXTI12_PORTB_SELECT'
+  256 | #define EXTI12_PORTB_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(276): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  276 |                                         EXTI13_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(266): note: expanded from macro 'EXTI13_PORTB_SELECT'
+  266 | #define EXTI13_PORTB_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(280): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  280 |                                         EXTI14_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(276): note: expanded from macro 'EXTI14_PORTB_SELECT'
+  276 | #define EXTI14_PORTB_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(284): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  284 |                                         EXTI15_PORTB_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(286): note: expanded from macro 'EXTI15_PORTB_SELECT'
+  286 | #define EXTI15_PORTB_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(287): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  287 |                                         default: retval=E_NOT_OK;
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(295): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  295 |                                         EXTI0_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(140): note: expanded from macro 'EXTI0_PORTC_SELECT'
+  140 | #define EXTI0_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(299): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  299 |                                         EXTI1_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(150): note: expanded from macro 'EXTI1_PORTC_SELECT'
+  150 | #define EXTI1_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(303): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  303 |                                         EXTI2_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(160): note: expanded from macro 'EXTI2_PORTC_SELECT'
+  160 | #define EXTI2_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(307): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  307 |                                         EXTI3_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(170): note: expanded from macro 'EXTI3_PORTC_SELECT'
+  170 | #define EXTI3_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(311): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  311 |                                         EXTI4_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(180): note: expanded from macro 'EXTI4_PORTC_SELECT'
+  180 | #define EXTI4_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(315): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  315 |                                         EXTI5_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(190): note: expanded from macro 'EXTI5_PORTC_SELECT'
+  190 | #define EXTI5_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(319): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  319 |                                         EXTI6_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(200): note: expanded from macro 'EXTI6_PORTC_SELECT'
+  200 | #define EXTI6_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(323): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  323 |                                         EXTI7_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(210): note: expanded from macro 'EXTI7_PORTC_SELECT'
+  210 | #define EXTI7_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(327): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  327 |                                         EXTI8_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(220): note: expanded from macro 'EXTI8_PORTC_SELECT'
+  220 | #define EXTI8_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(331): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  331 |                                         EXTI9_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(230): note: expanded from macro 'EXTI9_PORTC_SELECT'
+  230 | #define EXTI9_PORTC_SELECT()                                    ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(335): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  335 |                                         EXTI10_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(240): note: expanded from macro 'EXTI10_PORTC_SELECT'
+  240 | #define EXTI10_PORTC_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(339): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  339 |                                         EXTI11_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(250): note: expanded from macro 'EXTI11_PORTC_SELECT'
+  250 | #define EXTI11_PORTC_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(343): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  343 |                                         EXTI12_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(260): note: expanded from macro 'EXTI12_PORTC_SELECT'
+  260 | #define EXTI12_PORTC_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(347): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  347 |                                         EXTI13_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(270): note: expanded from macro 'EXTI13_PORTC_SELECT'
+  270 | #define EXTI13_PORTC_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(351): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  351 |                                         EXTI14_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(280): note: expanded from macro 'EXTI14_PORTC_SELECT'
+  280 | #define EXTI14_PORTC_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(355): warning: use of GNU statement expression extension from macro expansion [-Wgnu-statement-expression-from-macro-expansion]
+  355 |                                         EXTI15_PORTC_SELECT();
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(290): note: expanded from macro 'EXTI15_PORTC_SELECT'
+  290 | #define EXTI15_PORTC_SELECT()                                   ({\
+      |                                                                  ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(358): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  358 |                                         default: retval=E_NOT_OK;
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(362): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  362 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(386): warning: code will never be executed [-Wunreachable-code]
+  386 |                         retval=E_NOT_OK;
+      |                                ^~~~~~~~
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(508): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  508 |                                         default: retval=E_NOT_OK;
+      |                                         ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(516): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+  516 | void EXTI0_IRQHandler(void){
+      |      ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(516): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  516 | void EXTI0_IRQHandler(void){
+      | ^
+      | static 
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(527): warning: no previous prototype for function 'EXTI1_IRQHandler' [-Wmissing-prototypes]
+  527 | void EXTI1_IRQHandler(void){
+      |      ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(527): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  527 | void EXTI1_IRQHandler(void){
+      | ^
+      | static 
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(538): warning: no previous prototype for function 'EXTI2_IRQHandler' [-Wmissing-prototypes]
+  538 | void EXTI2_IRQHandler(void){
+      |      ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(538): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  538 | void EXTI2_IRQHandler(void){
+      | ^
+      | static 
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(550): warning: no previous prototype for function 'EXTI3_IRQHandler' [-Wmissing-prototypes]
+  550 | void EXTI3_IRQHandler(void){
+      |      ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(550): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  550 | void EXTI3_IRQHandler(void){
+      | ^
+      | static 
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(560): warning: no previous prototype for function 'EXTI4_IRQHandler' [-Wmissing-prototypes]
+  560 | void EXTI4_IRQHandler(void){
+      |      ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(560): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  560 | void EXTI4_IRQHandler(void){
+      | ^
+      | static 
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(571): warning: no previous prototype for function 'EXTI9_5_IRQHandler' [-Wmissing-prototypes]
+  571 | void EXTI9_5_IRQHandler(void){
+      |      ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(571): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  571 | void EXTI9_5_IRQHandler(void){
+      | ^
+      | static 
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(616): warning: no previous prototype for function 'EXTI15_10_IRQHandler' [-Wmissing-prototypes]
+  616 |         void EXTI15_10_IRQHandler(void){
+      |              ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(616): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  616 |         void EXTI15_10_IRQHandler(void){
+      |         ^
+      |         static 
+65 warnings generated.
+compiling MCAL_EXTERNAL_INTERRUPTS.c...
+MCAL_Layer/INTERRUPT/MCAL_INTERNAL_INTERRUPTS.c(1): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+1 warning generated.
+compiling MCAL_INTERNAL_INTERRUPTS.c...
+MCAL_Layer/UART/MCAL_UART.c(1): warning: In file included from...
+MCAL_Layer/UART/MCAL_UART.h(12): warning: In file included from...
+MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/UART/MCAL_UART.c(14): warning: variable 'err_status' set but not used [-Wunused-but-set-variable]
+   14 |         Std_ReturnType_t err_status=0;
+      |                          ^
+MCAL_Layer/UART/MCAL_UART.c(139): warning: implicit conversion turns floating-point number into integer: 'double' to 'unsigned long' [-Wfloat-conversion]
+  139 |         dec = frac;
+      |             ~ ^~~~
+MCAL_Layer/UART/MCAL_UART.c(151): warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned short' [-Wimplicit-int-conversion]
+  151 |         final = (div<<4);
+      |               ~  ~~~^~~
+MCAL_Layer/UART/MCAL_UART.c(166): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+  166 |                         c = USART1_DR;
+      |                           ~ ^~~~~~~~~
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(746): note: expanded from macro 'USART1_DR'
+  746 | #define USART1_DR                                                               HWRG(USART1_DR_ADDRESS)
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(30): note: expanded from macro 'HWRG'
+   30 | #define HWRG(ADDRESS)                                                                           (*ADDRESS)
+      |                                                                                                  ^~~~~~~~
+MCAL_Layer/UART/MCAL_UART.c(172): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+  172 |                         c = USART2_DR;
+      |                           ~ ^~~~~~~~~
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(763): note: expanded from macro 'USART2_DR'
+  763 | #define USART2_DR                                                               HWRG(USART2_DR_ADDRESS)
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(30): note: expanded from macro 'HWRG'
+   30 | #define HWRG(ADDRESS)                                                                           (*ADDRESS)
+      |                                                                                                  ^~~~~~~~
+MCAL_Layer/UART/MCAL_UART.c(179): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+  179 |                         c = USART3_DR;
+      |                           ~ ^~~~~~~~~
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(780): note: expanded from macro 'USART3_DR'
+  780 | #define USART3_DR                                                               HWRG(USART3_DR_ADDRESS)
+      |                                                                                 ^~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/UART/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(30): note: expanded from macro 'HWRG'
+   30 | #define HWRG(ADDRESS)                                                                           (*ADDRESS)
+      |                                                                                                  ^~~~~~~~
+MCAL_Layer/UART/MCAL_UART.c(210): warning: no previous prototype for function 'USART1_IRQHandler' [-Wmissing-prototypes]
+  210 | void USART1_IRQHandler(void)
+      |      ^
+MCAL_Layer/UART/MCAL_UART.c(210): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  210 | void USART1_IRQHandler(void)
+      | ^
+      | static 
+MCAL_Layer/UART/MCAL_UART.c(225): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+  225 | void USART2_IRQHandler(void)
+      |      ^
+MCAL_Layer/UART/MCAL_UART.c(225): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  225 | void USART2_IRQHandler(void)
+      | ^
+      | static 
+MCAL_Layer/UART/MCAL_UART.c(240): warning: no previous prototype for function 'USART3_IRQHandler' [-Wmissing-prototypes]
+  240 | void USART3_IRQHandler(void)
+      |      ^
+MCAL_Layer/UART/MCAL_UART.c(240): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  240 | void USART3_IRQHandler(void)
+      | ^
+      | static 
+MCAL_Layer/UART/MCAL_UART.c(255): warning: no previous prototype for function 'USART_Set_IRH' [-Wmissing-prototypes]
+  255 | void USART_Set_IRH(unsigned short usart, void (*ISR)(void))
+      |      ^
+MCAL_Layer/UART/MCAL_UART.c(255): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  255 | void USART_Set_IRH(unsigned short usart, void (*ISR)(void))
+      | ^
+      | static 
+13 warnings generated.
+compiling MCAL_UART.c...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  196 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(81): warning: padding struct 'Servo_t' with 6 bytes to align 'starting_pos' [-Wpadded]
+   81 |         double                                  starting_pos;
+      |                                                 ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(85): warning: padding struct 'Servo_t' with 1 byte to align 'gear_ratio' [-Wpadded]
+   85 |         float                                                   gear_ratio;
+      |                                                                 ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(12): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(168): warning: padding struct 'timer2_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  168 |                 uint32_t duty_cycle;
+      |                          ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(162): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  162 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(14): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(162): warning: padding struct 'timer4_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  162 |                 uint32_t duty_cycle;
+      |                          ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(236): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  236 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(240): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  240 |                         default:retval=E_NOT_OK;
+      |                         ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(308): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  308 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(356): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  356 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(360): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  360 |                         default:retval=E_NOT_OK;
+      |                         ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(411): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint16_t' (aka 'unsigned short') [-Wfloat-conversion]
+  411 |                 servo_ptr->duty_cycle=map_to_range(0,180,500,2500,servo_ptr->curr_pos);
+      |                                      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(404): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  404 |         Std_ReturnType_t retval=E_OK;
+      |                          ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(413): warning: non-void function does not return a value [-Wreturn-type]
+  413 | }
+      | ^
+17 warnings generated.
+compiling HAL_SERVO.c...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../ENCODER/HAL_ENCODER.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../ENCODER/../../MCAL_Layer/GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+HAL_Layer/DC_MOTOR/../ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+HAL_Layer/DC_MOTOR/../ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+HAL_Layer/DC_MOTOR/../ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(12): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  196 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(97): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+   97 |                         speed=map_to_range(0,128,0,20000,speed);
+      |                              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(104): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+  104 |                         speed=map_to_range(0,127,0,20000,speed);
+      |                              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(129): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  129 | }
+      | ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(12): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(12): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(168): warning: padding struct 'timer2_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  168 |                 uint32_t duty_cycle;
+      |                          ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(197): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  197 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(12): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(14): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(162): warning: padding struct 'timer4_config_t' with 3 bytes to align 'duty_cycle' [-Wpadded]
+  162 |                 uint32_t duty_cycle;
+      |                          ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(254): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  254 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(259): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  259 |                         default:retval=E_NOT_OK;
+      |                         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(357): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  357 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(406): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  406 |                                         default:retval=E_NOT_OK;
+      |                                         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(411): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  411 |                         default:retval=E_NOT_OK;
+      |                         ^
+15 warnings generated.
+compiling HAL_DC_MOTOR.c...
+HAL_Layer/ENCODER/HAL_ENCODER.c(9): warning: In file included from...
+HAL_Layer/ENCODER/HAL_ENCODER.h(11): warning: In file included from...
+HAL_Layer/ENCODER/../../MCAL_Layer/GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+HAL_Layer/ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+HAL_Layer/ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+HAL_Layer/ENCODER/../../MCAL_Layer/GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/ENCODER/HAL_ENCODER.c(9): warning: In file included from...
+HAL_Layer/ENCODER/HAL_ENCODER.h(12): warning: In file included from...
+HAL_Layer/ENCODER/../../MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(309): warning: padding struct 'Exti_Config_t' with 2 bytes to align 'InterruptHandler' [-Wpadded]
+  309 |         void (*InterruptHandler)(void);
+      |                ^
+4 warnings generated.
+compiling HAL_ENCODER.c...
+compiling M4_Softwares.c...
+MCAL_Layer/SPI/MCAL_SPI1.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/SPI/MCAL_SPI1.c(99): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   99 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI1.c(133): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  133 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI1.c(175): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  175 |                 *(data++) = (SPI1->DR);
+      |                           ~  ~~~~~~^~
+MCAL_Layer/SPI/MCAL_SPI1.c(263): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  263 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/SPI/MCAL_SPI1.c(289): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  289 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(302): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  302 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(327): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  327 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(351): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  351 |                 SPI1_CR1|= (temp<<4);           
+      |                         ~~  ~~~~^~~
+MCAL_Layer/SPI/MCAL_SPI1.c(349): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  349 |                 uint8_t temp=(spi1_ptr->baud_rate)>>1;//11<<4   110000
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(107): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  107 |                 SPI1->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(141): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  141 |                 SPI1->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(175): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  175 |                 *(data++) = (SPI1->DR);
+      |                   ^~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(200): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  200 |                 *(data++) = (SPI1->DR);
+      |                   ^~~~
+16 warnings generated.
+compiling MCAL_SPI1.c...
+MCAL_Layer/SPI/MCAL_SPI2.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI2.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/SPI/MCAL_SPI2.c(35): warning: no previous extern declaration for non-static variable 'SPI2_NSS_SLAVE' [-Wmissing-variable-declarations]
+   35 |         Pin_Config_t SPI2_NSS_SLAVE={
+      |                      ^
+MCAL_Layer/SPI/MCAL_SPI2.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   35 |         Pin_Config_t SPI2_NSS_SLAVE={
+      |         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(99): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   99 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI2.c(133): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  133 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI2.c(175): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  175 |                 *(data++) = (SPI2->DR);
+      |                           ~  ~~~~~~^~
+MCAL_Layer/SPI/MCAL_SPI2.c(263): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  263 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/SPI/MCAL_SPI2.c(289): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  289 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(302): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  302 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(327): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  327 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(107): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  107 |                 SPI2->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(141): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  141 |                 SPI2->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(175): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  175 |                 *(data++) = (SPI2->DR);
+      |                   ^~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(200): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  200 |                 *(data++) = (SPI2->DR);
+      |                   ^~~~
+15 warnings generated.
+compiling MCAL_SPI2.c...
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(13): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(196): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  196 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+HAL_Layer/NRF24L01/NRF24L01.c(143): warning: unused parameter 'pipenum' [-Wunused-parameter]
+  143 | Std_ReturnType_t NRF24L01_is_data_available(NRF24L01_t *nrf_ptr,uint8_t pipenum)
+      |                                                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(383): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  383 |         uint8_t buf[2]={reg_address,data};
+      |                 ^
+HAL_Layer/NRF24L01/NRF24L01.c(533): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  533 |                                 uint8_t en_rxaddr = 0x03;
+      |                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(561): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  561 |                         default:retval=E_NOT_OK;
+      |                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(627): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  627 |                                 uint8_t rx_addr_p0_def[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+      |                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(14): warning: unused variable 'debug' [-Wunused-variable]
+   14 | static uint8_t debug;
+      |                ^~~~~
+HAL_Layer/NRF24L01/NRF24L01.c(256): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  256 |         NRF24L01_read_reg(nrf_ptr,EN_AA,&data[1]);//0x3F
+      |                                          ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(257): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  257 |         NRF24L01_read_reg(nrf_ptr,EN_RXADDR,&data[2]);//0x03
+      |                                              ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(258): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  258 |         NRF24L01_read_reg(nrf_ptr,SETUP_AW,&data[3]);//0x03
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(259): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  259 |         NRF24L01_read_reg(nrf_ptr,SETUP_RETR,&data[4]);//0x5F
+      |                                               ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(260): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  260 |         NRF24L01_read_reg(nrf_ptr,RF_CH,&data[5]);//0x4c
+      |                                          ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(261): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  261 |         NRF24L01_read_reg(nrf_ptr,RF_SETUP,&data[6]);//0x0F
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(262): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  262 |         NRF24L01_read_reg(nrf_ptr,STATUS,&data[7]);//0X0E
+      |                                           ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |         NRF24L01_read_reg(nrf_ptr,CD,&data[8]);//0X00
+      |                                       ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(270): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  270 |         NRF24L01_read_reg(nrf_ptr,TX_ADDR,&data[9]);//0XE7*5
+      |                                            ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(271): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  271 |         NRF24L01_read_reg(nrf_ptr,RX_PW_P0,&data[10]);//0X20
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(272): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  272 |         NRF24L01_read_reg(nrf_ptr,RX_PW_P1,&data[11]);//0X20
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(273): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  273 |         NRF24L01_read_reg(nrf_ptr,RX_PW_P2,&data[12]);//0X00
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(274): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  274 |         NRF24L01_read_reg(nrf_ptr,RX_PW_P3,&data[13]);//0X00
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(275): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  275 |         NRF24L01_read_reg(nrf_ptr,RX_PW_P4,&data[14]);//0X00
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(276): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  276 |         NRF24L01_read_reg(nrf_ptr,RX_PW_P5,&data[15]);//0X00
+      |                                             ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(277): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  277 |         NRF24L01_read_reg(nrf_ptr,FIFO_STATUS,&data[16]);//0X11
+      |                                                ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(278): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  278 |         NRF24L01_read_reg(nrf_ptr,DYNPD,&data[17]);//0X00
+      |                                          ^~~~
+HAL_Layer/NRF24L01/NRF24L01.c(279): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  279 |         NRF24L01_read_reg(nrf_ptr,FEATURE,&data[18]);//0X00
+      |                                            ^~~~
+28 warnings generated.
+compiling NRF24L01.c...
+MCAL_Layer/ADC/MCAL_ADC.c(4): warning: In file included from...
+MCAL_Layer/ADC/MCAL_ADC.h(5): warning: In file included from...
+MCAL_Layer/ADC/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/ADC/../GPIO/../REGISTERS_DEFINITIONS/REGISTERS_DEFINITIONS.h(12): warning: In file included from...
+MCAL_Layer/ADC/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+MCAL_Layer/ADC/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+MCAL_Layer/ADC/../GPIO/../REGISTERS_DEFINITIONS/../../stm32f10c8.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/ADC/MCAL_ADC.c(4): warning: In file included from...
+MCAL_Layer/ADC/MCAL_ADC.h(59): warning: no newline at end of file [-Wnewline-eof]
+   59 | #endif
+      |       ^
+MCAL_Layer/ADC/MCAL_ADC.c(21): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+   21 |         default:
+      |         ^
+MCAL_Layer/ADC/MCAL_ADC.c(32): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+   32 |         default: return ADC_MAX_VALUE_12BIT;
+      |         ^
+MCAL_Layer/ADC/MCAL_ADC.c(54): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   54 |     adc->CR1 &= ~(0x3 << 24);
+      |              ~~ ^~~~~~~~~~~~
+MCAL_Layer/ADC/MCAL_ADC.c(67): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+   67 |         default:
+      |         ^
+MCAL_Layer/ADC/MCAL_ADC.c(41): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   41 |     ADC_TypeDef *adc = get_adc_instance(config->adc_index);
+      |                  ^
+MCAL_Layer/ADC/MCAL_ADC.c(4): warning: In file included from...
+MCAL_Layer/ADC/MCAL_ADC.h(46): warning: padding struct 'ADC_Config_t' with 1 byte to align 'sampling_time' [-Wpadded]
+   46 |     uint32_t sampling_time;
+      |              ^
+MCAL_Layer/ADC/MCAL_ADC.c(92): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   92 |     ADC_TypeDef *adc = get_adc_instance(adc_index);
+      |                  ^
+MCAL_Layer/ADC/MCAL_ADC.c(120): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  120 |     *value = adc->DR;
+      |            ~ ~~~~~^~
+MCAL_Layer/ADC/MCAL_ADC.c(111): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  111 |     ADC_TypeDef *adc = get_adc_instance(adc_index);
+      |                  ^
+MCAL_Layer/ADC/MCAL_ADC.c(133): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  133 |         uint16_t adc_value = adc->DR;  // Read ADC data register
+      |                  ~~~~~~~~~   ~~~~~^~
+MCAL_Layer/ADC/MCAL_ADC.c(136): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  136 |         adc->SR &= ~(1 << 1);
+      |                 ~~ ^~~~~~~~~
+MCAL_Layer/ADC/MCAL_ADC.c(133): warning: unused variable 'adc_value' [-Wunused-variable]
+  133 |         uint16_t adc_value = adc->DR;  // Read ADC data register
+      |                  ^~~~~~~~~
+MCAL_Layer/ADC/MCAL_ADC.c(140): warning: no newline at end of file [-Wnewline-eof]
+  140 | }
+      |  ^
+MCAL_Layer/ADC/MCAL_ADC.c(26): warning: unused function 'get_adc_max_value' [-Wunused-function]
+   26 | static uint32_t get_adc_max_value(ADC_Resolution_t resolution) {
+      |                 ^~~~~~~~~~~~~~~~~
+18 warnings generated.
+compiling MCAL_ADC.c...
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+5 warnings generated.
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=17884 RO-data=268 RW-data=436 ZI-data=1816  
+FromELF: creating hex file...
+".\Objects\M4_Project.axf" - 0 Error(s), 401 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:14
+</pre>
+</body>
+</html>

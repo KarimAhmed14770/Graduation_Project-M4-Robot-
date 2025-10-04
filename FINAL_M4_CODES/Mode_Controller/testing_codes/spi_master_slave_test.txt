@@ -1,0 +1,146 @@
+
+spi1,spi2 master slave test
+
+/*******************88Master Code***********************/
+
+#include "MCAL_Layer/SPI/MCAL_SPI1.h"
+#include "MCAL_Layer/SPI/MCAL_SPI2.h"
+#include "MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h"
+#include "MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h"
+/******************* HOW TO USE GPIO*************************/
+
+/*
+Spi1_t spi1={
+	.mode=MASTER,
+	.baud_rate=HZ_1125000,
+	.clock_polarity=IDLE_LOW,
+	.clock_phase=FIRST_EDGE,
+	.data_frame=SPI_SIXTEEN_BIT,
+	.SLAVE_SELECT.port_index=PORTB,
+	.SLAVE_SELECT.pin_index=PIN11,
+	.SLAVE_SELECT.mode=OUTPUT_MODE_50,
+	.SLAVE_SELECT.conf=OUTPUT_PP,
+};
+
+Pin_Config_t input_pin={
+	.port_index=PORTA,
+	.pin_index=PIN1,
+	.mode=INPUT_MODE,
+	.conf=FLOATING_INPUT
+};
+
+Pin_Config_t led_pin={
+	.port_index=PORTC,
+	.pin_index=PIN13,
+	.mode=OUTPUT_MODE_50, 
+	.conf=OUTPUT_PP
+};
+
+timer2_config_t tim2={
+	.TIM2_OF_InterruptHandler=NULL,
+	.time_base_us=100000
+};
+Std_ReturnType_t err_status;
+uint8_t pin_value;
+uint16_t a[2];
+	
+int main()
+{
+	err_status=gpio_pin_init(&input_pin);
+	err_status=gpio_pin_init(&led_pin);
+	err_status=spi1_init(&spi1);
+	timer2_init(&tim2);
+	while(1)
+	{
+		
+		
+			a[0]=50;
+			a[1]=210;
+			err_status=gpio_pin_write(&led_pin,LOW);
+			spi1_transmit_16(a,sizeof(a));
+			timer2_delay(&tim2,250000);
+				
+			err_status=gpio_pin_write(&led_pin,LOW);
+			a[0]=127;
+			a[1]=180;
+			spi1_transmit_16(a,sizeof(a));
+		timer2_delay(&tim2,250000);
+		
+
+
+	//err_status=gpio_pin_write(&led_pin,HIGH);
+}
+
+}
+*/
+/*******************Slave Code***********************/
+
+timer2_config_t tim2={
+	.TIM2_OF_InterruptHandler=NULL,
+	.time_base_us=100000
+};
+Spi1_t spi2={
+	.clock_polarity=IDLE_LOW,
+	.clock_phase=FIRST_EDGE,
+	.data_frame=SPI_SIXTEEN_BIT,
+	.mode=SLAVE
+};
+Pin_Config_t led_pin_y={
+	.port_index=PORTB,
+	.pin_index=PIN9,
+	.mode=OUTPUT_MODE_50, 
+	.conf=OUTPUT_PP
+};
+Pin_Config_t led_pin_b={
+	.port_index=PORTB,
+	.pin_index=PIN8,
+	.mode=OUTPUT_MODE_50, 
+	.conf=OUTPUT_PP
+};
+Pin_Config_t led_pin13={
+	.port_index=PORTC,
+	.pin_index=PIN13,
+	.mode=OUTPUT_MODE_50, 
+	.conf=OUTPUT_PP
+};
+uint16_t a[2];
+
+Std_ReturnType_t err_status;
+int main()
+{
+	err_status=gpio_pin_init(&led_pin_y);
+	err_status=gpio_pin_init(&led_pin_b);
+	err_status=gpio_pin_init(&led_pin13);
+	err_status=spi2_init(&spi2);
+	timer2_init(&tim2);
+	
+	
+	while(1)
+	{
+		spi2_recieve_16(&a,sizeof(a));
+		
+		if(a[0]==50 &&a[1]==210)
+		{
+			gpio_pin_write(&led_pin_y,HIGH);
+			gpio_pin_write(&led_pin_b,LOW);
+			
+		
+			
+		}
+		else if(a[0]==127 &&a[1]==180)
+		{
+			gpio_pin_write(&led_pin_y,LOW);
+			gpio_pin_write(&led_pin_b,HIGH);
+		}
+		else 
+		{
+		gpio_pin_write(&led_pin_y,HIGH);
+			gpio_pin_write(&led_pin_b,HIGH);
+	}
+		timer2_delay(&tim2,250000);
+}
+}
+
+
+
+

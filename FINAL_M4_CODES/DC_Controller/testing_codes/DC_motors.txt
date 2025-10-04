@@ -1,0 +1,42 @@
+#include "HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h"
+/******************* HOW TO USE DC Motor*************************/
+
+Dc_motor_t dc_motor_1={
+	//IN1=PA0
+	.IN1_pin.port_index=PORTA,
+	.IN1_pin.pin_index=PIN0,
+
+	//IN2=PB12
+	.IN2_pin.port_index=PORTB,
+	.IN2_pin.pin_index=PIN12,
+
+	//PWM=PA10
+	.pwm_timer=TIMER1,
+	.pwm_channel=CH3,
+};
+
+Dc_motor_t dc_motor_2={
+	//IN1=PA1
+	.IN1_pin.port_index=PORTA,
+	.IN1_pin.pin_index=PIN1,
+	//IN2=PB14
+	.IN2_pin.port_index=PORTB,
+	.IN2_pin.pin_index=PIN14,
+	//PWM=PA11
+	.pwm_timer=TIMER1,
+	.pwm_channel=CH4,
+};
+Std_ReturnType_t err_status;
+
+int main()
+{
+		err_status=Dc_motor_init(&dc_motor_1);
+		err_status=Dc_motor_init(&dc_motor_2);
+while(1)
+{
+	//move a motor with a certain PWM
+	Dc_motor_move(&dc_motor_1,255);
+	Dc_motor_move(&dc_motor_2,0);
+}	
+	
+}

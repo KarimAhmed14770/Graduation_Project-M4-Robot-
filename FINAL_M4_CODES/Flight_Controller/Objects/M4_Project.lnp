@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\mcal_gpio.o"
+".\objects\mcal_rcc.o"
+".\objects\mcal_timer2.o"
+".\objects\mcal_timer3.o"
+".\objects\mcal_timer4.o"
+".\objects\mcal_timer1.o"
+".\objects\mcal_timers.o"
+".\objects\mcal_external_interrupts.o"
+".\objects\mcal_internal_interrupts.o"
+".\objects\mcal_uart.o"
+".\objects\hal_servo.o"
+".\objects\hal_dc_motor.o"
+".\objects\m4_softwares.o"
+".\objects\mcal_spi1.o"
+".\objects\mcal_spi2.o"
+".\objects\nrf24l01.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\M4_Project.map" -o .\Objects\M4_Project.axf

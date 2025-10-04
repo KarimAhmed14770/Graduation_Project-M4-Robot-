@@ -1,0 +1,1878 @@
+Component: Arm Compiler for Embedded 6.21 Tool: armlink [5ec1fa00]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.main) refers to main.o(.data.led13) for led13
+    main.o(.text.main) refers to mcal_gpio.o(.text.gpio_pin_init) for gpio_pin_init
+    main.o(.text.main) refers to main.o(.text.tim_init) for tim_init
+    main.o(.text.main) refers to mcal_timers.o(.data.tim4) for tim4
+    main.o(.text.main) refers to mcal_timer4.o(.text.timer4_init) for timer4_init
+    main.o(.text.main) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    main.o(.text.main) refers to mcal_timer4.o(.text.timer4_delay) for timer4_delay
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    main.o(.text.tim_init) refers to mcal_timers.o(.data.tim4) for tim4
+    main.o(.ARM.exidx.text.tim_init) refers to main.o(.text.tim_init) for [Anonymous Symbol]
+    mcal_gpio.o(.text.gpio_pin_init) refers to mcal_gpio.o(.text.gpio_enable_clk) for gpio_enable_clk
+    mcal_gpio.o(.text.gpio_pin_init) refers to mcal_gpio.o(.text.gpio_afio_clk_enable) for gpio_afio_clk_enable
+    mcal_gpio.o(.text.gpio_pin_init) refers to mcal_gpio.o(.text.gpio_set_pin_mode) for gpio_set_pin_mode
+    mcal_gpio.o(.text.gpio_pin_init) refers to mcal_gpio.o(.text.gpio_set_pin_conf) for gpio_set_pin_conf
+    mcal_gpio.o(.ARM.exidx.text.gpio_pin_init) refers to mcal_gpio.o(.text.gpio_pin_init) for [Anonymous Symbol]
+    mcal_gpio.o(.text.gpio_enable_clk) refers to mcal_rcc.o(.text.RCC_IOPA_CLK_ENABLE) for RCC_IOPA_CLK_ENABLE
+    mcal_gpio.o(.text.gpio_enable_clk) refers to mcal_rcc.o(.text.RCC_IOPB_CLK_ENABLE) for RCC_IOPB_CLK_ENABLE
+    mcal_gpio.o(.text.gpio_enable_clk) refers to mcal_rcc.o(.text.RCC_IOPC_CLK_ENABLE) for RCC_IOPC_CLK_ENABLE
+    mcal_gpio.o(.ARM.exidx.text.gpio_enable_clk) refers to mcal_gpio.o(.text.gpio_enable_clk) for [Anonymous Symbol]
+    mcal_gpio.o(.text.gpio_afio_clk_enable) refers to mcal_rcc.o(.text.RCC_AFIO_CLK_ENABLE) for RCC_AFIO_CLK_ENABLE
+    mcal_gpio.o(.ARM.exidx.text.gpio_afio_clk_enable) refers to mcal_gpio.o(.text.gpio_afio_clk_enable) for [Anonymous Symbol]
+    mcal_gpio.o(.text.gpio_set_pin_mode) refers to mcal_gpio.o(.text.gpio_get_pin_index_decimal) for gpio_get_pin_index_decimal
+    mcal_gpio.o(.ARM.exidx.text.gpio_set_pin_mode) refers to mcal_gpio.o(.text.gpio_set_pin_mode) for [Anonymous Symbol]
+    mcal_gpio.o(.text.gpio_set_pin_conf) refers to mcal_gpio.o(.text.gpio_get_pin_index_decimal) for gpio_get_pin_index_decimal
+    mcal_gpio.o(.ARM.exidx.text.gpio_set_pin_conf) refers to mcal_gpio.o(.text.gpio_set_pin_conf) for [Anonymous Symbol]
+    mcal_gpio.o(.ARM.exidx.text.gpio_pin_write) refers to mcal_gpio.o(.text.gpio_pin_write) for [Anonymous Symbol]
+    mcal_gpio.o(.ARM.exidx.text.gpio_pin_read) refers to mcal_gpio.o(.text.gpio_pin_read) for [Anonymous Symbol]
+    mcal_gpio.o(.ARM.exidx.text.gpio_pin_toggle) refers to mcal_gpio.o(.text.gpio_pin_toggle) for [Anonymous Symbol]
+    mcal_gpio.o(.text.gpio_test_all_port_high) refers to mcal_rcc.o(.text.RCC_IOPA_CLK_ENABLE) for RCC_IOPA_CLK_ENABLE
+    mcal_gpio.o(.text.gpio_test_all_port_high) refers to mcal_rcc.o(.text.RCC_IOPB_CLK_ENABLE) for RCC_IOPB_CLK_ENABLE
+    mcal_gpio.o(.text.gpio_test_all_port_high) refers to mcal_rcc.o(.text.RCC_IOPC_CLK_ENABLE) for RCC_IOPC_CLK_ENABLE
+    mcal_gpio.o(.ARM.exidx.text.gpio_test_all_port_high) refers to mcal_gpio.o(.text.gpio_test_all_port_high) for [Anonymous Symbol]
+    mcal_gpio.o(.ARM.exidx.text.gpio_get_pin_index_decimal) refers to mcal_gpio.o(.text.gpio_get_pin_index_decimal) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_AFIO_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_AFIO_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_AFIO_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_AFIO_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_IOPA_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_IOPA_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_IOPA_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_IOPA_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_IOPB_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_IOPB_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_IOPB_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_IOPB_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_IOPC_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_IOPC_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_IOPC_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_IOPC_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM1_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_TIM1_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM1_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_TIM1_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_SPI1_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_SPI1_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_SPI1_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_SPI1_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_USART1_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_USART1_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_USART1_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_USART1_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM2_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_TIM2_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM2_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_TIM2_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM3_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_TIM3_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM3_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_TIM3_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM4_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_TIM4_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_TIM4_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_TIM4_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_USART2_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_USART2_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_USART2_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_USART2_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_USART3_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_USART3_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_USART3_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_USART3_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_I2C1_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_I2C1_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_I2C1_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_I2C1_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_I2C2_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_I2C2_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_I2C2_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_I2C2_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_SPI2_CLK_ENABLE) refers to mcal_rcc.o(.text.RCC_SPI2_CLK_ENABLE) for [Anonymous Symbol]
+    mcal_rcc.o(.ARM.exidx.text.RCC_SPI2_CLK_DISABLE) refers to mcal_rcc.o(.text.RCC_SPI2_CLK_DISABLE) for [Anonymous Symbol]
+    mcal_timer2.o(.text.timer2_init) refers to mcal_rcc.o(.text.RCC_TIM2_CLK_ENABLE) for RCC_TIM2_CLK_ENABLE
+    mcal_timer2.o(.text.timer2_init) refers to mcal_timer2.o(.text.TIMER2_DISABLE) for TIMER2_DISABLE
+    mcal_timer2.o(.text.timer2_init) refers to mcal_timer2.o(.text.set_timer2_mode_preload_prescale) for set_timer2_mode_preload_prescale
+    mcal_timer2.o(.text.timer2_init) refers to mcal_timer2.o(.text.timer2_handle_interrupts) for timer2_handle_interrupts
+    mcal_timer2.o(.text.timer2_init) refers to mcal_timer2.o(.text.Enable_timer2_interrupt) for Enable_timer2_interrupt
+    mcal_timer2.o(.text.timer2_init) refers to mcal_timer2.o(.text.TIMER2_GENERATE_UPDATE) for TIMER2_GENERATE_UPDATE
+    mcal_timer2.o(.text.timer2_init) refers to mcal_timer2.o(.text.TIMER2_ENABLE) for TIMER2_ENABLE
+    mcal_timer2.o(.ARM.exidx.text.timer2_init) refers to mcal_timer2.o(.text.timer2_init) for [Anonymous Symbol]
+    mcal_timer2.o(.ARM.exidx.text.TIMER2_DISABLE) refers to mcal_timer2.o(.text.TIMER2_DISABLE) for [Anonymous Symbol]
+    mcal_timer2.o(.text.set_timer2_mode_preload_prescale) refers to mcal_timer2.o(.bss.timer2_resolution) for timer2_resolution
+    mcal_timer2.o(.text.set_timer2_mode_preload_prescale) refers to mcal_timer2.o(.bss.timer2_max_count) for timer2_max_count
+    mcal_timer2.o(.text.set_timer2_mode_preload_prescale) refers to mcal_timer2.o(.data.prescaler_value) for prescaler_value
+    mcal_timer2.o(.text.set_timer2_mode_preload_prescale) refers to mcal_timer2.o(.bss.preload_value) for preload_value
+    mcal_timer2.o(.ARM.exidx.text.set_timer2_mode_preload_prescale) refers to mcal_timer2.o(.text.set_timer2_mode_preload_prescale) for [Anonymous Symbol]
+    mcal_timer2.o(.text.timer2_handle_interrupts) refers to mcal_timer2.o(.bss.TIM2_OF_InterruptHandler) for TIM2_OF_InterruptHandler
+    mcal_timer2.o(.ARM.exidx.text.timer2_handle_interrupts) refers to mcal_timer2.o(.text.timer2_handle_interrupts) for [Anonymous Symbol]
+    mcal_timer2.o(.text.Enable_timer2_interrupt) refers to mcal_internal_interrupts.o(.text.TIMER2_UPDATE_INTERRUPT_ENABLE) for TIMER2_UPDATE_INTERRUPT_ENABLE
+    mcal_timer2.o(.ARM.exidx.text.Enable_timer2_interrupt) refers to mcal_timer2.o(.text.Enable_timer2_interrupt) for [Anonymous Symbol]
+    mcal_timer2.o(.ARM.exidx.text.TIMER2_GENERATE_UPDATE) refers to mcal_timer2.o(.text.TIMER2_GENERATE_UPDATE) for [Anonymous Symbol]
+    mcal_timer2.o(.ARM.exidx.text.TIMER2_ENABLE) refers to mcal_timer2.o(.text.TIMER2_ENABLE) for [Anonymous Symbol]
+    mcal_timer2.o(.text.timer2_deinit) refers to mcal_timer2.o(.text.TIMER2_DISABLE) for TIMER2_DISABLE
+    mcal_timer2.o(.ARM.exidx.text.timer2_deinit) refers to mcal_timer2.o(.text.timer2_deinit) for [Anonymous Symbol]
+    mcal_timer2.o(.text.timer2_timeBase_write) refers to mcal_timer2.o(.bss.timer2_resolution) for timer2_resolution
+    mcal_timer2.o(.text.timer2_timeBase_write) refers to mcal_timer2.o(.bss.timer2_max_count) for timer2_max_count
+    mcal_timer2.o(.text.timer2_timeBase_write) refers to mcal_timer2.o(.data.prescaler_value) for prescaler_value
+    mcal_timer2.o(.text.timer2_timeBase_write) refers to mcal_timer2.o(.bss.preload_value) for preload_value
+    mcal_timer2.o(.ARM.exidx.text.timer2_timeBase_write) refers to mcal_timer2.o(.text.timer2_timeBase_write) for [Anonymous Symbol]
+    mcal_timer2.o(.text.timer2_delay) refers to mcal_timer2.o(.text.timer2_timeBase_write) for timer2_timeBase_write
+    mcal_timer2.o(.text.timer2_delay) refers to mcal_timer2.o(.bss.delay) for delay
+    mcal_timer2.o(.ARM.exidx.text.timer2_delay) refers to mcal_timer2.o(.text.timer2_delay) for [Anonymous Symbol]
+    mcal_timer2.o(.text.TIM2_IRQHandler) refers to mcal_internal_interrupts.o(.text.TIMER2_CLEAR_FLAG) for TIMER2_CLEAR_FLAG
+    mcal_timer2.o(.text.TIM2_IRQHandler) refers to mcal_timer2.o(.bss.delay) for delay
+    mcal_timer2.o(.text.TIM2_IRQHandler) refers to mcal_timer2.o(.bss.TIM2_OF_InterruptHandler) for TIM2_OF_InterruptHandler
+    mcal_timer2.o(.ARM.exidx.text.TIM2_IRQHandler) refers to mcal_timer2.o(.text.TIM2_IRQHandler) for [Anonymous Symbol]
+    mcal_timer3.o(.text.timer3_init) refers to mcal_rcc.o(.text.RCC_TIM3_CLK_ENABLE) for RCC_TIM3_CLK_ENABLE
+    mcal_timer3.o(.text.timer3_init) refers to mcal_timer3.o(.text.TIMER3_DISABLE) for TIMER3_DISABLE
+    mcal_timer3.o(.text.timer3_init) refers to mcal_timer3.o(.text.set_timer3_mode_preload_prescale) for set_timer3_mode_preload_prescale
+    mcal_timer3.o(.text.timer3_init) refers to mcal_timer3.o(.text.timer3_handle_interrupts) for timer3_handle_interrupts
+    mcal_timer3.o(.text.timer3_init) refers to mcal_timer3.o(.text.Enable_timer3_interrupt) for Enable_timer3_interrupt
+    mcal_timer3.o(.text.timer3_init) refers to mcal_timer3.o(.text.TIMER3_GENERATE_UPDATE) for TIMER3_GENERATE_UPDATE
+    mcal_timer3.o(.text.timer3_init) refers to mcal_timer3.o(.text.TIMER3_ENABLE) for TIMER3_ENABLE
+    mcal_timer3.o(.ARM.exidx.text.timer3_init) refers to mcal_timer3.o(.text.timer3_init) for [Anonymous Symbol]
+    mcal_timer3.o(.ARM.exidx.text.TIMER3_DISABLE) refers to mcal_timer3.o(.text.TIMER3_DISABLE) for [Anonymous Symbol]
+    mcal_timer3.o(.text.set_timer3_mode_preload_prescale) refers to mcal_timer3.o(.bss.timer3_resolution) for timer3_resolution
+    mcal_timer3.o(.text.set_timer3_mode_preload_prescale) refers to mcal_timer3.o(.bss.timer3_max_count) for timer3_max_count
+    mcal_timer3.o(.text.set_timer3_mode_preload_prescale) refers to mcal_timer3.o(.data.prescaler_value) for prescaler_value
+    mcal_timer3.o(.text.set_timer3_mode_preload_prescale) refers to mcal_timer3.o(.bss.preload_value) for preload_value
+    mcal_timer3.o(.ARM.exidx.text.set_timer3_mode_preload_prescale) refers to mcal_timer3.o(.text.set_timer3_mode_preload_prescale) for [Anonymous Symbol]
+    mcal_timer3.o(.text.timer3_handle_interrupts) refers to mcal_timer3.o(.bss.TIM3_OF_InterruptHandler) for TIM3_OF_InterruptHandler
+    mcal_timer3.o(.ARM.exidx.text.timer3_handle_interrupts) refers to mcal_timer3.o(.text.timer3_handle_interrupts) for [Anonymous Symbol]
+    mcal_timer3.o(.text.Enable_timer3_interrupt) refers to mcal_internal_interrupts.o(.text.TIMER3_UPDATE_INTERRUPT_ENABLE) for TIMER3_UPDATE_INTERRUPT_ENABLE
+    mcal_timer3.o(.ARM.exidx.text.Enable_timer3_interrupt) refers to mcal_timer3.o(.text.Enable_timer3_interrupt) for [Anonymous Symbol]
+    mcal_timer3.o(.ARM.exidx.text.TIMER3_GENERATE_UPDATE) refers to mcal_timer3.o(.text.TIMER3_GENERATE_UPDATE) for [Anonymous Symbol]
+    mcal_timer3.o(.ARM.exidx.text.TIMER3_ENABLE) refers to mcal_timer3.o(.text.TIMER3_ENABLE) for [Anonymous Symbol]
+    mcal_timer3.o(.text.timer3_deinit) refers to mcal_timer3.o(.text.TIMER3_DISABLE) for TIMER3_DISABLE
+    mcal_timer3.o(.ARM.exidx.text.timer3_deinit) refers to mcal_timer3.o(.text.timer3_deinit) for [Anonymous Symbol]
+    mcal_timer3.o(.text.timer3_timeBase_write) refers to mcal_timer3.o(.bss.timer3_resolution) for timer3_resolution
+    mcal_timer3.o(.text.timer3_timeBase_write) refers to mcal_timer3.o(.bss.timer3_max_count) for timer3_max_count
+    mcal_timer3.o(.text.timer3_timeBase_write) refers to mcal_timer3.o(.data.prescaler_value) for prescaler_value
+    mcal_timer3.o(.text.timer3_timeBase_write) refers to mcal_timer3.o(.bss.preload_value) for preload_value
+    mcal_timer3.o(.ARM.exidx.text.timer3_timeBase_write) refers to mcal_timer3.o(.text.timer3_timeBase_write) for [Anonymous Symbol]
+    mcal_timer3.o(.text.timer3_delay) refers to mcal_timer3.o(.text.timer3_timeBase_write) for timer3_timeBase_write
+    mcal_timer3.o(.text.timer3_delay) refers to mcal_timer3.o(.bss.delay) for delay
+    mcal_timer3.o(.ARM.exidx.text.timer3_delay) refers to mcal_timer3.o(.text.timer3_delay) for [Anonymous Symbol]
+    mcal_timer3.o(.text.TIM3_IRQHandler) refers to mcal_internal_interrupts.o(.text.TIMER3_CLEAR_FLAG) for TIMER3_CLEAR_FLAG
+    mcal_timer3.o(.text.TIM3_IRQHandler) refers to mcal_timer3.o(.bss.delay) for delay
+    mcal_timer3.o(.text.TIM3_IRQHandler) refers to mcal_timer3.o(.bss.TIM3_OF_InterruptHandler) for TIM3_OF_InterruptHandler
+    mcal_timer3.o(.ARM.exidx.text.TIM3_IRQHandler) refers to mcal_timer3.o(.text.TIM3_IRQHandler) for [Anonymous Symbol]
+    mcal_timer4.o(.text.timer4_init) refers to mcal_rcc.o(.text.RCC_TIM4_CLK_ENABLE) for RCC_TIM4_CLK_ENABLE
+    mcal_timer4.o(.text.timer4_init) refers to mcal_timer4.o(.text.TIMER4_DISABLE) for TIMER4_DISABLE
+    mcal_timer4.o(.text.timer4_init) refers to mcal_timer4.o(.text.set_timer4_mode_preload_prescale) for set_timer4_mode_preload_prescale
+    mcal_timer4.o(.text.timer4_init) refers to mcal_timer4.o(.text.timer4_handle_interrupts) for timer4_handle_interrupts
+    mcal_timer4.o(.text.timer4_init) refers to mcal_timer4.o(.text.Enable_timer4_interrupt) for Enable_timer4_interrupt
+    mcal_timer4.o(.text.timer4_init) refers to mcal_timer4.o(.text.TIMER4_GENERATE_UPDATE) for TIMER4_GENERATE_UPDATE
+    mcal_timer4.o(.text.timer4_init) refers to mcal_timer4.o(.text.TIMER4_ENABLE) for TIMER4_ENABLE
+    mcal_timer4.o(.ARM.exidx.text.timer4_init) refers to mcal_timer4.o(.text.timer4_init) for [Anonymous Symbol]
+    mcal_timer4.o(.ARM.exidx.text.TIMER4_DISABLE) refers to mcal_timer4.o(.text.TIMER4_DISABLE) for [Anonymous Symbol]
+    mcal_timer4.o(.text.set_timer4_mode_preload_prescale) refers to mcal_timer4.o(.bss.timer4_resolution) for timer4_resolution
+    mcal_timer4.o(.text.set_timer4_mode_preload_prescale) refers to mcal_timer4.o(.bss.timer4_max_count) for timer4_max_count
+    mcal_timer4.o(.text.set_timer4_mode_preload_prescale) refers to mcal_timer4.o(.data.prescaler_value) for prescaler_value
+    mcal_timer4.o(.text.set_timer4_mode_preload_prescale) refers to mcal_timer4.o(.bss.preload_value) for preload_value
+    mcal_timer4.o(.ARM.exidx.text.set_timer4_mode_preload_prescale) refers to mcal_timer4.o(.text.set_timer4_mode_preload_prescale) for [Anonymous Symbol]
+    mcal_timer4.o(.text.timer4_handle_interrupts) refers to mcal_timer4.o(.bss.TIM4_OF_InterruptHandler) for TIM4_OF_InterruptHandler
+    mcal_timer4.o(.ARM.exidx.text.timer4_handle_interrupts) refers to mcal_timer4.o(.text.timer4_handle_interrupts) for [Anonymous Symbol]
+    mcal_timer4.o(.text.Enable_timer4_interrupt) refers to mcal_internal_interrupts.o(.text.TIMER4_UPDATE_INTERRUPT_ENABLE) for TIMER4_UPDATE_INTERRUPT_ENABLE
+    mcal_timer4.o(.ARM.exidx.text.Enable_timer4_interrupt) refers to mcal_timer4.o(.text.Enable_timer4_interrupt) for [Anonymous Symbol]
+    mcal_timer4.o(.ARM.exidx.text.TIMER4_GENERATE_UPDATE) refers to mcal_timer4.o(.text.TIMER4_GENERATE_UPDATE) for [Anonymous Symbol]
+    mcal_timer4.o(.ARM.exidx.text.TIMER4_ENABLE) refers to mcal_timer4.o(.text.TIMER4_ENABLE) for [Anonymous Symbol]
+    mcal_timer4.o(.text.timer4_deinit) refers to mcal_timer4.o(.text.TIMER4_DISABLE) for TIMER4_DISABLE
+    mcal_timer4.o(.ARM.exidx.text.timer4_deinit) refers to mcal_timer4.o(.text.timer4_deinit) for [Anonymous Symbol]
+    mcal_timer4.o(.text.timer4_timeBase_write) refers to mcal_timer4.o(.bss.timer4_resolution) for timer4_resolution
+    mcal_timer4.o(.text.timer4_timeBase_write) refers to mcal_timer4.o(.bss.timer4_max_count) for timer4_max_count
+    mcal_timer4.o(.text.timer4_timeBase_write) refers to mcal_timer4.o(.data.prescaler_value) for prescaler_value
+    mcal_timer4.o(.text.timer4_timeBase_write) refers to mcal_timer4.o(.bss.preload_value) for preload_value
+    mcal_timer4.o(.ARM.exidx.text.timer4_timeBase_write) refers to mcal_timer4.o(.text.timer4_timeBase_write) for [Anonymous Symbol]
+    mcal_timer4.o(.text.timer4_delay) refers to mcal_timer4.o(.text.timer4_timeBase_write) for timer4_timeBase_write
+    mcal_timer4.o(.text.timer4_delay) refers to mcal_timer4.o(.bss.delay) for delay
+    mcal_timer4.o(.ARM.exidx.text.timer4_delay) refers to mcal_timer4.o(.text.timer4_delay) for [Anonymous Symbol]
+    mcal_timer4.o(.text.TIM4_IRQHandler) refers to mcal_internal_interrupts.o(.text.TIMER4_CLEAR_FLAG) for TIMER4_CLEAR_FLAG
+    mcal_timer4.o(.text.TIM4_IRQHandler) refers to mcal_timer4.o(.bss.delay) for delay
+    mcal_timer4.o(.text.TIM4_IRQHandler) refers to mcal_timer4.o(.bss.TIM4_OF_InterruptHandler) for TIM4_OF_InterruptHandler
+    mcal_timer4.o(.ARM.exidx.text.TIM4_IRQHandler) refers to mcal_timer4.o(.text.TIM4_IRQHandler) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_init) refers to mcal_rcc.o(.text.RCC_TIM1_CLK_ENABLE) for RCC_TIM1_CLK_ENABLE
+    mcal_timer1.o(.text.timer1_init) refers to mcal_timer1.o(.text.TIMER1_DISABLE) for TIMER1_DISABLE
+    mcal_timer1.o(.text.timer1_init) refers to mcal_timer1.o(.text.set_timer1_mode_preload_prescale) for set_timer1_mode_preload_prescale
+    mcal_timer1.o(.text.timer1_init) refers to mcal_timer1.o(.text.timer1_handle_interrupts) for timer1_handle_interrupts
+    mcal_timer1.o(.text.timer1_init) refers to mcal_timer1.o(.text.Enable_timer1_interrupt) for Enable_timer1_interrupt
+    mcal_timer1.o(.text.timer1_init) refers to mcal_timer1.o(.text.TIMER1_GENERATE_UPDATE) for TIMER1_GENERATE_UPDATE
+    mcal_timer1.o(.text.timer1_init) refers to mcal_timer1.o(.text.TIMER1_ENABLE) for TIMER1_ENABLE
+    mcal_timer1.o(.ARM.exidx.text.timer1_init) refers to mcal_timer1.o(.text.timer1_init) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_DISABLE) refers to mcal_timer1.o(.text.TIMER1_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.text.set_timer1_mode_preload_prescale) refers to mcal_timer1.o(.bss.timer1_resolution) for timer1_resolution
+    mcal_timer1.o(.text.set_timer1_mode_preload_prescale) refers to mcal_timer1.o(.bss.timer1_max_count) for timer1_max_count
+    mcal_timer1.o(.text.set_timer1_mode_preload_prescale) refers to mcal_timer1.o(.data.prescaler_value) for prescaler_value
+    mcal_timer1.o(.text.set_timer1_mode_preload_prescale) refers to mcal_timer1.o(.bss.preload_value) for preload_value
+    mcal_timer1.o(.ARM.exidx.text.set_timer1_mode_preload_prescale) refers to mcal_timer1.o(.text.set_timer1_mode_preload_prescale) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_handle_interrupts) refers to mcal_timer1.o(.bss.TIM1_OF_InterruptHandler) for TIM1_OF_InterruptHandler
+    mcal_timer1.o(.ARM.exidx.text.timer1_handle_interrupts) refers to mcal_timer1.o(.text.timer1_handle_interrupts) for [Anonymous Symbol]
+    mcal_timer1.o(.text.Enable_timer1_interrupt) refers to mcal_internal_interrupts.o(.text.TIMER1_UPDATE_INTERRUPT_ENABLE) for TIMER1_UPDATE_INTERRUPT_ENABLE
+    mcal_timer1.o(.ARM.exidx.text.Enable_timer1_interrupt) refers to mcal_timer1.o(.text.Enable_timer1_interrupt) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_GENERATE_UPDATE) refers to mcal_timer1.o(.text.TIMER1_GENERATE_UPDATE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_ENABLE) refers to mcal_timer1.o(.text.TIMER1_ENABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_deinit) refers to mcal_timer1.o(.text.TIMER1_DISABLE) for TIMER1_DISABLE
+    mcal_timer1.o(.ARM.exidx.text.timer1_deinit) refers to mcal_timer1.o(.text.timer1_deinit) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_timeBase_write) refers to mcal_timer1.o(.bss.timer1_resolution) for timer1_resolution
+    mcal_timer1.o(.text.timer1_timeBase_write) refers to mcal_timer1.o(.bss.timer1_max_count) for timer1_max_count
+    mcal_timer1.o(.text.timer1_timeBase_write) refers to mcal_timer1.o(.data.prescaler_value) for prescaler_value
+    mcal_timer1.o(.text.timer1_timeBase_write) refers to mcal_timer1.o(.bss.preload_value) for preload_value
+    mcal_timer1.o(.ARM.exidx.text.timer1_timeBase_write) refers to mcal_timer1.o(.text.timer1_timeBase_write) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_delay) refers to mcal_timer1.o(.text.timer1_timeBase_write) for timer1_timeBase_write
+    mcal_timer1.o(.text.timer1_delay) refers to mcal_timer1.o(.bss.delay) for delay
+    mcal_timer1.o(.ARM.exidx.text.timer1_delay) refers to mcal_timer1.o(.text.timer1_delay) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_millis) refers to mcal_timer1.o(.bss.timer1_millis_counter) for timer1_millis_counter
+    mcal_timer1.o(.text.timer1_millis) refers to mcal_timers.o(.data.tim1) for tim1
+    mcal_timer1.o(.text.timer1_millis) refers to mcal_timer1.o(.text.timer1_isr) for timer1_isr
+    mcal_timer1.o(.text.timer1_millis) refers to mcal_timer1.o(.text.timer1_init) for timer1_init
+    mcal_timer1.o(.text.timer1_millis) refers to mcal_timer1.o(.bss._miLLis__) for _miLLis__
+    mcal_timer1.o(.ARM.exidx.text.timer1_millis) refers to mcal_timer1.o(.text.timer1_millis) for [Anonymous Symbol]
+    mcal_timer1.o(.text.timer1_isr) refers to mcal_timer1.o(.bss._miLLis__) for _miLLis__
+    mcal_timer1.o(.ARM.exidx.text.timer1_isr) refers to mcal_timer1.o(.text.timer1_isr) for [Anonymous Symbol]
+    mcal_timer1.o(.text.TIM1_UP_IRQHandler) refers to mcal_internal_interrupts.o(.text.TIMER1_CLEAR_FLAG) for TIMER1_CLEAR_FLAG
+    mcal_timer1.o(.text.TIM1_UP_IRQHandler) refers to mcal_timer1.o(.bss.delay) for delay
+    mcal_timer1.o(.text.TIM1_UP_IRQHandler) refers to mcal_timer1.o(.bss.TIM1_OF_InterruptHandler) for TIM1_OF_InterruptHandler
+    mcal_timer1.o(.ARM.exidx.text.TIM1_UP_IRQHandler) refers to mcal_timer1.o(.text.TIM1_UP_IRQHandler) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_UEV_ENABLE) refers to mcal_timer1.o(.text.TIMER1_UEV_ENABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_UEV_DISABLE) refers to mcal_timer1.o(.text.TIMER1_UEV_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_URS_ALL) refers to mcal_timer1.o(.text.TIMER1_URS_ALL) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_URS_OVERFLOW) refers to mcal_timer1.o(.text.TIMER1_URS_OVERFLOW) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_SET_UP_COUNTER) refers to mcal_timer1.o(.text.TIMER1_SET_UP_COUNTER) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_SET_DOWN_COUNTER) refers to mcal_timer1.o(.text.TIMER1_SET_DOWN_COUNTER) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_AUTO_RELOAD_ENABLE) refers to mcal_timer1.o(.text.TIMER1_AUTO_RELOAD_ENABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_AUTO_RELOAD_DISABLE) refers to mcal_timer1.o(.text.TIMER1_AUTO_RELOAD_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_MODE_ENABLE) refers to mcal_timer1.o(.text.TIMER1_COUNTER_MODE_ENABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_TIMER_MODE_ENABLE) refers to mcal_timer1.o(.text.TIMER1_TIMER_MODE_ENABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_SELECT_EDGE_ALIGNED_MODE) refers to mcal_timer1.o(.text.TIMER1_SELECT_EDGE_ALIGNED_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_SELECT_OUTPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH1_SELECT_OUTPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CCP_CH1_SELECT_INPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CCP_CH1_SELECT_INPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH1_RISING_EDGE) refers to mcal_timer1.o(.text.TIMER1_COUNTER_CH1_RISING_EDGE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_CCP_DISABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH1_CCP_DISABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_CCP_ENABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH1_CCP_ENABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_CCP_DISABLE) refers to mcal_timer1.o(.text.TIMER1_CH1_CCP_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_ENABLE_OUTPUT) refers to mcal_timer1.o(.text.TIMER1_CH1_ENABLE_OUTPUT) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_SELECT_PWM_MODE) refers to mcal_timer1.o(.text.TIMER1_CH1_SELECT_PWM_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_SELECT_OUTPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH2_SELECT_OUTPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_SELECT_INPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH2_SELECT_INPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH2_RISING_EDGE) refers to mcal_timer1.o(.text.TIMER1_COUNTER_CH2_RISING_EDGE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_CCP_DISABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH2_CCP_DISABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_CCP_ENABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH2_CCP_ENABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_CCP_DISABLE) refers to mcal_timer1.o(.text.TIMER1_CH2_CCP_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_ENABLE_OUTPUT) refers to mcal_timer1.o(.text.TIMER1_CH2_ENABLE_OUTPUT) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_SELECT_PWM_MODE) refers to mcal_timer1.o(.text.TIMER1_CH2_SELECT_PWM_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_SELECT_OUTPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH3_SELECT_OUTPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_SELECT_INPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH3_SELECT_INPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH3_RISING_EDGE) refers to mcal_timer1.o(.text.TIMER1_COUNTER_CH3_RISING_EDGE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_CCP_DISABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH3_CCP_DISABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_CCP_ENABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH3_CCP_ENABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_CCP_DISABLE) refers to mcal_timer1.o(.text.TIMER1_CH3_CCP_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_ENABLE_OUTPUT) refers to mcal_timer1.o(.text.TIMER1_CH3_ENABLE_OUTPUT) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_SELECT_PWM_MODE) refers to mcal_timer1.o(.text.TIMER1_CH3_SELECT_PWM_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_SELECT_OUTPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH4_SELECT_OUTPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_SELECT_INPUT_MODE) refers to mcal_timer1.o(.text.TIMER1_CH4_SELECT_INPUT_MODE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH4_RISING_EDGE) refers to mcal_timer1.o(.text.TIMER1_COUNTER_CH4_RISING_EDGE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_CCP_DISABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH4_CCP_DISABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_CCP_ENABLE_PRELOAD) refers to mcal_timer1.o(.text.TIMER1_CH4_CCP_ENABLE_PRELOAD) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_CCP_DISABLE) refers to mcal_timer1.o(.text.TIMER1_CH4_CCP_DISABLE) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_ENABLE_OUTPUT) refers to mcal_timer1.o(.text.TIMER1_CH4_ENABLE_OUTPUT) for [Anonymous Symbol]
+    mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_SELECT_PWM_MODE) refers to mcal_timer1.o(.text.TIMER1_CH4_SELECT_PWM_MODE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_UPDATE_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_UPDATE_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC1_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC1_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC2_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC2_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC3_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC3_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC4_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC4_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_UPDATE_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_UPDATE_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC1_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC1_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC2_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC2_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC3_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC3_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC4_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER1_CC4_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER1_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP1_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER1_CCP1_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP2_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER1_CCP2_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP3_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER1_CCP3_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP4_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER1_CCP4_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_UPDATE_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_UPDATE_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC1_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC1_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC2_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC2_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC3_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC3_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC4_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC4_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_UPDATE_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_UPDATE_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC1_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC1_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC2_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC2_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC3_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC3_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC4_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER2_CC4_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER2_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP1_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER2_CCP1_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP2_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER2_CCP2_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP3_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER2_CCP3_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP4_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER2_CCP4_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_UPDATE_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_UPDATE_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC1_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC1_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC2_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC2_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC3_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC3_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC4_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC4_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_UPDATE_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_UPDATE_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC1_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC1_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC2_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC2_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC3_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC3_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC4_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER3_CC4_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER3_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP1_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER3_CCP1_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP2_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER3_CCP2_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP3_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER3_CCP3_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP4_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER3_CCP4_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_UPDATE_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_UPDATE_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC1_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC1_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC2_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC2_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC3_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC3_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC4_INTERRUPT_ENABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC4_INTERRUPT_ENABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_UPDATE_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_UPDATE_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC1_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC1_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC2_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC2_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC3_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC3_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC4_INTERRUPT_DISABLE) refers to mcal_internal_interrupts.o(.text.TIMER4_CC4_INTERRUPT_DISABLE) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER4_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP1_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER4_CCP1_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP2_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER4_CCP2_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP3_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER4_CCP3_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP4_CLEAR_FLAG) refers to mcal_internal_interrupts.o(.text.TIMER4_CCP4_CLEAR_FLAG) for [Anonymous Symbol]
+    mcal_uart.o(.text.USART_Init) refers to mcal_uart.o(.text.bauderateCalculator) for bauderateCalculator
+    mcal_uart.o(.text.USART_Init) refers to mcal_gpio.o(.text.gpio_pin_init) for gpio_pin_init
+    mcal_uart.o(.ARM.exidx.text.USART_Init) refers to mcal_uart.o(.text.USART_Init) for [Anonymous Symbol]
+    mcal_uart.o(.text.bauderateCalculator) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    mcal_uart.o(.text.bauderateCalculator) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    mcal_uart.o(.text.bauderateCalculator) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    mcal_uart.o(.text.bauderateCalculator) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    mcal_uart.o(.text.bauderateCalculator) refers to dfixu.o(x$fpl$dfixu) for __aeabi_d2uiz
+    mcal_uart.o(.text.bauderateCalculator) refers to dcmp.o(x$fpl$fcmp) for __aeabi_dcmple
+    mcal_uart.o(.ARM.exidx.text.bauderateCalculator) refers to mcal_uart.o(.text.bauderateCalculator) for [Anonymous Symbol]
+    mcal_uart.o(.ARM.exidx.text.USART_RX) refers to mcal_uart.o(.text.USART_RX) for [Anonymous Symbol]
+    mcal_uart.o(.ARM.exidx.text.USART_TX) refers to mcal_uart.o(.text.USART_TX) for [Anonymous Symbol]
+    hal_dc_motor.o(.text.Dc_motor_init) refers to mcal_gpio.o(.text.gpio_pin_init) for gpio_pin_init
+    hal_dc_motor.o(.text.Dc_motor_init) refers to hal_dc_motor.o(.text.DC_pwm_pin_init) for DC_pwm_pin_init
+    hal_dc_motor.o(.ARM.exidx.text.Dc_motor_init) refers to hal_dc_motor.o(.text.Dc_motor_init) for [Anonymous Symbol]
+    hal_dc_motor.o(.ARM.exidx.text.DC_pwm_pin_init) refers to hal_dc_motor.o(.text.DC_pwm_pin_init) for [Anonymous Symbol]
+    hal_dc_motor.o(.text.Dc_motor_move) refers to dflt_clz.o(x$fpl$dfltu) for __aeabi_ui2d
+    hal_dc_motor.o(.text.Dc_motor_move) refers to m4_softwares.o(.text.map_to_range) for map_to_range
+    hal_dc_motor.o(.text.Dc_motor_move) refers to dfixu.o(x$fpl$dfixu) for __aeabi_d2uiz
+    hal_dc_motor.o(.text.Dc_motor_move) refers to hal_dc_motor.o(.text.DC_move_forward) for DC_move_forward
+    hal_dc_motor.o(.text.Dc_motor_move) refers to hal_dc_motor.o(.text.DC_set_speed) for DC_set_speed
+    hal_dc_motor.o(.text.Dc_motor_move) refers to hal_dc_motor.o(.text.DC_move_Backward) for DC_move_Backward
+    hal_dc_motor.o(.text.Dc_motor_move) refers to hal_dc_motor.o(.text.Dc_motor_stop) for Dc_motor_stop
+    hal_dc_motor.o(.ARM.exidx.text.Dc_motor_move) refers to hal_dc_motor.o(.text.Dc_motor_move) for [Anonymous Symbol]
+    hal_dc_motor.o(.text.DC_move_forward) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    hal_dc_motor.o(.ARM.exidx.text.DC_move_forward) refers to hal_dc_motor.o(.text.DC_move_forward) for [Anonymous Symbol]
+    hal_dc_motor.o(.ARM.exidx.text.DC_set_speed) refers to hal_dc_motor.o(.text.DC_set_speed) for [Anonymous Symbol]
+    hal_dc_motor.o(.text.DC_move_Backward) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    hal_dc_motor.o(.ARM.exidx.text.DC_move_Backward) refers to hal_dc_motor.o(.text.DC_move_Backward) for [Anonymous Symbol]
+    hal_dc_motor.o(.text.Dc_motor_stop) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    hal_dc_motor.o(.ARM.exidx.text.Dc_motor_stop) refers to hal_dc_motor.o(.text.Dc_motor_stop) for [Anonymous Symbol]
+    m4_softwares.o(.text.map_to_range) refers to dcmp.o(x$fpl$fcmp) for __aeabi_dcmplt
+    m4_softwares.o(.text.map_to_range) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
+    m4_softwares.o(.text.map_to_range) refers to ddiv.o(x$fpl$ddiv) for __aeabi_ddiv
+    m4_softwares.o(.text.map_to_range) refers to dmul.o(x$fpl$dmul) for __aeabi_dmul
+    m4_softwares.o(.text.map_to_range) refers to daddsub_clz.o(x$fpl$dadd) for __aeabi_dadd
+    m4_softwares.o(.ARM.exidx.text.map_to_range) refers to m4_softwares.o(.text.map_to_range) for [Anonymous Symbol]
+    mcal_spi1.o(.text.spi1_init) refers to mcal_rcc.o(.text.RCC_SPI1_CLK_ENABLE) for RCC_SPI1_CLK_ENABLE
+    mcal_spi1.o(.text.spi1_init) refers to mcal_spi1.o(.text.spi1_pins_init) for spi1_pins_init
+    mcal_spi1.o(.text.spi1_init) refers to mcal_spi1.o(.text.spi1_polarity_phase) for spi1_polarity_phase
+    mcal_spi1.o(.text.spi1_init) refers to mcal_spi1.o(.text.spi1_data_frame) for spi1_data_frame
+    mcal_spi1.o(.text.spi1_init) refers to mcal_spi1.o(.text.spi1_baudrate) for spi1_baudrate
+    mcal_spi1.o(.text.spi1_init) refers to mcal_spi1.o(.text.SPI1_ENABLE) for SPI1_ENABLE
+    mcal_spi1.o(.ARM.exidx.text.spi1_init) refers to mcal_spi1.o(.text.spi1_init) for [Anonymous Symbol]
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_rcc.o(.text.RCC_SPI1_CLK_ENABLE) for RCC_SPI1_CLK_ENABLE
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.data.SPI1_SCK) for SPI1_SCK
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.data.SPI1_MOSI) for SPI1_MOSI
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.data.SPI1_MISO) for SPI1_MISO
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_gpio.o(.text.gpio_pin_init) for gpio_pin_init
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.text.SPI1_ENABLE_SSM) for SPI1_ENABLE_SSM
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.text.SPI1_NSS_HIGH) for SPI1_NSS_HIGH
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.text.SPI1_IS_MASTER) for SPI1_IS_MASTER
+    mcal_spi1.o(.text.spi1_pins_init) refers to mcal_spi1.o(.text.SPI1_IS_SLAVE) for SPI1_IS_SLAVE
+    mcal_spi1.o(.ARM.exidx.text.spi1_pins_init) refers to mcal_spi1.o(.text.spi1_pins_init) for [Anonymous Symbol]
+    mcal_spi1.o(.text.spi1_polarity_phase) refers to mcal_spi1.o(.text.SPI1_CPOL_HIGH) for SPI1_CPOL_HIGH
+    mcal_spi1.o(.text.spi1_polarity_phase) refers to mcal_spi1.o(.text.SPI1_CPOL_LOW) for SPI1_CPOL_LOW
+    mcal_spi1.o(.text.spi1_polarity_phase) refers to mcal_spi1.o(.text.SPI1_CPHA_FIRST) for SPI1_CPHA_FIRST
+    mcal_spi1.o(.text.spi1_polarity_phase) refers to mcal_spi1.o(.text.SPI1_CPHA_SECOND) for SPI1_CPHA_SECOND
+    mcal_spi1.o(.ARM.exidx.text.spi1_polarity_phase) refers to mcal_spi1.o(.text.spi1_polarity_phase) for [Anonymous Symbol]
+    mcal_spi1.o(.text.spi1_data_frame) refers to mcal_spi1.o(.text.SPI1_EIGHT_BIT) for SPI1_EIGHT_BIT
+    mcal_spi1.o(.text.spi1_data_frame) refers to mcal_spi1.o(.text.SPI1_SIXTEEN_BIT) for SPI1_SIXTEEN_BIT
+    mcal_spi1.o(.ARM.exidx.text.spi1_data_frame) refers to mcal_spi1.o(.text.spi1_data_frame) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.spi1_baudrate) refers to mcal_spi1.o(.text.spi1_baudrate) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_ENABLE) refers to mcal_spi1.o(.text.SPI1_ENABLE) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.spi1_transmit_8) refers to mcal_spi1.o(.text.spi1_transmit_8) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.spi1_transmit_16) refers to mcal_spi1.o(.text.spi1_transmit_16) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.spi1_recieve_8) refers to mcal_spi1.o(.text.spi1_recieve_8) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.spi1_recieve_16) refers to mcal_spi1.o(.text.spi1_recieve_16) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_ENABLE_SSM) refers to mcal_spi1.o(.text.SPI1_ENABLE_SSM) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_NSS_HIGH) refers to mcal_spi1.o(.text.SPI1_NSS_HIGH) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_IS_MASTER) refers to mcal_spi1.o(.text.SPI1_IS_MASTER) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_IS_SLAVE) refers to mcal_spi1.o(.text.SPI1_IS_SLAVE) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_CPOL_HIGH) refers to mcal_spi1.o(.text.SPI1_CPOL_HIGH) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_CPOL_LOW) refers to mcal_spi1.o(.text.SPI1_CPOL_LOW) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_CPHA_FIRST) refers to mcal_spi1.o(.text.SPI1_CPHA_FIRST) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_CPHA_SECOND) refers to mcal_spi1.o(.text.SPI1_CPHA_SECOND) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_EIGHT_BIT) refers to mcal_spi1.o(.text.SPI1_EIGHT_BIT) for [Anonymous Symbol]
+    mcal_spi1.o(.ARM.exidx.text.SPI1_SIXTEEN_BIT) refers to mcal_spi1.o(.text.SPI1_SIXTEEN_BIT) for [Anonymous Symbol]
+    mcal_spi2.o(.text.spi2_init) refers to mcal_rcc.o(.text.RCC_SPI2_CLK_ENABLE) for RCC_SPI2_CLK_ENABLE
+    mcal_spi2.o(.text.spi2_init) refers to mcal_spi2.o(.text.spi2_pins_init) for spi2_pins_init
+    mcal_spi2.o(.text.spi2_init) refers to mcal_spi2.o(.text.spi2_polarity_phase) for spi2_polarity_phase
+    mcal_spi2.o(.text.spi2_init) refers to mcal_spi2.o(.text.spi2_data_frame) for spi2_data_frame
+    mcal_spi2.o(.text.spi2_init) refers to mcal_spi2.o(.text.spi2_baudrate) for spi2_baudrate
+    mcal_spi2.o(.text.spi2_init) refers to mcal_spi2.o(.text.SPI2_ENABLE) for SPI2_ENABLE
+    mcal_spi2.o(.ARM.exidx.text.spi2_init) refers to mcal_spi2.o(.text.spi2_init) for [Anonymous Symbol]
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_rcc.o(.text.RCC_SPI2_CLK_ENABLE) for RCC_SPI2_CLK_ENABLE
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.data.SPI2_SCK) for SPI2_SCK
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.data.SPI2_MOSI) for SPI2_MOSI
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.data.SPI2_MISO) for SPI2_MISO
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_gpio.o(.text.gpio_pin_init) for gpio_pin_init
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.text.SPI2_ENABLE_SSM) for SPI2_ENABLE_SSM
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.text.SPI2_NSS_HIGH) for SPI2_NSS_HIGH
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.text.SPI2_IS_MASTER) for SPI2_IS_MASTER
+    mcal_spi2.o(.text.spi2_pins_init) refers to mcal_spi2.o(.text.SPI2_IS_SLAVE) for SPI2_IS_SLAVE
+    mcal_spi2.o(.ARM.exidx.text.spi2_pins_init) refers to mcal_spi2.o(.text.spi2_pins_init) for [Anonymous Symbol]
+    mcal_spi2.o(.text.spi2_polarity_phase) refers to mcal_spi2.o(.text.SPI2_CPOL_HIGH) for SPI2_CPOL_HIGH
+    mcal_spi2.o(.text.spi2_polarity_phase) refers to mcal_spi2.o(.text.SPI2_CPOL_LOW) for SPI2_CPOL_LOW
+    mcal_spi2.o(.text.spi2_polarity_phase) refers to mcal_spi2.o(.text.SPI2_CPHA_FIRST) for SPI2_CPHA_FIRST
+    mcal_spi2.o(.text.spi2_polarity_phase) refers to mcal_spi2.o(.text.SPI2_CPHA_SECOND) for SPI2_CPHA_SECOND
+    mcal_spi2.o(.ARM.exidx.text.spi2_polarity_phase) refers to mcal_spi2.o(.text.spi2_polarity_phase) for [Anonymous Symbol]
+    mcal_spi2.o(.text.spi2_data_frame) refers to mcal_spi2.o(.text.SPI2_EIGHT_BIT) for SPI2_EIGHT_BIT
+    mcal_spi2.o(.text.spi2_data_frame) refers to mcal_spi2.o(.text.SPI2_SIXTEEN_BIT) for SPI2_SIXTEEN_BIT
+    mcal_spi2.o(.ARM.exidx.text.spi2_data_frame) refers to mcal_spi2.o(.text.spi2_data_frame) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.spi2_baudrate) refers to mcal_spi2.o(.text.spi2_baudrate) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_ENABLE) refers to mcal_spi2.o(.text.SPI2_ENABLE) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.spi2_transmit_8) refers to mcal_spi2.o(.text.spi2_transmit_8) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.spi2_transmit_16) refers to mcal_spi2.o(.text.spi2_transmit_16) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.spi2_recieve_8) refers to mcal_spi2.o(.text.spi2_recieve_8) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.spi2_recieve_16) refers to mcal_spi2.o(.text.spi2_recieve_16) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_ENABLE_SSM) refers to mcal_spi2.o(.text.SPI2_ENABLE_SSM) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_NSS_HIGH) refers to mcal_spi2.o(.text.SPI2_NSS_HIGH) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_IS_MASTER) refers to mcal_spi2.o(.text.SPI2_IS_MASTER) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_IS_SLAVE) refers to mcal_spi2.o(.text.SPI2_IS_SLAVE) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_CPOL_HIGH) refers to mcal_spi2.o(.text.SPI2_CPOL_HIGH) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_CPOL_LOW) refers to mcal_spi2.o(.text.SPI2_CPOL_LOW) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_CPHA_FIRST) refers to mcal_spi2.o(.text.SPI2_CPHA_FIRST) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_CPHA_SECOND) refers to mcal_spi2.o(.text.SPI2_CPHA_SECOND) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_EIGHT_BIT) refers to mcal_spi2.o(.text.SPI2_EIGHT_BIT) for [Anonymous Symbol]
+    mcal_spi2.o(.ARM.exidx.text.SPI2_SIXTEEN_BIT) refers to mcal_spi2.o(.text.SPI2_SIXTEEN_BIT) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_pins_init) for NRF24L01_pins_init
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_CE_disable) for NRF24L01_CE_disable
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_reset) for NRF24L01_reset
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_write_reg) for NRF24L01_write_reg
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_PA_DR_init) for NRF24L01_PA_DR_init
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_set_mode) for NRF24L01_set_mode
+    nrf24l01.o(.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_CE_enable) for NRF24L01_CE_enable
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_init) refers to nrf24l01.o(.text.NRF24L01_init) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_pins_init) refers to mcal_spi1.o(.text.spi1_init) for spi1_init
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_pins_init) refers to nrf24l01.o(.text.NRF24L01_pins_init) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_CE_disable) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_CE_disable) refers to nrf24l01.o(.text.NRF24L01_CE_disable) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_CSN_unselect) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_CSN_unselect) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_reset) refers to nrf24l01.o(.text.NRF24L01_write_reg) for NRF24L01_write_reg
+    nrf24l01.o(.text.NRF24L01_reset) refers to nrf24l01.o(.text.NRF24L01_write_reg_multi) for NRF24L01_write_reg_multi
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_reset) refers to nrf24l01.o(.text.NRF24L01_reset) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_write_reg) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for NRF24L01_CSN_select
+    nrf24l01.o(.text.NRF24L01_write_reg) refers to mcal_spi1.o(.text.spi1_transmit_8) for spi1_transmit_8
+    nrf24l01.o(.text.NRF24L01_write_reg) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_write_reg) refers to nrf24l01.o(.text.NRF24L01_write_reg) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_PA_DR_init) refers to nrf24l01.o(.text.NRF24L01_write_reg) for NRF24L01_write_reg
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_PA_DR_init) refers to nrf24l01.o(.text.NRF24L01_PA_DR_init) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_set_mode) refers to nrf24l01.o(.text.NRF24L01_reset) for NRF24L01_reset
+    nrf24l01.o(.text.NRF24L01_set_mode) refers to nrf24l01.o(.text.NRF24L01_write_reg) for NRF24L01_write_reg
+    nrf24l01.o(.text.NRF24L01_set_mode) refers to nrf24l01.o(.text.NRF24L01_write_reg_multi) for NRF24L01_write_reg_multi
+    nrf24l01.o(.text.NRF24L01_set_mode) refers to nrf24l01.o(.bss.config) for config
+    nrf24l01.o(.text.NRF24L01_set_mode) refers to nrf24l01.o(.text.NRF24L01_read_reg) for NRF24L01_read_reg
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_set_mode) refers to nrf24l01.o(.text.NRF24L01_set_mode) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_CE_enable) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_CE_enable) refers to nrf24l01.o(.text.NRF24L01_CE_enable) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_transmit) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for NRF24L01_CSN_select
+    nrf24l01.o(.text.NRF24L01_transmit) refers to mcal_spi1.o(.text.spi1_transmit_8) for spi1_transmit_8
+    nrf24l01.o(.text.NRF24L01_transmit) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.text.NRF24L01_transmit) refers to nrf24l01.o(.bss.fifostatus) for fifostatus
+    nrf24l01.o(.text.NRF24L01_transmit) refers to nrf24l01.o(.text.NRF24L01_read_reg) for NRF24L01_read_reg
+    nrf24l01.o(.text.NRF24L01_transmit) refers to nrf24l01.o(.text.NRF24L01_sendcmd) for NRF24L01_sendcmd
+    nrf24l01.o(.text.NRF24L01_transmit) refers to nrf24l01.o(.text.NRF24L01_reset) for NRF24L01_reset
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_transmit) refers to nrf24l01.o(.text.NRF24L01_transmit) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_CSN_select) refers to mcal_gpio.o(.text.gpio_pin_write) for gpio_pin_write
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_CSN_select) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_read_reg) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for NRF24L01_CSN_select
+    nrf24l01.o(.text.NRF24L01_read_reg) refers to mcal_spi1.o(.text.spi1_transmit_8) for spi1_transmit_8
+    nrf24l01.o(.text.NRF24L01_read_reg) refers to mcal_spi1.o(.text.spi1_recieve_8) for spi1_recieve_8
+    nrf24l01.o(.text.NRF24L01_read_reg) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_read_reg) refers to nrf24l01.o(.text.NRF24L01_read_reg) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_sendcmd) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for NRF24L01_CSN_select
+    nrf24l01.o(.text.NRF24L01_sendcmd) refers to mcal_spi1.o(.text.spi1_transmit_8) for spi1_transmit_8
+    nrf24l01.o(.text.NRF24L01_sendcmd) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_sendcmd) refers to nrf24l01.o(.text.NRF24L01_sendcmd) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_is_data_available) refers to nrf24l01.o(.bss.status) for status
+    nrf24l01.o(.text.NRF24L01_is_data_available) refers to nrf24l01.o(.text.NRF24L01_read_reg) for NRF24L01_read_reg
+    nrf24l01.o(.text.NRF24L01_is_data_available) refers to nrf24l01.o(.text.NRF24L01_write_reg) for NRF24L01_write_reg
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_is_data_available) refers to nrf24l01.o(.text.NRF24L01_is_data_available) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_recieve) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for NRF24L01_CSN_select
+    nrf24l01.o(.text.NRF24L01_recieve) refers to mcal_spi1.o(.text.spi1_transmit_8) for spi1_transmit_8
+    nrf24l01.o(.text.NRF24L01_recieve) refers to mcal_spi1.o(.text.spi1_recieve_8) for spi1_recieve_8
+    nrf24l01.o(.text.NRF24L01_recieve) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.text.NRF24L01_recieve) refers to nrf24l01.o(.text.NRF24L01_sendcmd) for NRF24L01_sendcmd
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_recieve) refers to nrf24l01.o(.text.NRF24L01_recieve) for [Anonymous Symbol]
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_read_all_reg) refers to nrf24l01.o(.text.NRF24L01_read_all_reg) for [Anonymous Symbol]
+    nrf24l01.o(.text.NRF24L01_write_reg_multi) refers to nrf24l01.o(.text.NRF24L01_CSN_select) for NRF24L01_CSN_select
+    nrf24l01.o(.text.NRF24L01_write_reg_multi) refers to mcal_spi1.o(.text.spi1_transmit_8) for spi1_transmit_8
+    nrf24l01.o(.text.NRF24L01_write_reg_multi) refers to nrf24l01.o(.text.NRF24L01_CSN_unselect) for NRF24L01_CSN_unselect
+    nrf24l01.o(.ARM.exidx.text.NRF24L01_write_reg_multi) refers to nrf24l01.o(.text.NRF24L01_write_reg_multi) for [Anonymous Symbol]
+    startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to mcal_timer1.o(.text.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mcal_timer2.o(.text.TIM2_IRQHandler) for TIM2_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mcal_timer3.o(.text.TIM3_IRQHandler) for TIM3_IRQHandler
+    startup_stm32f10x_md.o(RESET) refers to mcal_timer4.o(.text.TIM4_IRQHandler) for TIM4_IRQHandler
+    startup_stm32f10x_md.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(.text.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(HEAP) for Heap_Mem
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(STACK) for Stack_Mem
+    system_stm32f10x.o(.text.SystemInit) refers to system_stm32f10x.o(.text.SetSysClock) for SetSysClock
+    system_stm32f10x.o(.ARM.exidx.text.SystemInit) refers to system_stm32f10x.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClock) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72) refers to system_stm32f10x.o(.text.SetSysClockTo72) for [Anonymous Symbol]
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    daddsub_clz.o(x$fpl$dadd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$dadd) refers to daddsub_clz.o(x$fpl$dsub) for _dsub1
+    daddsub_clz.o(x$fpl$dadd) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    daddsub_clz.o(x$fpl$dadd) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    daddsub_clz.o(x$fpl$drsb) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$drsb) refers to daddsub_clz.o(x$fpl$dadd) for _dadd1
+    daddsub_clz.o(x$fpl$drsb) refers to daddsub_clz.o(x$fpl$dsub) for _dsub1
+    daddsub_clz.o(x$fpl$dsub) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    daddsub_clz.o(x$fpl$dsub) refers to daddsub_clz.o(x$fpl$dadd) for _dadd1
+    daddsub_clz.o(x$fpl$dsub) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dcmp.o(x$fpl$fcmp) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dcmp.o(x$fpl$fcmp) refers to deqf.o(x$fpl$deqf) for _dcmpeq
+    dcmp.o(x$fpl$fcmp) refers to dgeqf.o(x$fpl$dgeqf) for _dcmpge
+    dcmp.o(x$fpl$fcmp) refers to dleqf.o(x$fpl$dleqf) for _dcmple
+    ddiv.o(x$fpl$drdiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ddiv.o(x$fpl$drdiv) refers to ddiv.o(x$fpl$ddiv) for ddiv_entry
+    ddiv.o(x$fpl$ddiv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    ddiv.o(x$fpl$ddiv) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    ddiv.o(x$fpl$ddiv) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfixu.o(x$fpl$dfixu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfixu.o(x$fpl$dfixu) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dfixu.o(x$fpl$dfixur) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dfixu.o(x$fpl$dfixur) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dflt_clz.o(x$fpl$dfltu) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dflt_clz.o(x$fpl$dflt) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dflt_clz.o(x$fpl$dfltn) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dmul.o(x$fpl$dmul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dmul.o(x$fpl$dmul) refers to dretinf.o(x$fpl$dretinf) for __fpl_dretinf
+    dmul.o(x$fpl$dmul) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    deqf.o(x$fpl$deqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    deqf.o(x$fpl$deqf) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    deqf.o(x$fpl$deqf) refers to dcmpi.o(x$fpl$dcmpinf) for __fpl_dcmp_Inf
+    dgeqf.o(x$fpl$dgeqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dgeqf.o(x$fpl$dgeqf) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dgeqf.o(x$fpl$dgeqf) refers to dcmpi.o(x$fpl$dcmpinf) for __fpl_dcmp_Inf
+    dleqf.o(x$fpl$dleqf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dleqf.o(x$fpl$dleqf) refers to dnaninf.o(x$fpl$dnaninf) for __fpl_dnaninf
+    dleqf.o(x$fpl$dleqf) refers to dcmpi.o(x$fpl$dcmpinf) for __fpl_dcmp_Inf
+    dnaninf.o(x$fpl$dnaninf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    dretinf.o(x$fpl$dretinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    dcmpi.o(x$fpl$dcmpinf) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f10x_md.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000034) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000006) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000010) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_relocate_pie_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000035) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000027) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$0000001A) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000028) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000029) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.tim_init), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing mcal_gpio.o(.text), (0 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_pin_init), (8 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_enable_clk), (8 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_afio_clk_enable), (8 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_set_pin_mode), (8 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_set_pin_conf), (8 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_pin_write), (8 bytes).
+    Removing mcal_gpio.o(.text.gpio_pin_read), (144 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_pin_read), (8 bytes).
+    Removing mcal_gpio.o(.text.gpio_pin_toggle), (316 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_pin_toggle), (8 bytes).
+    Removing mcal_gpio.o(.text.gpio_test_all_port_high), (128 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_test_all_port_high), (8 bytes).
+    Removing mcal_gpio.o(.ARM.exidx.text.gpio_get_pin_index_decimal), (8 bytes).
+    Removing mcal_rcc.o(.text), (0 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_AFIO_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_AFIO_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_AFIO_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_IOPA_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_IOPA_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_IOPA_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_IOPB_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_IOPB_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_IOPB_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_IOPC_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_IOPC_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_IOPC_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM1_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM1_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM1_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM1_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_SPI1_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_SPI1_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_SPI1_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_SPI1_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_USART1_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_USART1_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_USART1_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_USART1_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM2_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM2_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM2_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM2_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM3_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM3_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM3_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM3_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM4_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_TIM4_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_TIM4_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_USART2_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_USART2_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_USART2_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_USART2_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_USART3_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_USART3_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_USART3_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_USART3_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_I2C1_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_I2C1_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_I2C1_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_I2C1_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_I2C2_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_I2C2_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_I2C2_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_I2C2_CLK_DISABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_SPI2_CLK_ENABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_SPI2_CLK_ENABLE), (8 bytes).
+    Removing mcal_rcc.o(.text.RCC_SPI2_CLK_DISABLE), (18 bytes).
+    Removing mcal_rcc.o(.ARM.exidx.text.RCC_SPI2_CLK_DISABLE), (8 bytes).
+    Removing mcal_timer2.o(.text), (0 bytes).
+    Removing mcal_timer2.o(.text.timer2_init), (80 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.timer2_init), (8 bytes).
+    Removing mcal_timer2.o(.text.TIMER2_DISABLE), (14 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.TIMER2_DISABLE), (8 bytes).
+    Removing mcal_timer2.o(.text.set_timer2_mode_preload_prescale), (190 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.set_timer2_mode_preload_prescale), (8 bytes).
+    Removing mcal_timer2.o(.text.timer2_handle_interrupts), (48 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.timer2_handle_interrupts), (8 bytes).
+    Removing mcal_timer2.o(.text.Enable_timer2_interrupt), (38 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.Enable_timer2_interrupt), (8 bytes).
+    Removing mcal_timer2.o(.text.TIMER2_GENERATE_UPDATE), (16 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.TIMER2_GENERATE_UPDATE), (8 bytes).
+    Removing mcal_timer2.o(.text.TIMER2_ENABLE), (14 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.TIMER2_ENABLE), (8 bytes).
+    Removing mcal_timer2.o(.text.timer2_deinit), (40 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.timer2_deinit), (8 bytes).
+    Removing mcal_timer2.o(.text.timer2_timeBase_write), (194 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.timer2_timeBase_write), (8 bytes).
+    Removing mcal_timer2.o(.text.timer2_delay), (90 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.timer2_delay), (8 bytes).
+    Removing mcal_timer2.o(.ARM.exidx.text.TIM2_IRQHandler), (8 bytes).
+    Removing mcal_timer2.o(.bss.timer2_resolution), (1 bytes).
+    Removing mcal_timer2.o(.bss.timer2_max_count), (4 bytes).
+    Removing mcal_timer2.o(.data.prescaler_value), (4 bytes).
+    Removing mcal_timer2.o(.bss.preload_value), (4 bytes).
+    Removing mcal_timer3.o(.text), (0 bytes).
+    Removing mcal_timer3.o(.text.timer3_init), (80 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.timer3_init), (8 bytes).
+    Removing mcal_timer3.o(.text.TIMER3_DISABLE), (18 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.TIMER3_DISABLE), (8 bytes).
+    Removing mcal_timer3.o(.text.set_timer3_mode_preload_prescale), (194 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.set_timer3_mode_preload_prescale), (8 bytes).
+    Removing mcal_timer3.o(.text.timer3_handle_interrupts), (48 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.timer3_handle_interrupts), (8 bytes).
+    Removing mcal_timer3.o(.text.Enable_timer3_interrupt), (38 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.Enable_timer3_interrupt), (8 bytes).
+    Removing mcal_timer3.o(.text.TIMER3_GENERATE_UPDATE), (18 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.TIMER3_GENERATE_UPDATE), (8 bytes).
+    Removing mcal_timer3.o(.text.TIMER3_ENABLE), (18 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.TIMER3_ENABLE), (8 bytes).
+    Removing mcal_timer3.o(.text.timer3_deinit), (40 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.timer3_deinit), (8 bytes).
+    Removing mcal_timer3.o(.text.timer3_timeBase_write), (198 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.timer3_timeBase_write), (8 bytes).
+    Removing mcal_timer3.o(.text.timer3_delay), (90 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.timer3_delay), (8 bytes).
+    Removing mcal_timer3.o(.ARM.exidx.text.TIM3_IRQHandler), (8 bytes).
+    Removing mcal_timer3.o(.bss.timer3_resolution), (1 bytes).
+    Removing mcal_timer3.o(.bss.timer3_max_count), (4 bytes).
+    Removing mcal_timer3.o(.data.prescaler_value), (2 bytes).
+    Removing mcal_timer3.o(.bss.preload_value), (2 bytes).
+    Removing mcal_timer4.o(.text), (0 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.timer4_init), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.TIMER4_DISABLE), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.set_timer4_mode_preload_prescale), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.timer4_handle_interrupts), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.Enable_timer4_interrupt), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.TIMER4_GENERATE_UPDATE), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.TIMER4_ENABLE), (8 bytes).
+    Removing mcal_timer4.o(.text.timer4_deinit), (40 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.timer4_deinit), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.timer4_timeBase_write), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.timer4_delay), (8 bytes).
+    Removing mcal_timer4.o(.ARM.exidx.text.TIM4_IRQHandler), (8 bytes).
+    Removing mcal_timer1.o(.text), (0 bytes).
+    Removing mcal_timer1.o(.text.timer1_init), (80 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_init), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.set_timer1_mode_preload_prescale), (194 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.set_timer1_mode_preload_prescale), (8 bytes).
+    Removing mcal_timer1.o(.text.timer1_handle_interrupts), (48 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_handle_interrupts), (8 bytes).
+    Removing mcal_timer1.o(.text.Enable_timer1_interrupt), (38 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.Enable_timer1_interrupt), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_GENERATE_UPDATE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_GENERATE_UPDATE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_ENABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_ENABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.timer1_deinit), (40 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_deinit), (8 bytes).
+    Removing mcal_timer1.o(.text.timer1_timeBase_write), (198 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_timeBase_write), (8 bytes).
+    Removing mcal_timer1.o(.text.timer1_delay), (90 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_delay), (8 bytes).
+    Removing mcal_timer1.o(.text.timer1_millis), (68 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_millis), (8 bytes).
+    Removing mcal_timer1.o(.text.timer1_isr), (24 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.timer1_isr), (8 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIM1_UP_IRQHandler), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_UEV_ENABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_UEV_ENABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_UEV_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_UEV_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_URS_ALL), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_URS_ALL), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_URS_OVERFLOW), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_URS_OVERFLOW), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_SET_UP_COUNTER), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_SET_UP_COUNTER), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_SET_DOWN_COUNTER), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_SET_DOWN_COUNTER), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_AUTO_RELOAD_ENABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_AUTO_RELOAD_ENABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_AUTO_RELOAD_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_AUTO_RELOAD_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_COUNTER_MODE_ENABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_MODE_ENABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_TIMER_MODE_ENABLE), (16 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_TIMER_MODE_ENABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_SELECT_EDGE_ALIGNED_MODE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_SELECT_EDGE_ALIGNED_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH1_SELECT_OUTPUT_MODE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_SELECT_OUTPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CCP_CH1_SELECT_INPUT_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CCP_CH1_SELECT_INPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_COUNTER_CH1_RISING_EDGE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH1_RISING_EDGE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH1_CCP_DISABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_CCP_DISABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH1_CCP_ENABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_CCP_ENABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH1_CCP_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_CCP_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH1_ENABLE_OUTPUT), (34 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_ENABLE_OUTPUT), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH1_SELECT_PWM_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH1_SELECT_PWM_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_SELECT_OUTPUT_MODE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_SELECT_OUTPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_SELECT_INPUT_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_SELECT_INPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_COUNTER_CH2_RISING_EDGE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH2_RISING_EDGE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_CCP_DISABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_CCP_DISABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_CCP_ENABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_CCP_ENABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_CCP_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_CCP_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_ENABLE_OUTPUT), (34 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_ENABLE_OUTPUT), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH2_SELECT_PWM_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH2_SELECT_PWM_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_SELECT_OUTPUT_MODE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_SELECT_OUTPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_SELECT_INPUT_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_SELECT_INPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_COUNTER_CH3_RISING_EDGE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH3_RISING_EDGE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_CCP_DISABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_CCP_DISABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_CCP_ENABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_CCP_ENABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_CCP_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_CCP_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_ENABLE_OUTPUT), (34 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_ENABLE_OUTPUT), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH3_SELECT_PWM_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH3_SELECT_PWM_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_SELECT_OUTPUT_MODE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_SELECT_OUTPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_SELECT_INPUT_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_SELECT_INPUT_MODE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_COUNTER_CH4_RISING_EDGE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_COUNTER_CH4_RISING_EDGE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_CCP_DISABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_CCP_DISABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_CCP_ENABLE_PRELOAD), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_CCP_ENABLE_PRELOAD), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_CCP_DISABLE), (18 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_CCP_DISABLE), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_ENABLE_OUTPUT), (34 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_ENABLE_OUTPUT), (8 bytes).
+    Removing mcal_timer1.o(.text.TIMER1_CH4_SELECT_PWM_MODE), (26 bytes).
+    Removing mcal_timer1.o(.ARM.exidx.text.TIMER1_CH4_SELECT_PWM_MODE), (8 bytes).
+    Removing mcal_timer1.o(.bss.timer1_resolution), (1 bytes).
+    Removing mcal_timer1.o(.bss.timer1_max_count), (4 bytes).
+    Removing mcal_timer1.o(.data.prescaler_value), (2 bytes).
+    Removing mcal_timer1.o(.bss.preload_value), (2 bytes).
+    Removing mcal_timer1.o(.bss.timer1_millis_counter), (1 bytes).
+    Removing mcal_timer1.o(.bss._miLLis__), (8 bytes).
+    Removing mcal_timers.o(.text), (0 bytes).
+    Removing mcal_timers.o(.data.tim1), (8 bytes).
+    Removing mcal_timers.o(.data.tim2), (8 bytes).
+    Removing mcal_timers.o(.data.tim3), (8 bytes).
+    Removing mcal_external_interrupts.o(.text), (0 bytes).
+    Removing mcal_internal_interrupts.o(.text), (0 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_UPDATE_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_UPDATE_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC1_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC1_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC2_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC2_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC3_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC3_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC4_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC4_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_UPDATE_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_UPDATE_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC1_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC1_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC2_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC2_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC3_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC3_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CC4_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CC4_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CCP1_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP1_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CCP2_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP2_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CCP3_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP3_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER1_CCP4_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER1_CCP4_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_UPDATE_INTERRUPT_ENABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_UPDATE_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC1_INTERRUPT_ENABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC1_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC2_INTERRUPT_ENABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC2_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC3_INTERRUPT_ENABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC3_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC4_INTERRUPT_ENABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC4_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_UPDATE_INTERRUPT_DISABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_UPDATE_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC1_INTERRUPT_DISABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC1_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC2_INTERRUPT_DISABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC2_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC3_INTERRUPT_DISABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC3_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CC4_INTERRUPT_DISABLE), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CC4_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CCP1_CLEAR_FLAG), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP1_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CCP2_CLEAR_FLAG), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP2_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CCP3_CLEAR_FLAG), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP3_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER2_CCP4_CLEAR_FLAG), (16 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER2_CCP4_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_UPDATE_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_UPDATE_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC1_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC1_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC2_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC2_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC3_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC3_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC4_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC4_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_UPDATE_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_UPDATE_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC1_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC1_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC2_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC2_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC3_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC3_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CC4_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CC4_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CCP1_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP1_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CCP2_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP2_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CCP3_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP3_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER3_CCP4_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER3_CCP4_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_UPDATE_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC1_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC1_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC2_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC2_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC3_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC3_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC4_INTERRUPT_ENABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC4_INTERRUPT_ENABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_UPDATE_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_UPDATE_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC1_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC1_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC2_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC2_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC3_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC3_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CC4_INTERRUPT_DISABLE), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CC4_INTERRUPT_DISABLE), (8 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CCP1_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP1_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CCP2_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP2_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CCP3_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP3_CLEAR_FLAG), (8 bytes).
+    Removing mcal_internal_interrupts.o(.text.TIMER4_CCP4_CLEAR_FLAG), (18 bytes).
+    Removing mcal_internal_interrupts.o(.ARM.exidx.text.TIMER4_CCP4_CLEAR_FLAG), (8 bytes).
+    Removing mcal_uart.o(.text), (0 bytes).
+    Removing mcal_uart.o(.text.USART_Init), (358 bytes).
+    Removing mcal_uart.o(.ARM.exidx.text.USART_Init), (8 bytes).
+    Removing mcal_uart.o(.text.bauderateCalculator), (296 bytes).
+    Removing mcal_uart.o(.ARM.exidx.text.bauderateCalculator), (8 bytes).
+    Removing mcal_uart.o(.text.USART_RX), (168 bytes).
+    Removing mcal_uart.o(.ARM.exidx.text.USART_RX), (8 bytes).
+    Removing mcal_uart.o(.text.USART_TX), (162 bytes).
+    Removing mcal_uart.o(.ARM.exidx.text.USART_TX), (8 bytes).
+    Removing mcal_uart.o(.rodata.cst8), (48 bytes).
+    Removing hal_servo.o(.text), (0 bytes).
+    Removing hal_dc_motor.o(.text), (0 bytes).
+    Removing hal_dc_motor.o(.text.Dc_motor_init), (88 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.Dc_motor_init), (8 bytes).
+    Removing hal_dc_motor.o(.text.DC_pwm_pin_init), (34 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.DC_pwm_pin_init), (8 bytes).
+    Removing hal_dc_motor.o(.text.Dc_motor_move), (260 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.Dc_motor_move), (8 bytes).
+    Removing hal_dc_motor.o(.text.DC_move_forward), (62 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.DC_move_forward), (8 bytes).
+    Removing hal_dc_motor.o(.text.DC_set_speed), (36 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.DC_set_speed), (8 bytes).
+    Removing hal_dc_motor.o(.text.DC_move_Backward), (62 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.DC_move_Backward), (8 bytes).
+    Removing hal_dc_motor.o(.text.Dc_motor_stop), (72 bytes).
+    Removing hal_dc_motor.o(.ARM.exidx.text.Dc_motor_stop), (8 bytes).
+    Removing m4_softwares.o(.text), (0 bytes).
+    Removing m4_softwares.o(.text.map_to_range), (194 bytes).
+    Removing m4_softwares.o(.ARM.exidx.text.map_to_range), (8 bytes).
+    Removing mcal_spi1.o(.text), (0 bytes).
+    Removing mcal_spi1.o(.text.spi1_init), (84 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_init), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_pins_init), (276 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_pins_init), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_polarity_phase), (116 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_polarity_phase), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_data_frame), (76 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_data_frame), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_baudrate), (130 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_baudrate), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_ENABLE), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_ENABLE), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_transmit_8), (170 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_transmit_8), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_transmit_16), (172 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_transmit_16), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_recieve_8), (102 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_recieve_8), (8 bytes).
+    Removing mcal_spi1.o(.text.spi1_recieve_16), (102 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.spi1_recieve_16), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_ENABLE_SSM), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_ENABLE_SSM), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_NSS_HIGH), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_NSS_HIGH), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_IS_MASTER), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_IS_MASTER), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_IS_SLAVE), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_IS_SLAVE), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_CPOL_HIGH), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_CPOL_HIGH), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_CPOL_LOW), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_CPOL_LOW), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_CPHA_FIRST), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_CPHA_FIRST), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_CPHA_SECOND), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_CPHA_SECOND), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_EIGHT_BIT), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_EIGHT_BIT), (8 bytes).
+    Removing mcal_spi1.o(.text.SPI1_SIXTEEN_BIT), (18 bytes).
+    Removing mcal_spi1.o(.ARM.exidx.text.SPI1_SIXTEEN_BIT), (8 bytes).
+    Removing mcal_spi1.o(.data.SPI1_SCK), (8 bytes).
+    Removing mcal_spi1.o(.data.SPI1_MOSI), (8 bytes).
+    Removing mcal_spi1.o(.data.SPI1_MISO), (8 bytes).
+    Removing mcal_spi2.o(.text), (0 bytes).
+    Removing mcal_spi2.o(.text.spi2_init), (84 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_init), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_pins_init), (276 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_pins_init), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_polarity_phase), (116 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_polarity_phase), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_data_frame), (76 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_data_frame), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_baudrate), (130 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_baudrate), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_ENABLE), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_ENABLE), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_transmit_8), (170 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_transmit_8), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_transmit_16), (172 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_transmit_16), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_recieve_8), (102 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_recieve_8), (8 bytes).
+    Removing mcal_spi2.o(.text.spi2_recieve_16), (102 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.spi2_recieve_16), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_ENABLE_SSM), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_ENABLE_SSM), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_NSS_HIGH), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_NSS_HIGH), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_IS_MASTER), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_IS_MASTER), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_IS_SLAVE), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_IS_SLAVE), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_CPOL_HIGH), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_CPOL_HIGH), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_CPOL_LOW), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_CPOL_LOW), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_CPHA_FIRST), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_CPHA_FIRST), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_CPHA_SECOND), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_CPHA_SECOND), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_EIGHT_BIT), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_EIGHT_BIT), (8 bytes).
+    Removing mcal_spi2.o(.text.SPI2_SIXTEEN_BIT), (18 bytes).
+    Removing mcal_spi2.o(.ARM.exidx.text.SPI2_SIXTEEN_BIT), (8 bytes).
+    Removing mcal_spi2.o(.data.SPI2_SCK), (8 bytes).
+    Removing mcal_spi2.o(.data.SPI2_MOSI), (8 bytes).
+    Removing mcal_spi2.o(.data.SPI2_MISO), (8 bytes).
+    Removing nrf24l01.o(.text), (0 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_init), (154 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_init), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_pins_init), (82 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_pins_init), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_CE_disable), (48 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_CE_disable), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_CSN_unselect), (50 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_CSN_unselect), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_reset), (380 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_reset), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_write_reg), (66 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_write_reg), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_PA_DR_init), (98 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_PA_DR_init), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_set_mode), (252 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_set_mode), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_CE_enable), (48 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_CE_enable), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_transmit), (174 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_transmit), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_CSN_select), (50 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_CSN_select), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_read_reg), (80 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_read_reg), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_sendcmd), (36 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_sendcmd), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_is_data_available), (138 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_is_data_available), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_recieve), (96 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_recieve), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_read_all_reg), (30 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_read_all_reg), (8 bytes).
+    Removing nrf24l01.o(.text.NRF24L01_write_reg_multi), (100 bytes).
+    Removing nrf24l01.o(.ARM.exidx.text.NRF24L01_write_reg_multi), (8 bytes).
+    Removing nrf24l01.o(.bss.fifostatus), (1 bytes).
+    Removing nrf24l01.o(.bss.status), (1 bytes).
+    Removing nrf24l01.o(.bss.config), (1 bytes).
+    Removing nrf24l01.o(.rodata..L__const.NRF24L01_reset.rx_addr_p0_def), (5 bytes).
+    Removing nrf24l01.o(.rodata..L__const.NRF24L01_reset.rx_addr_p1_def), (5 bytes).
+    Removing nrf24l01.o(.rodata..L__const.NRF24L01_reset.tx_addr_def), (5 bytes).
+    Removing system_stm32f10x.o(.text), (0 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClock), (8 bytes).
+    Removing system_stm32f10x.o(.text.SystemCoreClockUpdate), (290 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72), (8 bytes).
+    Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
+
+544 unused section(s) (total 14370 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/daddsub.s                       0x00000000   Number         0  daddsub_clz.o ABSOLUTE
+    ../fplib/dcmp.s                          0x00000000   Number         0  dcmp.o ABSOLUTE
+    ../fplib/dcmpi.s                         0x00000000   Number         0  dcmpi.o ABSOLUTE
+    ../fplib/ddiv.s                          0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/deqf.s                          0x00000000   Number         0  deqf.o ABSOLUTE
+    ../fplib/dfixu.s                         0x00000000   Number         0  dfixu.o ABSOLUTE
+    ../fplib/dflt.s                          0x00000000   Number         0  dflt_clz.o ABSOLUTE
+    ../fplib/dgeqf.s                         0x00000000   Number         0  dgeqf.o ABSOLUTE
+    ../fplib/dleqf.s                         0x00000000   Number         0  dleqf.o ABSOLUTE
+    ../fplib/dmul.s                          0x00000000   Number         0  dmul.o ABSOLUTE
+    ../fplib/dnaninf.s                       0x00000000   Number         0  dnaninf.o ABSOLUTE
+    ../fplib/dretinf.s                       0x00000000   Number         0  dretinf.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ../fplib/fpinit_empty.s                  0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
+    HAL_DC_MOTOR.c                           0x00000000   Number         0  hal_dc_motor.o ABSOLUTE
+    HAL_SERVO.c                              0x00000000   Number         0  hal_servo.o ABSOLUTE
+    M4_Softwares.c                           0x00000000   Number         0  m4_softwares.o ABSOLUTE
+    MCAL_EXTERNAL_INTERRUPTS.c               0x00000000   Number         0  mcal_external_interrupts.o ABSOLUTE
+    MCAL_GPIO.c                              0x00000000   Number         0  mcal_gpio.o ABSOLUTE
+    MCAL_INTERNAL_INTERRUPTS.c               0x00000000   Number         0  mcal_internal_interrupts.o ABSOLUTE
+    MCAL_RCC.c                               0x00000000   Number         0  mcal_rcc.o ABSOLUTE
+    MCAL_SPI1.c                              0x00000000   Number         0  mcal_spi1.o ABSOLUTE
+    MCAL_SPI2.c                              0x00000000   Number         0  mcal_spi2.o ABSOLUTE
+    MCAL_TIMER1.c                            0x00000000   Number         0  mcal_timer1.o ABSOLUTE
+    MCAL_TIMER2.c                            0x00000000   Number         0  mcal_timer2.o ABSOLUTE
+    MCAL_TIMER3.c                            0x00000000   Number         0  mcal_timer3.o ABSOLUTE
+    MCAL_TIMER4.c                            0x00000000   Number         0  mcal_timer4.o ABSOLUTE
+    MCAL_TIMERS.c                            0x00000000   Number         0  mcal_timers.o ABSOLUTE
+    MCAL_UART.c                              0x00000000   Number         0  mcal_uart.o ABSOLUTE
+    NRF24L01.c                               0x00000000   Number         0  nrf24l01.o ABSOLUTE
+    RTE/Device/STM32F103C8/startup_stm32f10x_md.s 0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    system_stm32f10x.c                       0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RESET                                    0x08000000   Section      236  startup_stm32f10x_md.o(RESET)
+    !!!main                                  0x080000ec   Section        8  __main.o(!!!main)
+    !!!scatter                               0x080000f4   Section       92  __scatter.o(!!!scatter)
+    !!handler_copy                           0x08000150   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_null                           0x0800016c   Section        2  __scatter.o(!!handler_null)
+    !!handler_zi                             0x08000170   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x0800018c   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$00000006          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    .ARM.Collect$$libinit$$0000000C          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000010          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    .ARM.Collect$$libinit$$00000013          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$00000027          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    .ARM.Collect$$libinit$$0000002E          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000034          0x0800018e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    .ARM.Collect$$libinit$$00000035          0x0800018e   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    .ARM.Collect$$libshutdown$$00000000      0x08000190   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x08000192   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x08000192   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x08000192   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x08000192   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x08000192   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x08000192   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x08000192   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x08000194   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x08000194   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x08000194   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0800019a   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0800019a   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0800019e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0800019e   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x080001a6   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x080001a8   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x080001a8   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x080001ac   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x080001b4   Section       64  startup_stm32f10x_md.o(.text)
+    .text                                    0x080001f4   Section        0  heapauxi.o(.text)
+    .text                                    0x080001fa   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x08000244   Section        0  exit.o(.text)
+    .text                                    0x08000258   Section        8  libspace.o(.text)
+    .text                                    0x08000260   Section        0  sys_exit.o(.text)
+    .text                                    0x0800026c   Section        2  use_no_semi.o(.text)
+    .text                                    0x0800026e   Section        0  indicate_semi.o(.text)
+    Enable_timer4_interrupt                  0x08000271   Thumb Code    38  mcal_timer4.o(.text.Enable_timer4_interrupt)
+    [Anonymous Symbol]                       0x08000270   Section        0  mcal_timer4.o(.text.Enable_timer4_interrupt)
+    [Anonymous Symbol]                       0x08000298   Section        0  mcal_rcc.o(.text.RCC_AFIO_CLK_ENABLE)
+    [Anonymous Symbol]                       0x080002ac   Section        0  mcal_rcc.o(.text.RCC_IOPA_CLK_ENABLE)
+    [Anonymous Symbol]                       0x080002c0   Section        0  mcal_rcc.o(.text.RCC_IOPB_CLK_ENABLE)
+    [Anonymous Symbol]                       0x080002d4   Section        0  mcal_rcc.o(.text.RCC_IOPC_CLK_ENABLE)
+    [Anonymous Symbol]                       0x080002e8   Section        0  mcal_rcc.o(.text.RCC_TIM4_CLK_ENABLE)
+    SetSysClock                              0x080002fd   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x080002fc   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x08000305   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000304   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000428   Section        0  system_stm32f10x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08000490   Section        0  mcal_timer1.o(.text.TIM1_UP_IRQHandler)
+    [Anonymous Symbol]                       0x080004e4   Section        0  mcal_timer2.o(.text.TIM2_IRQHandler)
+    [Anonymous Symbol]                       0x08000534   Section        0  mcal_timer3.o(.text.TIM3_IRQHandler)
+    [Anonymous Symbol]                       0x08000588   Section        0  mcal_timer4.o(.text.TIM4_IRQHandler)
+    [Anonymous Symbol]                       0x080005dc   Section        0  mcal_internal_interrupts.o(.text.TIMER1_CLEAR_FLAG)
+    [Anonymous Symbol]                       0x080005f0   Section        0  mcal_internal_interrupts.o(.text.TIMER2_CLEAR_FLAG)
+    [Anonymous Symbol]                       0x08000600   Section        0  mcal_internal_interrupts.o(.text.TIMER3_CLEAR_FLAG)
+    [Anonymous Symbol]                       0x08000614   Section        0  mcal_internal_interrupts.o(.text.TIMER4_CLEAR_FLAG)
+    TIMER4_DISABLE                           0x08000629   Thumb Code    18  mcal_timer4.o(.text.TIMER4_DISABLE)
+    [Anonymous Symbol]                       0x08000628   Section        0  mcal_timer4.o(.text.TIMER4_DISABLE)
+    TIMER4_ENABLE                            0x0800063d   Thumb Code    18  mcal_timer4.o(.text.TIMER4_ENABLE)
+    [Anonymous Symbol]                       0x0800063c   Section        0  mcal_timer4.o(.text.TIMER4_ENABLE)
+    TIMER4_GENERATE_UPDATE                   0x08000651   Thumb Code    18  mcal_timer4.o(.text.TIMER4_GENERATE_UPDATE)
+    [Anonymous Symbol]                       0x08000650   Section        0  mcal_timer4.o(.text.TIMER4_GENERATE_UPDATE)
+    [Anonymous Symbol]                       0x08000664   Section        0  mcal_internal_interrupts.o(.text.TIMER4_UPDATE_INTERRUPT_ENABLE)
+    gpio_afio_clk_enable                     0x08000679   Thumb Code    62  mcal_gpio.o(.text.gpio_afio_clk_enable)
+    [Anonymous Symbol]                       0x08000678   Section        0  mcal_gpio.o(.text.gpio_afio_clk_enable)
+    gpio_enable_clk                          0x080006b9   Thumb Code    90  mcal_gpio.o(.text.gpio_enable_clk)
+    [Anonymous Symbol]                       0x080006b8   Section        0  mcal_gpio.o(.text.gpio_enable_clk)
+    gpio_get_pin_index_decimal               0x08000715   Thumb Code    56  mcal_gpio.o(.text.gpio_get_pin_index_decimal)
+    [Anonymous Symbol]                       0x08000714   Section        0  mcal_gpio.o(.text.gpio_get_pin_index_decimal)
+    [Anonymous Symbol]                       0x0800074c   Section        0  mcal_gpio.o(.text.gpio_pin_init)
+    [Anonymous Symbol]                       0x0800080c   Section        0  mcal_gpio.o(.text.gpio_pin_write)
+    gpio_set_pin_conf                        0x0800093d   Thumb Code  1972  mcal_gpio.o(.text.gpio_set_pin_conf)
+    [Anonymous Symbol]                       0x0800093c   Section        0  mcal_gpio.o(.text.gpio_set_pin_conf)
+    gpio_set_pin_mode                        0x080010f1   Thumb Code  1586  mcal_gpio.o(.text.gpio_set_pin_mode)
+    [Anonymous Symbol]                       0x080010f0   Section        0  mcal_gpio.o(.text.gpio_set_pin_mode)
+    [Anonymous Symbol]                       0x08001724   Section        0  main.o(.text.main)
+    set_timer4_mode_preload_prescale         0x08001785   Thumb Code   194  mcal_timer4.o(.text.set_timer4_mode_preload_prescale)
+    [Anonymous Symbol]                       0x08001784   Section        0  mcal_timer4.o(.text.set_timer4_mode_preload_prescale)
+    [Anonymous Symbol]                       0x08001848   Section        0  main.o(.text.tim_init)
+    [Anonymous Symbol]                       0x0800185c   Section        0  mcal_timer4.o(.text.timer4_delay)
+    timer4_handle_interrupts                 0x080018b9   Thumb Code    48  mcal_timer4.o(.text.timer4_handle_interrupts)
+    [Anonymous Symbol]                       0x080018b8   Section        0  mcal_timer4.o(.text.timer4_handle_interrupts)
+    [Anonymous Symbol]                       0x080018e8   Section        0  mcal_timer4.o(.text.timer4_init)
+    [Anonymous Symbol]                       0x08001938   Section        0  mcal_timer4.o(.text.timer4_timeBase_write)
+    prescaler_value                          0x20000008   Data           4  mcal_timer4.o(.data.prescaler_value)
+    [Anonymous Symbol]                       0x20000008   Section        0  mcal_timer4.o(.data.prescaler_value)
+    .bss                                     0x20000018   Section       96  libspace.o(.bss)
+    TIM1_OF_InterruptHandler                 0x20000078   Data           4  mcal_timer1.o(.bss.TIM1_OF_InterruptHandler)
+    [Anonymous Symbol]                       0x20000078   Section        0  mcal_timer1.o(.bss.TIM1_OF_InterruptHandler)
+    TIM2_OF_InterruptHandler                 0x2000007c   Data           4  mcal_timer2.o(.bss.TIM2_OF_InterruptHandler)
+    [Anonymous Symbol]                       0x2000007c   Section        0  mcal_timer2.o(.bss.TIM2_OF_InterruptHandler)
+    TIM3_OF_InterruptHandler                 0x20000080   Data           4  mcal_timer3.o(.bss.TIM3_OF_InterruptHandler)
+    [Anonymous Symbol]                       0x20000080   Section        0  mcal_timer3.o(.bss.TIM3_OF_InterruptHandler)
+    TIM4_OF_InterruptHandler                 0x20000084   Data           4  mcal_timer4.o(.bss.TIM4_OF_InterruptHandler)
+    [Anonymous Symbol]                       0x20000084   Section        0  mcal_timer4.o(.bss.TIM4_OF_InterruptHandler)
+    delay                                    0x20000088   Data           4  mcal_timer2.o(.bss.delay)
+    [Anonymous Symbol]                       0x20000088   Section        0  mcal_timer2.o(.bss.delay)
+    delay                                    0x2000008c   Data           4  mcal_timer3.o(.bss.delay)
+    [Anonymous Symbol]                       0x2000008c   Section        0  mcal_timer3.o(.bss.delay)
+    delay                                    0x20000090   Data           4  mcal_timer4.o(.bss.delay)
+    [Anonymous Symbol]                       0x20000090   Section        0  mcal_timer4.o(.bss.delay)
+    delay                                    0x20000094   Data           4  mcal_timer1.o(.bss.delay)
+    [Anonymous Symbol]                       0x20000094   Section        0  mcal_timer1.o(.bss.delay)
+    preload_value                            0x20000098   Data           4  mcal_timer4.o(.bss.preload_value)
+    [Anonymous Symbol]                       0x20000098   Section        0  mcal_timer4.o(.bss.preload_value)
+    timer4_max_count                         0x2000009c   Data           4  mcal_timer4.o(.bss.timer4_max_count)
+    [Anonymous Symbol]                       0x2000009c   Section        0  mcal_timer4.o(.bss.timer4_max_count)
+    timer4_resolution                        0x200000a0   Data           1  mcal_timer4.o(.bss.timer4_resolution)
+    [Anonymous Symbol]                       0x200000a0   Section        0  mcal_timer4.o(.bss.timer4_resolution)
+    Heap_Mem                                 0x200000a8   Data         512  startup_stm32f10x_md.o(HEAP)
+    HEAP                                     0x200000a8   Section      512  startup_stm32f10x_md.o(HEAP)
+    Stack_Mem                                0x200002a8   Data        1024  startup_stm32f10x_md.o(STACK)
+    STACK                                    0x200002a8   Section     1024  startup_stm32f10x_md.o(STACK)
+    __initial_sp                             0x200006a8   Data           0  startup_stm32f10x_md.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __fp_init_empty                          0x00000000   Number         0  fpinit_empty.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __arm_relocate_pie_                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x000000ec   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md.o(RESET)
+    __Vectors_End                            0x080000ec   Data           0  startup_stm32f10x_md.o(RESET)
+    __main                                   0x080000ed   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x080000f5   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x080000f5   Thumb Code    84  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x080000f5   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_loop                       0x080000ff   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x08000151   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_null                       0x0800016d   Thumb Code     2  __scatter.o(!!handler_null)
+    __scatterload_zeroinit                   0x08000171   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x0800018d   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_argv_1                     0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_atexit_1                   0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_clock_1                    0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_cpp_1                      0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    __rt_lib_init_exceptions_1               0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_fp_1                       0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_getenv_1                   0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_heap_1                     0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_lc_collate_1               0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_ctype_1                 0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_monetary_1              0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_numeric_1               0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_lc_time_1                  0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_preinit_1                  0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    __rt_lib_init_rand_1                     0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    __rt_lib_init_relocate_pie_1             0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_return                     0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    __rt_lib_init_signal_1                   0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_stdio_1                    0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    __rt_lib_init_user_alloc_1               0x0800018f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_shutdown                        0x08000191   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x08000193   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x08000195   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x08000195   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x08000195   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0800019b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0800019b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0800019f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0800019f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x080001a7   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x080001a9   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x080001a9   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x080001ad   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x080001b5   Thumb Code     8  startup_stm32f10x_md.o(.text)
+    NMI_Handler                              0x080001bd   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    HardFault_Handler                        0x080001bf   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    MemManage_Handler                        0x080001c1   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    BusFault_Handler                         0x080001c3   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    UsageFault_Handler                       0x080001c5   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SVC_Handler                              0x080001c7   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    DebugMon_Handler                         0x080001c9   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    PendSV_Handler                           0x080001cb   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SysTick_Handler                          0x080001cd   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    ADC1_2_IRQHandler                        0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_RX1_IRQHandler                      0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_SCE_IRQHandler                      0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel1_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel2_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel3_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel4_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel5_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel6_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel7_IRQHandler                 0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI0_IRQHandler                         0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI15_10_IRQHandler                     0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI1_IRQHandler                         0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI2_IRQHandler                         0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI3_IRQHandler                         0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI4_IRQHandler                         0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI9_5_IRQHandler                       0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    FLASH_IRQHandler                         0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_ER_IRQHandler                       0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_EV_IRQHandler                       0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_ER_IRQHandler                       0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_EV_IRQHandler                       0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    PVD_IRQHandler                           0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RCC_IRQHandler                           0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTCAlarm_IRQHandler                      0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTC_IRQHandler                           0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI1_IRQHandler                          0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI2_IRQHandler                          0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TAMPER_IRQHandler                        0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_BRK_IRQHandler                      0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_CC_IRQHandler                       0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART1_IRQHandler                        0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART2_IRQHandler                        0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USBWakeUp_IRQHandler                     0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    WWDG_IRQHandler                          0x080001cf   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __user_initial_stackheap                 0x080001d1   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __use_two_region_memory                  0x080001f5   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x080001f7   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x080001f9   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x080001fb   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x08000245   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x08000259   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x08000259   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x08000259   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x08000261   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x0800026d   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x0800026d   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x0800026f   Thumb Code     0  indicate_semi.o(.text)
+    RCC_AFIO_CLK_ENABLE                      0x08000299   Thumb Code    18  mcal_rcc.o(.text.RCC_AFIO_CLK_ENABLE)
+    RCC_IOPA_CLK_ENABLE                      0x080002ad   Thumb Code    18  mcal_rcc.o(.text.RCC_IOPA_CLK_ENABLE)
+    RCC_IOPB_CLK_ENABLE                      0x080002c1   Thumb Code    18  mcal_rcc.o(.text.RCC_IOPB_CLK_ENABLE)
+    RCC_IOPC_CLK_ENABLE                      0x080002d5   Thumb Code    18  mcal_rcc.o(.text.RCC_IOPC_CLK_ENABLE)
+    RCC_TIM4_CLK_ENABLE                      0x080002e9   Thumb Code    18  mcal_rcc.o(.text.RCC_TIM4_CLK_ENABLE)
+    SystemInit                               0x08000429   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    TIM1_UP_IRQHandler                       0x08000491   Thumb Code    82  mcal_timer1.o(.text.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x080004e5   Thumb Code    80  mcal_timer2.o(.text.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08000535   Thumb Code    82  mcal_timer3.o(.text.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08000589   Thumb Code    82  mcal_timer4.o(.text.TIM4_IRQHandler)
+    TIMER1_CLEAR_FLAG                        0x080005dd   Thumb Code    18  mcal_internal_interrupts.o(.text.TIMER1_CLEAR_FLAG)
+    TIMER2_CLEAR_FLAG                        0x080005f1   Thumb Code    16  mcal_internal_interrupts.o(.text.TIMER2_CLEAR_FLAG)
+    TIMER3_CLEAR_FLAG                        0x08000601   Thumb Code    18  mcal_internal_interrupts.o(.text.TIMER3_CLEAR_FLAG)
+    TIMER4_CLEAR_FLAG                        0x08000615   Thumb Code    18  mcal_internal_interrupts.o(.text.TIMER4_CLEAR_FLAG)
+    TIMER4_UPDATE_INTERRUPT_ENABLE           0x08000665   Thumb Code    18  mcal_internal_interrupts.o(.text.TIMER4_UPDATE_INTERRUPT_ENABLE)
+    gpio_pin_init                            0x0800074d   Thumb Code   192  mcal_gpio.o(.text.gpio_pin_init)
+    gpio_pin_write                           0x0800080d   Thumb Code   302  mcal_gpio.o(.text.gpio_pin_write)
+    main                                     0x08001725   Thumb Code    96  main.o(.text.main)
+    tim_init                                 0x08001849   Thumb Code    20  main.o(.text.tim_init)
+    timer4_delay                             0x0800185d   Thumb Code    90  mcal_timer4.o(.text.timer4_delay)
+    timer4_init                              0x080018e9   Thumb Code    80  mcal_timer4.o(.text.timer4_init)
+    timer4_timeBase_write                    0x08001939   Thumb Code   198  mcal_timer4.o(.text.timer4_timeBase_write)
+    Region$$Table$$Base                      0x08001a00   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001a20   Number         0  anon$$obj.o(Region$$Table)
+    led13                                    0x20000000   Data           8  main.o(.data.led13)
+    tim4                                     0x2000000c   Data           8  mcal_timers.o(.data.tim4)
+    __libspace_start                         0x20000018   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000078   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080001b5
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00001a34, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001a20, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO          672    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000008   Code   RO          700  * !!!main             c_w.l(__main.o)
+    0x080000f4   0x080000f4   0x0000005c   Code   RO          902    !!!scatter          c_w.l(__scatter.o)
+    0x08000150   0x08000150   0x0000001a   Code   RO          906    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x0800016a   0x0800016a   0x00000002   PAD
+    0x0800016c   0x0800016c   0x00000002   Code   RO          903    !!handler_null      c_w.l(__scatter.o)
+    0x0800016e   0x0800016e   0x00000002   PAD
+    0x08000170   0x08000170   0x0000001c   Code   RO          908    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x0800018c   0x0800018c   0x00000002   Code   RO          764    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          771    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          773    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          775    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          778    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          780    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          782    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          785    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          787    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          789    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          791    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          793    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          795    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          797    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          799    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          801    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          803    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          805    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          809    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          811    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          813    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000000   Code   RO          815    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x0800018e   0x0800018e   0x00000002   Code   RO          816    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x08000190   0x08000190   0x00000002   Code   RO          838    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x08000192   0x08000192   0x00000000   Code   RO          853    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x08000192   0x08000192   0x00000000   Code   RO          855    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x08000192   0x08000192   0x00000000   Code   RO          858    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x08000192   0x08000192   0x00000000   Code   RO          861    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x08000192   0x08000192   0x00000000   Code   RO          863    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x08000192   0x08000192   0x00000000   Code   RO          866    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x08000192   0x08000192   0x00000002   Code   RO          867    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x08000194   0x08000194   0x00000000   Code   RO          726    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x08000194   0x08000194   0x00000000   Code   RO          739    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x08000194   0x08000194   0x00000006   Code   RO          751    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0800019a   0x0800019a   0x00000000   Code   RO          741    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0800019a   0x0800019a   0x00000004   Code   RO          742    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0800019e   0x0800019e   0x00000000   Code   RO          744    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0800019e   0x0800019e   0x00000008   Code   RO          745    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x080001a6   0x080001a6   0x00000002   Code   RO          768    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x080001a8   0x080001a8   0x00000000   Code   RO          818    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x080001a8   0x080001a8   0x00000004   Code   RO          819    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x080001ac   0x080001ac   0x00000006   Code   RO          820    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x080001b2   0x080001b2   0x00000002   PAD
+    0x080001b4   0x080001b4   0x00000040   Code   RO          673  * .text               startup_stm32f10x_md.o
+    0x080001f4   0x080001f4   0x00000006   Code   RO          698    .text               c_w.l(heapauxi.o)
+    0x080001fa   0x080001fa   0x0000004a   Code   RO          755    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000244   0x08000244   0x00000012   Code   RO          757    .text               c_w.l(exit.o)
+    0x08000256   0x08000256   0x00000002   PAD
+    0x08000258   0x08000258   0x00000008   Code   RO          765    .text               c_w.l(libspace.o)
+    0x08000260   0x08000260   0x0000000c   Code   RO          828    .text               c_w.l(sys_exit.o)
+    0x0800026c   0x0800026c   0x00000002   Code   RO          843    .text               c_w.l(use_no_semi.o)
+    0x0800026e   0x0800026e   0x00000000   Code   RO          845    .text               c_w.l(indicate_semi.o)
+    0x0800026e   0x0800026e   0x00000002   PAD
+    0x08000270   0x08000270   0x00000026   Code   RO          187    .text.Enable_timer4_interrupt  mcal_timer4.o
+    0x08000296   0x08000296   0x00000002   PAD
+    0x08000298   0x08000298   0x00000012   Code   RO           42    .text.RCC_AFIO_CLK_ENABLE  mcal_rcc.o
+    0x080002aa   0x080002aa   0x00000002   PAD
+    0x080002ac   0x080002ac   0x00000012   Code   RO           46    .text.RCC_IOPA_CLK_ENABLE  mcal_rcc.o
+    0x080002be   0x080002be   0x00000002   PAD
+    0x080002c0   0x080002c0   0x00000012   Code   RO           50    .text.RCC_IOPB_CLK_ENABLE  mcal_rcc.o
+    0x080002d2   0x080002d2   0x00000002   PAD
+    0x080002d4   0x080002d4   0x00000012   Code   RO           54    .text.RCC_IOPC_CLK_ENABLE  mcal_rcc.o
+    0x080002e6   0x080002e6   0x00000002   PAD
+    0x080002e8   0x080002e8   0x00000012   Code   RO           78    .text.RCC_TIM4_CLK_ENABLE  mcal_rcc.o
+    0x080002fa   0x080002fa   0x00000002   PAD
+    0x080002fc   0x080002fc   0x00000008   Code   RO          682    .text.SetSysClock   system_stm32f10x.o
+    0x08000304   0x08000304   0x00000122   Code   RO          686    .text.SetSysClockTo72  system_stm32f10x.o
+    0x08000426   0x08000426   0x00000002   PAD
+    0x08000428   0x08000428   0x00000066   Code   RO          680    .text.SystemInit    system_stm32f10x.o
+    0x0800048e   0x0800048e   0x00000002   PAD
+    0x08000490   0x08000490   0x00000052   Code   RO          238    .text.TIM1_UP_IRQHandler  mcal_timer1.o
+    0x080004e2   0x080004e2   0x00000002   PAD
+    0x080004e4   0x080004e4   0x00000050   Code   RO          129    .text.TIM2_IRQHandler  mcal_timer2.o
+    0x08000534   0x08000534   0x00000052   Code   RO          164    .text.TIM3_IRQHandler  mcal_timer3.o
+    0x08000586   0x08000586   0x00000002   PAD
+    0x08000588   0x08000588   0x00000052   Code   RO          199    .text.TIM4_IRQHandler  mcal_timer4.o
+    0x080005da   0x080005da   0x00000002   PAD
+    0x080005dc   0x080005dc   0x00000012   Code   RO          371    .text.TIMER1_CLEAR_FLAG  mcal_internal_interrupts.o
+    0x080005ee   0x080005ee   0x00000002   PAD
+    0x080005f0   0x080005f0   0x00000010   Code   RO          401    .text.TIMER2_CLEAR_FLAG  mcal_internal_interrupts.o
+    0x08000600   0x08000600   0x00000012   Code   RO          431    .text.TIMER3_CLEAR_FLAG  mcal_internal_interrupts.o
+    0x08000612   0x08000612   0x00000002   PAD
+    0x08000614   0x08000614   0x00000012   Code   RO          461    .text.TIMER4_CLEAR_FLAG  mcal_internal_interrupts.o
+    0x08000626   0x08000626   0x00000002   PAD
+    0x08000628   0x08000628   0x00000012   Code   RO          181    .text.TIMER4_DISABLE  mcal_timer4.o
+    0x0800063a   0x0800063a   0x00000002   PAD
+    0x0800063c   0x0800063c   0x00000012   Code   RO          191    .text.TIMER4_ENABLE  mcal_timer4.o
+    0x0800064e   0x0800064e   0x00000002   PAD
+    0x08000650   0x08000650   0x00000012   Code   RO          189    .text.TIMER4_GENERATE_UPDATE  mcal_timer4.o
+    0x08000662   0x08000662   0x00000002   PAD
+    0x08000664   0x08000664   0x00000012   Code   RO          441    .text.TIMER4_UPDATE_INTERRUPT_ENABLE  mcal_internal_interrupts.o
+    0x08000676   0x08000676   0x00000002   PAD
+    0x08000678   0x08000678   0x0000003e   Code   RO           19    .text.gpio_afio_clk_enable  mcal_gpio.o
+    0x080006b6   0x080006b6   0x00000002   PAD
+    0x080006b8   0x080006b8   0x0000005a   Code   RO           17    .text.gpio_enable_clk  mcal_gpio.o
+    0x08000712   0x08000712   0x00000002   PAD
+    0x08000714   0x08000714   0x00000038   Code   RO           33    .text.gpio_get_pin_index_decimal  mcal_gpio.o
+    0x0800074c   0x0800074c   0x000000c0   Code   RO           15    .text.gpio_pin_init  mcal_gpio.o
+    0x0800080c   0x0800080c   0x0000012e   Code   RO           25    .text.gpio_pin_write  mcal_gpio.o
+    0x0800093a   0x0800093a   0x00000002   PAD
+    0x0800093c   0x0800093c   0x000007b4   Code   RO           23    .text.gpio_set_pin_conf  mcal_gpio.o
+    0x080010f0   0x080010f0   0x00000632   Code   RO           21    .text.gpio_set_pin_mode  mcal_gpio.o
+    0x08001722   0x08001722   0x00000002   PAD
+    0x08001724   0x08001724   0x00000060   Code   RO            2    .text.main          main.o
+    0x08001784   0x08001784   0x000000c2   Code   RO          183    .text.set_timer4_mode_preload_prescale  mcal_timer4.o
+    0x08001846   0x08001846   0x00000002   PAD
+    0x08001848   0x08001848   0x00000014   Code   RO            4    .text.tim_init      main.o
+    0x0800185c   0x0800185c   0x0000005a   Code   RO          197    .text.timer4_delay  mcal_timer4.o
+    0x080018b6   0x080018b6   0x00000002   PAD
+    0x080018b8   0x080018b8   0x00000030   Code   RO          185    .text.timer4_handle_interrupts  mcal_timer4.o
+    0x080018e8   0x080018e8   0x00000050   Code   RO          179    .text.timer4_init   mcal_timer4.o
+    0x08001938   0x08001938   0x000000c6   Code   RO          195    .text.timer4_timeBase_write  mcal_timer4.o
+    0x080019fe   0x080019fe   0x00000002   PAD
+    0x08001a00   0x08001a00   0x00000020   Data   RO          901    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08001a20, Size: 0x00000014, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08001a20   0x00000008   Data   RW            6    .data.led13         main.o
+    0x20000008   0x08001a28   0x00000004   Data   RW          203    .data.prescaler_value  mcal_timer4.o
+    0x2000000c   0x08001a2c   0x00000008   Data   RW          344    .data.tim4          mcal_timers.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000018, Load base: 0x08001a34, Size: 0x00000690, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000018        -       0x00000060   Zero   RW          766    .bss                c_w.l(libspace.o)
+    0x20000078        -       0x00000004   Zero   RW          333    .bss.TIM1_OF_InterruptHandler  mcal_timer1.o
+    0x2000007c        -       0x00000004   Zero   RW          136    .bss.TIM2_OF_InterruptHandler  mcal_timer2.o
+    0x20000080        -       0x00000004   Zero   RW          171    .bss.TIM3_OF_InterruptHandler  mcal_timer3.o
+    0x20000084        -       0x00000004   Zero   RW          206    .bss.TIM4_OF_InterruptHandler  mcal_timer4.o
+    0x20000088        -       0x00000004   Zero   RW          135    .bss.delay          mcal_timer2.o
+    0x2000008c        -       0x00000004   Zero   RW          170    .bss.delay          mcal_timer3.o
+    0x20000090        -       0x00000004   Zero   RW          205    .bss.delay          mcal_timer4.o
+    0x20000094        -       0x00000004   Zero   RW          330    .bss.delay          mcal_timer1.o
+    0x20000098        -       0x00000004   Zero   RW          204    .bss.preload_value  mcal_timer4.o
+    0x2000009c        -       0x00000004   Zero   RW          202    .bss.timer4_max_count  mcal_timer4.o
+    0x200000a0        -       0x00000001   Zero   RW          201    .bss.timer4_resolution  mcal_timer4.o
+    0x200000a1   0x08001a34   0x00000007   PAD
+    0x200000a8        -       0x00000200   Zero   RW          671    HEAP                startup_stm32f10x_md.o
+    0x200002a8        -       0x00000400   Zero   RW          670    STACK               startup_stm32f10x_md.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       116          0          0          8          0       1640   main.o
+      4260         24          0          0          0       5917   mcal_gpio.o
+        88          0          0          0          0       7084   mcal_internal_interrupts.o
+        90          0          0          0          0       3428   mcal_rcc.o
+        82          0          0          0          8       8945   mcal_timer1.o
+        80          0          0          0          8       4555   mcal_timer2.o
+        82          0          0          0          8       4557   mcal_timer3.o
+       784          0          0          4         17       4557   mcal_timer4.o
+         0          0          0          8          0        999   mcal_timers.o
+        64         26        236          0       1536        864   startup_stm32f10x_md.o
+       400          0          0          0          0       2988   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+      6096         50        268         20       1584      45534   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        50          0          0          0          7          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        94          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       324         16          0          0         96        584   Library Totals
+        10          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       314         16          0          0         96        584   c_w.l
+
+    ----------------------------------------------------------------------
+       324         16          0          0         96        584   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6420         66        268         20       1680      45918   Grand Totals
+      6420         66        268         20       1680      45918   ELF Image Totals
+      6420         66        268         20          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6688 (   6.53kB)
+    Total RW  Size (RW Data + ZI Data)              1700 (   1.66kB)
+    Total ROM Size (Code + RO Data + RW Data)       6708 (   6.55kB)
+
+==============================================================================
+

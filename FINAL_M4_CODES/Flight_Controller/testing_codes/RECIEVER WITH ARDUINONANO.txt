@@ -1,0 +1,157 @@
+/*******************Reciever Code and master code***********************/
+#include "HAL_Layer/NRF24L01/NRF24L01.h"
+#include "HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h"
+extern timer4_config_t tim4;
+/*
+NRF24L01_t radio={
+	.spi1.mode=MASTER,
+	.spi1.baud_rate=HZ_1125000,
+	.spi1.clock_polarity=IDLE_LOW,
+	.spi1.clock_phase=FIRST_EDGE,
+	.spi1.data_frame=SPI_SIXTEEN_BIT,
+	.spi1.SLAVE_SELECT.port_index=PORTA,
+	.spi1.SLAVE_SELECT.pin_index=PIN8,
+	.CE_PIN.port_index=PORTA,
+	.CE_PIN.pin_index=PIN9,
+	.mode=RECIEVER,
+	.data_rate=MBPS1,
+	.PA=PA_MAX,
+	.RF_channel=76,
+	.pipe_address={0xCC	,0xCE,0xCC,0xCE,0xCC},
+	
+};
+
+Spi2_t spi2={
+	.mode=MASTER,
+	.clock_phase=IDLE_LOW,
+	.clock_phase=FIRST_EDGE,
+	.data_frame=SPI_EIGHT_BIT,
+	.baud_rate=HZ_1125000,
+	.SLAVE_SELECT.port_index=PORTB,
+	.SLAVE_SELECT.pin_index=PIN9
+};
+
+Pin_Config_t led={
+	.port_index=PORTB,
+	.pin_index=PIN8,
+	.mode=OUTPUT_MODE_50,
+	.conf=OUTPUT_PP
+	
+};
+
+
+Pin_Config_t led13={
+	.port_index=PORTC,
+	.pin_index=PIN13,
+	.mode=OUTPUT_MODE_50,
+	.conf=OUTPUT_PP
+	
+};
+
+
+
+uint8_t arr[11];
+uint8_t lxAxisValue;
+uint8_t  lyAxisValue;
+uint8_t  rxAxisValue; 
+uint8_t  ryAxisValue; 
+uint8_t  lxAxisValue; 
+uint8_t  lPotValue; 
+uint8_t  switch1Value; 
+uint8_t  switch2Value; 
+uint8_t  switch3Value; 
+uint8_t  switch4Value; 
+uint8_t  switch5Value; 
+uint8_t  switch6Value;
+/* for debugging nrf
+uint8_t data[20];
+uint8_t data1[5];
+uint8_t data2[5];
+uint8_t data3[5];
+uint8_t data4[5];
+uint8_t data5[5];
+uint8_t data6[5];
+*/
+/*
+int main()
+{
+	NRF24L01_init(&radio);
+	
+	spi2_init(&spi2);
+	//gpio_pin_init(&led);
+	gpio_pin_init(&led13);
+	while(1)
+	{
+		//NRF24L01_read_all_reg(&radio,data,data1,data2,data3,data4,data5,data6); //for debugging nrf
+		if(NRF24L01_is_data_available(&radio,1)==E_OK)
+		{
+			NRF24L01_recieve(&radio,arr);
+			lxAxisValue=arr[0];
+			lyAxisValue=arr[1];
+			rxAxisValue=arr[2]; 
+			ryAxisValue=arr[3]; 
+			lPotValue=arr[4]; 
+			switch1Value=arr[5]; 
+			switch2Value=arr[6]; 
+			switch3Value=arr[7]; 
+			switch4Value=arr[8]; 
+			switch5Value=arr[9]; 
+			switch6Value=arr[10];
+			//timer4_delay(&tim4,1000);
+			
+		}
+		spi2_transmit_8(arr,11);
+		//"Hello World"
+	
+	
+			}
+	}
+*/
+	
+	/**************88slave code*****************/
+
+
+Spi2_t spi2={
+	.mode=SLAVE,
+	.clock_polarity=FIRST_EDGE,
+	.clock_phase=IDLE_LOW,
+	.data_frame=SPI_EIGHT_BIT,
+	
+};
+
+uint8_t arr[11];
+uint8_t lxAxisValue;
+uint8_t  lyAxisValue;
+uint8_t  rxAxisValue; 
+uint8_t  ryAxisValue; 
+uint8_t  lxAxisValue; 
+uint8_t  lPotValue; 
+uint8_t  switch1Value; 
+uint8_t  switch2Value; 
+uint8_t  switch3Value; 
+uint8_t  switch4Value; 
+uint8_t  switch5Value; 
+uint8_t  switch6Value;
+int main()
+{
+	spi2_init(&spi2);
+	
+	while(1)
+	{
+			spi2_recieve_8(arr,11);
+			lxAxisValue=arr[0];
+			lyAxisValue=arr[1];
+			rxAxisValue=arr[2]; 
+			ryAxisValue=arr[3]; 
+			lPotValue=arr[4]; 
+			switch1Value=arr[5]; 
+			switch2Value=arr[6]; 
+			switch3Value=arr[7]; 
+			switch4Value=arr[8]; 
+			switch5Value=arr[9]; 
+			switch6Value=arr[10];
+	}
+	
+}
+
+/********************************/

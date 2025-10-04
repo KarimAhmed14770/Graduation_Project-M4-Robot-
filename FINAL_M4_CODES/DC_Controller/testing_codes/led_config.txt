@@ -1,0 +1,7 @@
+Pin_Config_t led13={
+	.port_index=PORTC,
+	.pin_index=PIN13,
+	.mode=OUTPUT_MODE_50,
+	.conf=OUTPUT_PP
+	
+};

@@ -1,0 +1,66 @@
+//brushless calibration code
+#include "MCAL_Layer/ADC/MCAL_ADC.h"
+#include "Softwares/M4_Softwares.h"
+#include "MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h"
+
+#define VREF 3.3
+#define ADC_MAX_VALUE 4095  // Assuming a 12-bit ADC
+
+
+
+// Global variables for debugging
+uint16_t adcValue;
+double potval;
+uint32_t pwm;
+void setup_adc(ADC_Index_t adc_index);
+double get_pot_val(ADC_Index_t adc_index);
+
+timer2_config_t tim2={
+	.TIM2_OF_InterruptHandler=NULL,
+	.channel=TIMER2_CH1,
+	.PWM_frequency=20000,
+	.duty_cycle=20000
+};
+
+int main() {
+    // Initialize ADC1 and ADC2
+    setup_adc(ADC1_INDEX);
+    setup_adc(ADC2_INDEX);
+		timer2_init(&tim2);
+
+    while (1) {
+        get_pot_val(ADC1_INDEX);
+        pwm=map_to_range(0,3.3,0,20000,potval);
+				if(pwm>=19500)
+				{pwm=19500;}
+				timer2_pwm_write(&tim2,pwm);
+				
+		
+    }
+
+
+}
+
+
+void setup_adc(ADC_Index_t adc_index) {
+    // Configuration for the ADC
+    ADC_Config_t adcConfig;
+    adcConfig.adc_index = adc_index;
+    adcConfig.channel = ADC_CHANNEL_9;  // PB1 corresponds to ADC_CHANNEL_9
+    adcConfig.resolution = ADC_RESOLUTION_12BIT;
+    adcConfig.sampling_time = 0x7;  // Maximum sampling time
+
+    adc_init(&adcConfig);
+    adc_start_conversion(adc_index, adcConfig.channel);
+}
+
+
+
+double get_pot_val(ADC_Index_t adc_index){
+    adc_read_value(adc_index, ADC_CHANNEL_9, &adcValue);
+
+    // Calculate the input voltage
+    potval = (adcValue * VREF) / ADC_MAX_VALUE;
+
+    return potval;
+}

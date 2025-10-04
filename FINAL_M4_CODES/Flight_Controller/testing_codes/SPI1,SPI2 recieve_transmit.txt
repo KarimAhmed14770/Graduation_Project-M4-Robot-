@@ -1,0 +1,78 @@
+
+//spi1,spi2 master slave test
+
+/*******************88Master Code***********************/
+
+#include "MCAL_Layer/SPI/MCAL_SPI1.h"
+#include "MCAL_Layer/SPI/MCAL_SPI2.h"
+#include "MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h"
+/******************* HOW TO USE GPIO*************************/
+/*
+Spi2_t spi2={
+	.mode=MASTER,
+	.baud_rate=HZ_1125000,
+	.clock_polarity=IDLE_LOW,
+	.clock_phase=FIRST_EDGE,
+	.data_frame=SPI_EIGHT_BIT,
+	.SLAVE_SELECT.port_index=PORTB,
+	.SLAVE_SELECT.pin_index=PIN12,
+	.SLAVE_SELECT.mode=OUTPUT_MODE_50,
+	.SLAVE_SELECT.conf=OUTPUT_PP,
+};
+
+
+
+extern timer4_config_t tim4;
+Std_ReturnType_t err_status;
+uint8_t master_data[10]={0,0,0,0,0,0,0,0,0,0};
+uint8_t counter;
+int main()
+{
+
+	err_status=spi2_init(&spi2);
+	timer4_init(&tim4);
+	while(1)
+	{
+		if(counter>9)
+		{
+			counter=0;
+		}
+			master_data[counter]++;
+			spi2_transmit_8(master_data,sizeof(master_data));
+			timer4_delay(&tim4,500000);
+			counter++;
+		
+
+
+}
+
+}
+*/
+/*******************Slave Code***********************/
+
+Spi1_t spi1={
+	.clock_polarity=IDLE_LOW,
+	.clock_phase=FIRST_EDGE,
+	.data_frame=SPI_EIGHT_BIT,
+	.mode=SLAVE
+};
+
+uint8_t slave1_data[10];
+
+Std_ReturnType_t err_status;
+int main()
+{
+	
+	err_status=spi1_init(&spi1);
+	
+	
+	while(1)
+	{
+		spi1_recieve_8(&slave1_data,sizeof(slave1_data));
+		
+		
+		}
+
+}
+
+

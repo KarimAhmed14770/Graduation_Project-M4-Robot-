@@ -1,0 +1,369 @@
+Dependencies for Project 'M4_Project', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6210000::V6.21::ARMCLANG
+F (.\main.c)(0x667A72AE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/main.o -MD)
+I (MCAL_Layer\SPI\MCAL_SPI_GEN_CFG.hsCAL_Layer\SPI\..\GPIO\MCAL_GPIO.h)(0x00000000)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (main.haCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.h)(0x00000000)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.h)(0x6678E59F)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.h)(0x6671643C)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.h)(0x6671646B)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.h)(0x6671641F)
+I (HAL_Layer\DC_MOTOR\HAL_DC_MOTOR.h)(0x667A7051)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\HAL_ENCODER.h)(0x66349995)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\MCAL_EXTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.h)(0x664E2B26)
+I (HAL_Layer\DC_MOTOR\..\..\Softwares\M4_Softwares.h)(0x667A601C)
+I (HAL_Layer\DC_MOTOR\..\..\Softwares\..\MCAL_Layer\std_types.h)(0x663CBC26)
+F (.\main.h)(0x66769396)()
+F (.\MCAL_Layer\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)()
+F (.\MCAL_Layer\std_types.h)(0x663CBC26)()
+F (.\stm32f10c8.h)(0x664D885D)()
+F (.\MCAL_Layer\GPIO\MCAL_GPIO.c)(0x663CC0BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_gpio.o -MD)
+I (MCAL_Layer\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\MCAL_Layer\GPIO\MCAL_GPIO.h)(0x663CB989)()
+F (.\MCAL_Layer\RCC_CLOCK\MCAL_RCC.c)(0x663CC071)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_rcc.o -MD)
+I (MCAL_Layer\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\RCC_CLOCK\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\RCC_CLOCK\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+F (.\MCAL_Layer\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)()
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.c)(0x66716743)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_timer2.o -MD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.h)(0x6671643C)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.h)(0x6671646B)()
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.h)(0x6671643C)()
+F (.\MCAL_Layer\TIMERS\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)()
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.c)(0x66793668)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_timer3.o -MD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.h)(0x6671646B)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.c)(0x66716771)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_timer4.o -MD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.h)(0x6671641F)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.h)(0x6671641F)()
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.c)(0x66793668)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_timer1.o -MD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.h)(0x6678E59F)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.h)(0x6678E59F)()
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.c)(0x664E2B26)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_timers.o -MD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.h)(0x664E2B26)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.h)(0x6678E59F)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.h)(0x6671643C)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.h)(0x6671646B)
+I (MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.h)(0x6671641F)
+F (.\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.h)(0x664E2B26)()
+F (.\MCAL_Layer\INTERRUPT\MCAL_EXTERNAL_INTERRUPTS.c)(0x663CBBE1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_external_interrupts.o -MD)
+I (MCAL_Layer\INTERRUPT\MCAL_EXTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (MCAL_Layer\INTERRUPT\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\INTERRUPT\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\INTERRUPT\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\INTERRUPT\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\INTERRUPT\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\INTERRUPT\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (MCAL_Layer\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\MCAL_Layer\INTERRUPT\MCAL_EXTERNAL_INTERRUPTS.h)(0x663CBBE1)()
+F (.\MCAL_Layer\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)()
+F (.\MCAL_Layer\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.c)(0x662E74C0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_internal_interrupts.o -MD)
+F (.\MCAL_Layer\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)()
+F (.\MCAL_Layer\UART\MCAL_UART.c)(0x666F4AB1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_uart.o -MD)
+I (MCAL_Layer\UART\MCAL_UART.h)(0x665CBDA2)
+I (MCAL_Layer\UART\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\UART\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\UART\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\UART\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\UART\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\MCAL_Layer\UART\MCAL_UART.h)(0x665CBDA2)()
+F (.\HAL_Layer\DC_MOTOR\HAL_DC_MOTOR.c)(0x667A7166)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/hal_dc_motor.o -MD)
+I (HAL_Layer\DC_MOTOR\HAL_DC_MOTOR.h)(0x667A7051)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\HAL_ENCODER.h)(0x66349995)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\MCAL_EXTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (HAL_Layer\DC_MOTOR\..\ENCODER\..\..\MCAL_Layer\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.h)(0x664E2B26)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.h)(0x6678E59F)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.h)(0x6671643C)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.h)(0x6671646B)
+I (HAL_Layer\DC_MOTOR\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.h)(0x6671641F)
+I (HAL_Layer\DC_MOTOR\..\..\Softwares\M4_Softwares.h)(0x667A601C)
+I (HAL_Layer\DC_MOTOR\..\..\Softwares\..\MCAL_Layer\std_types.h)(0x663CBC26)
+F (.\HAL_Layer\DC_MOTOR\HAL_DC_MOTOR.h)(0x667A7051)()
+F (.\HAL_Layer\ENCODER\HAL_ENCODER.c)(0x66349995)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/hal_encoder.o -MD)
+I (HAL_Layer\ENCODER\HAL_ENCODER.h)(0x66349995)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\INTERRUPT\MCAL_EXTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\INTERRUPT\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (HAL_Layer\ENCODER\..\..\MCAL_Layer\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\HAL_Layer\ENCODER\HAL_ENCODER.h)(0x66349995)()
+F (.\Softwares\M4_Softwares.c)(0x667A601C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/m4_softwares.o -MD)
+I (Softwares\M4_Softwares.h)(0x667A601C)
+F (.\Softwares\M4_Softwares.h)(0x667A601C)()
+F (.\MCAL_Layer\SPI\MCAL_SPI_GEN_CFG.h)(0x666F49C8)()
+F (.\MCAL_Layer\SPI\MCAL_SPI1.c)(0x66770688)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_spi1.o -MD)
+I (MCAL_Layer\SPI\MCAL_SPI1.h)(0x66769D1A)
+I (MCAL_Layer\SPI\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\MCAL_Layer\SPI\MCAL_SPI1.h)(0x66769D1A)()
+F (.\MCAL_Layer\SPI\MCAL_SPI2.c)(0x665B0114)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_spi2.o -MD)
+I (MCAL_Layer\SPI\MCAL_SPI2.h)(0x665AFFDF)
+I (MCAL_Layer\SPI\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\MCAL_Layer\SPI\MCAL_SPI2.h)(0x665AFFDF)()
+F (.\HAL_Layer\NRF24L01\NRF24L01.c)(0x665B0131)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/nrf24l01.o -MD)
+I (HAL_Layer\NRF24L01\NRF24L01.h)(0x664E2B26)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\MCAL_SPI1.h)(0x66769D1A)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\MCAL_SPI_GEN_CFG.h)(0x666F49C8)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\SPI\MCAL_SPI2.h)(0x665AFFDF)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMERS.h)(0x664E2B26)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER1.h)(0x6678E59F)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\MCAL_TIMERS_GEN_CFG.h)(0x667935ED)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_INTERNAL_INTERRUPTS.h)(0x663CBBE1)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\..\..\INTERRUPT\MCAL_NVIC.h)(0x663CBBE1)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER2.h)(0x6671643C)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER3.h)(0x6671646B)
+I (HAL_Layer\NRF24L01\..\..\MCAL_Layer\TIMERS\General_Purpose_Timers\MCAL_TIMER4.h)(0x6671641F)
+F (.\HAL_Layer\NRF24L01\NRF24L01.h)(0x664E2B26)()
+F (.\MCAL_Layer\ADC\MCAL_ADC.c)(0x664D8568)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/mcal_adc.o -MD)
+I (MCAL_Layer\ADC\..\GPIO\MCAL_GPIO.h)(0x663CB989)
+I (MCAL_Layer\ADC\..\GPIO\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+I (MCAL_Layer\ADC\..\GPIO\..\REGISTERS_DEFINITIONS\..\..\stm32f10c8.h)(0x664D885D)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)
+I (MCAL_Layer\ADC\..\GPIO\..\REGISTERS_DEFINITIONS\..\std_types.h)(0x663CBC26)
+I (MCAL_Layer\ADC\..\GPIO\..\RCC_CLOCK\MCAL_RCC.h)(0x663D07CD)
+I (MCAL_Layer\ADC\..\GPIO\..\RCC_CLOCK\..\REGISTERS_DEFINITIONS\REGISTERS_DEFINITIONS.h)(0x664D8738)
+F (.\MCAL_Layer\ADC\MCAL_ADC.h)(0x664D885D)()
+F (RTE/Device/STM32F103C8/RTE_Device.h)(0x65F9D4BE)()
+F (RTE/Device/STM32F103C8/startup_stm32f10x_md.s)(0x66451D11)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 539" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f10x_md.o)
+F (RTE/Device/STM32F103C8/system_stm32f10x.c)(0x65F9D4BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-I./RTE/Device/STM32F103C8-I./RTE/_Target_1-IC:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="539" -D_RTE_ -DSTM32F10X_MD -D_RTE_-o ./objects/system_stm32f10x.o -MD)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x65F9D4BE)
+I (RTE\_Target_1\RTE_Components.h)(0x65FBE1A1)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm3.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x662FFAF9)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x65F9BCD4)
+I (C:\Users\dell\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x65F9BCD4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x656A0470)
+I (C:\Users\dell\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x65F9D4BE)

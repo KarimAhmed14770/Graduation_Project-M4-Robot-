@@ -1,0 +1,1270 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Karim Ahmed, Bonty, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DARMSTL.DLL
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+F:\studiess\mechatronics engineering\FINAL_M4_CODES\Flight_Controller\M4_Project.uvprojx
+Project File Date:  06/30/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+main.c(3): warning: In file included from...
+./MCAL_Layer/UART/MCAL_UART.h(12): warning: In file included from...
+./MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+./MCAL_Layer/UART/../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+main.c(4): warning: In file included from...
+./main.h(44): warning: no newline at end of file [-Wnewline-eof]
+   44 | #endif
+      |       ^
+main.c(5): warning: In file included from...
+./MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+./MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   97 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+main.c(9): warning: no previous extern declaration for non-static variable 'led13' [-Wmissing-variable-declarations]
+    9 | Pin_Config_t led13={
+      |              ^
+main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    9 | Pin_Config_t led13={
+      | ^
+main.c(3): warning: In file included from...
+./MCAL_Layer/UART/MCAL_UART.h(12): warning: In file included from...
+./MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+./MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+main.c(20): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   20 | int main()
+      |         ^
+      |          void
+main.c(41): warning: no newline at end of file [-Wnewline-eof]
+   41 | }
+      |  ^
+10 warnings generated.
+compiling main.c...
+MCAL_Layer/RCC_CLOCK/MCAL_RCC.c(1): warning: In file included from...
+MCAL_Layer/RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+3 warnings generated.
+compiling MCAL_RCC.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(183): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  183 |                 TIM2->PSC=prescaler_value;
+      |                          ~^~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(184): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  184 |                 TIM2->ARR=preload_value;
+      |                          ~^~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(291): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  291 |                 TIM2->PSC=prescaler_value;
+      |                          ~^~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(292): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  292 |                 TIM2->ARR=preload_value;
+      |                          ~^~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(274): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  274 |     Std_ReturnType_t retval=E_OK;
+      |                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(358): warning: non-void function does not return a value [-Wreturn-type]
+  358 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(380): warning: unused function 'Disable_timer2_interrupt' [-Wunused-function]
+  380 | static Std_ReturnType_t Disable_timer2_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(448): warning: unused function 'TIMER2_UEV_ENABLE' [-Wunused-function]
+  448 | static void TIMER2_UEV_ENABLE(void)     
+      |             ^~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(452): warning: unused function 'TIMER2_UEV_DISABLE' [-Wunused-function]
+  452 | static void TIMER2_UEV_DISABLE(void)      
+      |             ^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(456): warning: unused function 'TIMER2_URS_ALL' [-Wunused-function]
+  456 | static void TIMER2_URS_ALL(void){
+      |             ^~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(459): warning: unused function 'TIMER2_URS_OVERFLOW' [-Wunused-function]
+  459 | static void TIMER2_URS_OVERFLOW(void){
+      |             ^~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(462): warning: unused function 'TIMER2_SET_UP_COUNTER' [-Wunused-function]
+  462 | static void TIMER2_SET_UP_COUNTER(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(465): warning: unused function 'TIMER2_SET_DOWN_COUNTER' [-Wunused-function]
+  465 | static void TIMER2_SET_DOWN_COUNTER(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(468): warning: unused function 'TIMER2_AUTO_RELOAD_ENABLE' [-Wunused-function]
+  468 | static void TIMER2_AUTO_RELOAD_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(471): warning: unused function 'TIMER2_AUTO_RELOAD_DISABLE' [-Wunused-function]
+  471 | static void TIMER2_AUTO_RELOAD_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(474): warning: unused function 'TIMER2_COUNTER_MODE_ENABLE' [-Wunused-function]
+  474 | static void TIMER2_COUNTER_MODE_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(477): warning: unused function 'TIMER2_TIMER_MODE_ENABLE' [-Wunused-function]
+  477 | static void TIMER2_TIMER_MODE_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(480): warning: unused function 'TIMER2_SELECT_EDGE_ALIGNED_MODE' [-Wunused-function]
+  480 | static void TIMER2_SELECT_EDGE_ALIGNED_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(489): warning: unused function 'TIMER2_CH1_SELECT_OUTPUT_MODE' [-Wunused-function]
+  489 | static void TIMER2_CH1_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(492): warning: unused function 'TIMER2_CCP_CH1_SELECT_INPUT_MODE' [-Wunused-function]
+  492 | static void TIMER2_CCP_CH1_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(496): warning: unused function 'TIMER2_COUNTER_CH1_RISING_EDGE' [-Wunused-function]
+  496 | static void TIMER2_COUNTER_CH1_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(499): warning: unused function 'TIMER2_CH1_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  499 | static void TIMER2_CH1_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(502): warning: unused function 'TIMER2_CH1_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  502 | static void TIMER2_CH1_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(505): warning: unused function 'TIMER2_CH1_CCP_DISABLE' [-Wunused-function]
+  505 | static void TIMER2_CH1_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(508): warning: unused function 'TIMER2_CH1_ENABLE_OUTPUT' [-Wunused-function]
+  508 | static void TIMER2_CH1_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(511): warning: unused function 'TIMER2_CH1_SELECT_PWM_MODE' [-Wunused-function]
+  511 | static void TIMER2_CH1_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(519): warning: unused function 'TIMER2_CH2_SELECT_OUTPUT_MODE' [-Wunused-function]
+  519 | static void TIMER2_CH2_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(522): warning: unused function 'TIMER2_CH2_SELECT_INPUT_MODE' [-Wunused-function]
+  522 | static void TIMER2_CH2_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(527): warning: unused function 'TIMER2_COUNTER_CH2_RISING_EDGE' [-Wunused-function]
+  527 | static void TIMER2_COUNTER_CH2_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(530): warning: unused function 'TIMER2_CH2_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  530 | static void TIMER2_CH2_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(533): warning: unused function 'TIMER2_CH2_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  533 | static void TIMER2_CH2_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(536): warning: unused function 'TIMER2_CH2_CCP_DISABLE' [-Wunused-function]
+  536 | static void TIMER2_CH2_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(539): warning: unused function 'TIMER2_CH2_ENABLE_OUTPUT' [-Wunused-function]
+  539 | static void TIMER2_CH2_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(542): warning: unused function 'TIMER2_CH2_SELECT_PWM_MODE' [-Wunused-function]
+  542 | static void TIMER2_CH2_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(551): warning: unused function 'TIMER2_CH3_SELECT_OUTPUT_MODE' [-Wunused-function]
+  551 | static void TIMER2_CH3_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(554): warning: unused function 'TIMER2_CH3_SELECT_INPUT_MODE' [-Wunused-function]
+  554 | static void TIMER2_CH3_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(558): warning: unused function 'TIMER2_COUNTER_CH3_RISING_EDGE' [-Wunused-function]
+  558 | static void TIMER2_COUNTER_CH3_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(561): warning: unused function 'TIMER2_CH3_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  561 | static void TIMER2_CH3_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(564): warning: unused function 'TIMER2_CH3_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  564 | static void TIMER2_CH3_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(567): warning: unused function 'TIMER2_CH3_CCP_DISABLE' [-Wunused-function]
+  567 | static void TIMER2_CH3_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(570): warning: unused function 'TIMER2_CH3_ENABLE_OUTPUT' [-Wunused-function]
+  570 | static void TIMER2_CH3_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(573): warning: unused function 'TIMER2_CH3_SELECT_PWM_MODE' [-Wunused-function]
+  573 | static void TIMER2_CH3_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(580): warning: unused function 'TIMER2_CH4_SELECT_OUTPUT_MODE' [-Wunused-function]
+  580 | static void TIMER2_CH4_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(583): warning: unused function 'TIMER2_CH4_SELECT_INPUT_MODE' [-Wunused-function]
+  583 | static void TIMER2_CH4_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(587): warning: unused function 'TIMER2_COUNTER_CH4_RISING_EDGE' [-Wunused-function]
+  587 | static void TIMER2_COUNTER_CH4_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(590): warning: unused function 'TIMER2_CH4_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  590 | static void TIMER2_CH4_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(593): warning: unused function 'TIMER2_CH4_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  593 | static void TIMER2_CH4_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(596): warning: unused function 'TIMER2_CH4_CCP_DISABLE' [-Wunused-function]
+  596 | static void TIMER2_CH4_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(599): warning: unused function 'TIMER2_CH4_ENABLE_OUTPUT' [-Wunused-function]
+  599 | static void TIMER2_CH4_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER2.c(602): warning: unused function 'TIMER2_CH4_SELECT_PWM_MODE' [-Wunused-function]
+  602 | static void TIMER2_CH4_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+53 warnings generated.
+compiling MCAL_TIMER2.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   97 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(200): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  200 |                 preload_value=time_base/timer1_resolution;
+      |                              ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(229): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  229 | uint64_t timer1_millis()
+      |                       ^
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(229): warning: no previous prototype for function 'timer1_millis' [-Wmissing-prototypes]
+  229 | uint64_t timer1_millis()
+      |          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+   97 | uint64_t timer1_millis();
+      |          ^             
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(319): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  319 |                 preload_value=timer1_ptr->time_base_us/timer1_resolution;
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(303): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  303 |     Std_ReturnType_t retval=E_OK;
+      |                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(387): warning: non-void function does not return a value [-Wreturn-type]
+  387 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(393): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  393 | static Std_ReturnType_t Enable_timer1_interrupt(){
+      |                                                ^
+      |                                                 void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(409): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  409 | static Std_ReturnType_t Disable_timer1_interrupt(){
+      |                                                 ^
+      |                                                  void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(22): warning: no previous extern declaration for non-static variable 'timer1_millis_counter' [-Wmissing-variable-declarations]
+   22 | uint8_t timer1_millis_counter;
+      |         ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   22 | uint8_t timer1_millis_counter;
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(23): warning: no previous extern declaration for non-static variable '_miLLis__' [-Wmissing-variable-declarations]
+   23 | uint64_t _miLLis__;
+      |          ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   23 | uint64_t _miLLis__;
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.c(409): warning: unused function 'Disable_timer1_interrupt' [-Wunused-function]
+  409 | static Std_ReturnType_t Disable_timer1_interrupt(){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+15 warnings generated.
+compiling MCAL_TIMER1.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(183): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  183 |                 TIM4->PSC=prescaler_value;
+      |                          ~^~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(184): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  184 |                 TIM4->ARR=preload_value;
+      |                          ~^~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(291): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  291 |                 TIM4->PSC=prescaler_value;
+      |                          ~^~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(292): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  292 |                 TIM4->ARR=preload_value;
+      |                          ~^~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(274): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  274 |     Std_ReturnType_t retval=E_OK;
+      |                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(358): warning: non-void function does not return a value [-Wreturn-type]
+  358 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(380): warning: unused function 'Disable_timer4_interrupt' [-Wunused-function]
+  380 | static Std_ReturnType_t Disable_timer4_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(448): warning: unused function 'TIMER4_UEV_ENABLE' [-Wunused-function]
+  448 | static void TIMER4_UEV_ENABLE(void)     
+      |             ^~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(452): warning: unused function 'TIMER4_UEV_DISABLE' [-Wunused-function]
+  452 | static void TIMER4_UEV_DISABLE(void)      
+      |             ^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(456): warning: unused function 'TIMER4_URS_ALL' [-Wunused-function]
+  456 | static void TIMER4_URS_ALL(void){
+      |             ^~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(459): warning: unused function 'TIMER4_URS_OVERFLOW' [-Wunused-function]
+  459 | static void TIMER4_URS_OVERFLOW(void){
+      |             ^~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(462): warning: unused function 'TIMER4_SET_UP_COUNTER' [-Wunused-function]
+  462 | static void TIMER4_SET_UP_COUNTER(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(465): warning: unused function 'TIMER4_SET_DOWN_COUNTER' [-Wunused-function]
+  465 | static void TIMER4_SET_DOWN_COUNTER(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(468): warning: unused function 'TIMER4_AUTO_RELOAD_ENABLE' [-Wunused-function]
+  468 | static void TIMER4_AUTO_RELOAD_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(471): warning: unused function 'TIMER4_AUTO_RELOAD_DISABLE' [-Wunused-function]
+  471 | static void TIMER4_AUTO_RELOAD_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(474): warning: unused function 'TIMER4_COUNTER_MODE_ENABLE' [-Wunused-function]
+  474 | static void TIMER4_COUNTER_MODE_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(477): warning: unused function 'TIMER4_TIMER_MODE_ENABLE' [-Wunused-function]
+  477 | static void TIMER4_TIMER_MODE_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(480): warning: unused function 'TIMER4_SELECT_EDGE_ALIGNED_MODE' [-Wunused-function]
+  480 | static void TIMER4_SELECT_EDGE_ALIGNED_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(489): warning: unused function 'TIMER4_CH1_SELECT_OUTPUT_MODE' [-Wunused-function]
+  489 | static void TIMER4_CH1_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(492): warning: unused function 'TIMER4_CCP_CH1_SELECT_INPUT_MODE' [-Wunused-function]
+  492 | static void TIMER4_CCP_CH1_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(496): warning: unused function 'TIMER4_COUNTER_CH1_RISING_EDGE' [-Wunused-function]
+  496 | static void TIMER4_COUNTER_CH1_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(499): warning: unused function 'TIMER4_CH1_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  499 | static void TIMER4_CH1_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(502): warning: unused function 'TIMER4_CH1_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  502 | static void TIMER4_CH1_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(505): warning: unused function 'TIMER4_CH1_CCP_DISABLE' [-Wunused-function]
+  505 | static void TIMER4_CH1_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(508): warning: unused function 'TIMER4_CH1_ENABLE_OUTPUT' [-Wunused-function]
+  508 | static void TIMER4_CH1_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(511): warning: unused function 'TIMER4_CH1_SELECT_PWM_MODE' [-Wunused-function]
+  511 | static void TIMER4_CH1_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(519): warning: unused function 'TIMER4_CH2_SELECT_OUTPUT_MODE' [-Wunused-function]
+  519 | static void TIMER4_CH2_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(522): warning: unused function 'TIMER4_CH2_SELECT_INPUT_MODE' [-Wunused-function]
+  522 | static void TIMER4_CH2_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(527): warning: unused function 'TIMER4_COUNTER_CH2_RISING_EDGE' [-Wunused-function]
+  527 | static void TIMER4_COUNTER_CH2_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(530): warning: unused function 'TIMER4_CH2_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  530 | static void TIMER4_CH2_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(533): warning: unused function 'TIMER4_CH2_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  533 | static void TIMER4_CH2_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(536): warning: unused function 'TIMER4_CH2_CCP_DISABLE' [-Wunused-function]
+  536 | static void TIMER4_CH2_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(539): warning: unused function 'TIMER4_CH2_ENABLE_OUTPUT' [-Wunused-function]
+  539 | static void TIMER4_CH2_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(542): warning: unused function 'TIMER4_CH2_SELECT_PWM_MODE' [-Wunused-function]
+  542 | static void TIMER4_CH2_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(551): warning: unused function 'TIMER4_CH3_SELECT_OUTPUT_MODE' [-Wunused-function]
+  551 | static void TIMER4_CH3_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(554): warning: unused function 'TIMER4_CH3_SELECT_INPUT_MODE' [-Wunused-function]
+  554 | static void TIMER4_CH3_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(558): warning: unused function 'TIMER4_COUNTER_CH3_RISING_EDGE' [-Wunused-function]
+  558 | static void TIMER4_COUNTER_CH3_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(561): warning: unused function 'TIMER4_CH3_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  561 | static void TIMER4_CH3_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(564): warning: unused function 'TIMER4_CH3_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  564 | static void TIMER4_CH3_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(567): warning: unused function 'TIMER4_CH3_CCP_DISABLE' [-Wunused-function]
+  567 | static void TIMER4_CH3_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(570): warning: unused function 'TIMER4_CH3_ENABLE_OUTPUT' [-Wunused-function]
+  570 | static void TIMER4_CH3_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(573): warning: unused function 'TIMER4_CH3_SELECT_PWM_MODE' [-Wunused-function]
+  573 | static void TIMER4_CH3_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(580): warning: unused function 'TIMER4_CH4_SELECT_OUTPUT_MODE' [-Wunused-function]
+  580 | static void TIMER4_CH4_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(583): warning: unused function 'TIMER4_CH4_SELECT_INPUT_MODE' [-Wunused-function]
+  583 | static void TIMER4_CH4_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(587): warning: unused function 'TIMER4_COUNTER_CH4_RISING_EDGE' [-Wunused-function]
+  587 | static void TIMER4_COUNTER_CH4_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(590): warning: unused function 'TIMER4_CH4_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  590 | static void TIMER4_CH4_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(593): warning: unused function 'TIMER4_CH4_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  593 | static void TIMER4_CH4_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(596): warning: unused function 'TIMER4_CH4_CCP_DISABLE' [-Wunused-function]
+  596 | static void TIMER4_CH4_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(599): warning: unused function 'TIMER4_CH4_ENABLE_OUTPUT' [-Wunused-function]
+  599 | static void TIMER4_CH4_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER4.c(602): warning: unused function 'TIMER4_CH4_SELECT_PWM_MODE' [-Wunused-function]
+  602 | static void TIMER4_CH4_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+53 warnings generated.
+compiling MCAL_TIMER4.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(182): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  182 |                 preload_value=time_base/timer3_resolution;
+      |                              ~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(293): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  293 |                 preload_value=timer3_ptr->time_base_us/timer3_resolution;
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(277): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  277 |     Std_ReturnType_t retval=E_OK;
+      |                      ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(361): warning: non-void function does not return a value [-Wreturn-type]
+  361 | }
+      | ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(383): warning: unused function 'Disable_timer3_interrupt' [-Wunused-function]
+  383 | static Std_ReturnType_t Disable_timer3_interrupt(void){
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(451): warning: unused function 'TIMER3_UEV_ENABLE' [-Wunused-function]
+  451 | static void TIMER3_UEV_ENABLE(void)     
+      |             ^~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(455): warning: unused function 'TIMER3_UEV_DISABLE' [-Wunused-function]
+  455 | static void TIMER3_UEV_DISABLE(void)      
+      |             ^~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(459): warning: unused function 'TIMER3_URS_ALL' [-Wunused-function]
+  459 | static void TIMER3_URS_ALL(void){
+      |             ^~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(462): warning: unused function 'TIMER3_URS_OVERFLOW' [-Wunused-function]
+  462 | static void TIMER3_URS_OVERFLOW(void){
+      |             ^~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(465): warning: unused function 'TIMER3_SET_UP_COUNTER' [-Wunused-function]
+  465 | static void TIMER3_SET_UP_COUNTER(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(468): warning: unused function 'TIMER3_SET_DOWN_COUNTER' [-Wunused-function]
+  468 | static void TIMER3_SET_DOWN_COUNTER(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(471): warning: unused function 'TIMER3_AUTO_RELOAD_ENABLE' [-Wunused-function]
+  471 | static void TIMER3_AUTO_RELOAD_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(474): warning: unused function 'TIMER3_AUTO_RELOAD_DISABLE' [-Wunused-function]
+  474 | static void TIMER3_AUTO_RELOAD_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(477): warning: unused function 'TIMER3_COUNTER_MODE_ENABLE' [-Wunused-function]
+  477 | static void TIMER3_COUNTER_MODE_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(480): warning: unused function 'TIMER3_TIMER_MODE_ENABLE' [-Wunused-function]
+  480 | static void TIMER3_TIMER_MODE_ENABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(483): warning: unused function 'TIMER3_SELECT_EDGE_ALIGNED_MODE' [-Wunused-function]
+  483 | static void TIMER3_SELECT_EDGE_ALIGNED_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(492): warning: unused function 'TIMER3_CH1_SELECT_OUTPUT_MODE' [-Wunused-function]
+  492 | static void TIMER3_CH1_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(495): warning: unused function 'TIMER3_CCP_CH1_SELECT_INPUT_MODE' [-Wunused-function]
+  495 | static void TIMER3_CCP_CH1_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(499): warning: unused function 'TIMER3_COUNTER_CH1_RISING_EDGE' [-Wunused-function]
+  499 | static void TIMER3_COUNTER_CH1_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(502): warning: unused function 'TIMER3_CH1_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  502 | static void TIMER3_CH1_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(505): warning: unused function 'TIMER3_CH1_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  505 | static void TIMER3_CH1_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(508): warning: unused function 'TIMER3_CH1_CCP_DISABLE' [-Wunused-function]
+  508 | static void TIMER3_CH1_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(511): warning: unused function 'TIMER3_CH1_ENABLE_OUTPUT' [-Wunused-function]
+  511 | static void TIMER3_CH1_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(514): warning: unused function 'TIMER3_CH1_SELECT_PWM_MODE' [-Wunused-function]
+  514 | static void TIMER3_CH1_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(522): warning: unused function 'TIMER3_CH2_SELECT_OUTPUT_MODE' [-Wunused-function]
+  522 | static void TIMER3_CH2_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(525): warning: unused function 'TIMER3_CH2_SELECT_INPUT_MODE' [-Wunused-function]
+  525 | static void TIMER3_CH2_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(530): warning: unused function 'TIMER3_COUNTER_CH2_RISING_EDGE' [-Wunused-function]
+  530 | static void TIMER3_COUNTER_CH2_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(533): warning: unused function 'TIMER3_CH2_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  533 | static void TIMER3_CH2_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(536): warning: unused function 'TIMER3_CH2_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  536 | static void TIMER3_CH2_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(539): warning: unused function 'TIMER3_CH2_CCP_DISABLE' [-Wunused-function]
+  539 | static void TIMER3_CH2_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(542): warning: unused function 'TIMER3_CH2_ENABLE_OUTPUT' [-Wunused-function]
+  542 | static void TIMER3_CH2_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(545): warning: unused function 'TIMER3_CH2_SELECT_PWM_MODE' [-Wunused-function]
+  545 | static void TIMER3_CH2_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(554): warning: unused function 'TIMER3_CH3_SELECT_OUTPUT_MODE' [-Wunused-function]
+  554 | static void TIMER3_CH3_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(557): warning: unused function 'TIMER3_CH3_SELECT_INPUT_MODE' [-Wunused-function]
+  557 | static void TIMER3_CH3_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(561): warning: unused function 'TIMER3_COUNTER_CH3_RISING_EDGE' [-Wunused-function]
+  561 | static void TIMER3_COUNTER_CH3_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(564): warning: unused function 'TIMER3_CH3_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  564 | static void TIMER3_CH3_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(567): warning: unused function 'TIMER3_CH3_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  567 | static void TIMER3_CH3_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(570): warning: unused function 'TIMER3_CH3_CCP_DISABLE' [-Wunused-function]
+  570 | static void TIMER3_CH3_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(573): warning: unused function 'TIMER3_CH3_ENABLE_OUTPUT' [-Wunused-function]
+  573 | static void TIMER3_CH3_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(576): warning: unused function 'TIMER3_CH3_SELECT_PWM_MODE' [-Wunused-function]
+  576 | static void TIMER3_CH3_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(583): warning: unused function 'TIMER3_CH4_SELECT_OUTPUT_MODE' [-Wunused-function]
+  583 | static void TIMER3_CH4_SELECT_OUTPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(586): warning: unused function 'TIMER3_CH4_SELECT_INPUT_MODE' [-Wunused-function]
+  586 | static void TIMER3_CH4_SELECT_INPUT_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(590): warning: unused function 'TIMER3_COUNTER_CH4_RISING_EDGE' [-Wunused-function]
+  590 | static void TIMER3_COUNTER_CH4_RISING_EDGE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(593): warning: unused function 'TIMER3_CH4_CCP_DISABLE_PRELOAD' [-Wunused-function]
+  593 | static void TIMER3_CH4_CCP_DISABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(596): warning: unused function 'TIMER3_CH4_CCP_ENABLE_PRELOAD' [-Wunused-function]
+  596 | static void TIMER3_CH4_CCP_ENABLE_PRELOAD(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(599): warning: unused function 'TIMER3_CH4_CCP_DISABLE' [-Wunused-function]
+  599 | static void TIMER3_CH4_CCP_DISABLE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(602): warning: unused function 'TIMER3_CH4_ENABLE_OUTPUT' [-Wunused-function]
+  602 | static void TIMER3_CH4_ENABLE_OUTPUT(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER3.c(605): warning: unused function 'TIMER3_CH4_SELECT_PWM_MODE' [-Wunused-function]
+  605 | static void TIMER3_CH4_SELECT_PWM_MODE(void){
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+51 warnings generated.
+compiling MCAL_TIMER3.c...
+MCAL_Layer/GPIO/MCAL_GPIO.c(9): warning: In file included from...
+MCAL_Layer/GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(9): warning: In file included from...
+MCAL_Layer/GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+MCAL_Layer/GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(83): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+   83 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(122): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  122 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(137): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  137 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(152): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  152 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(156): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  156 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(188): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  188 |                                         *logic=READ_BIT(GPIOA->IDR,pin_ptr->pin_index);
+      |                                               ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8358): note: expanded from macro 'READ_BIT'
+ 8358 | #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+      |                                ~~~~~~^~~~~~~
+MCAL_Layer/GPIO/MCAL_GPIO.c(192): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  192 |                                         *logic=READ_BIT(GPIOB->IDR,pin_ptr->pin_index);
+      |                                               ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8358): note: expanded from macro 'READ_BIT'
+ 8358 | #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+      |                                ~~~~~~^~~~~~~
+MCAL_Layer/GPIO/MCAL_GPIO.c(196): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  196 |                                         *logic=READ_BIT(GPIOC->IDR,pin_ptr->pin_index);
+      |                                               ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8358): note: expanded from macro 'READ_BIT'
+ 8358 | #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+      |                                ~~~~~~^~~~~~~
+MCAL_Layer/GPIO/MCAL_GPIO.c(199): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  199 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(238): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  238 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(254): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  254 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(270): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  270 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(274): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  274 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(326): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  326 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(388): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  388 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(414): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  414 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(440): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  440 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(444): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  444 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(473): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  473 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(499): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  499 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(525): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  525 |                                                 default: retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(529): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  529 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(633): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  633 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(718): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  718 |                                 default:retval=E_NOT_OK;
+      |                                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(747): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  747 |                 default:retval=E_NOT_OK ;
+      |                 ^
+MCAL_Layer/GPIO/MCAL_GPIO.c(731): warning: unused function 'gpio_port_initialize' [-Wunused-function]
+  731 | static Std_ReturnType_t  gpio_port_initialize(Port_INDEX_t port)
+      |                          ^~~~~~~~~~~~~~~~~~~~
+31 warnings generated.
+compiling MCAL_GPIO.c...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(9): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   97 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(92): warning: 'extern' variable has an initializer [-Wextern-initializer]
+   92 | extern timer1_config_t tim1={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(92): warning: no previous extern declaration for non-static variable 'tim1' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(92): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   92 | extern timer1_config_t tim1={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(101): warning: 'extern' variable has an initializer [-Wextern-initializer]
+  101 | extern timer2_config_t tim2={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(101): warning: no previous extern declaration for non-static variable 'tim2' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(101): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  101 | extern timer2_config_t tim2={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(110): warning: 'extern' variable has an initializer [-Wextern-initializer]
+  110 | extern timer3_config_t tim3={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(110): warning: no previous extern declaration for non-static variable 'tim3' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(110): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  110 | extern timer3_config_t tim3={
+      |        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(119): warning: 'extern' variable has an initializer [-Wextern-initializer]
+  119 | extern timer4_config_t tim4={
+      |                        ^
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(119): warning: no previous extern declaration for non-static variable 'tim4' [-Wmissing-variable-declarations]
+MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.c(119): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  119 | extern timer4_config_t tim4={
+      |        ^
+12 warnings generated.
+compiling MCAL_TIMERS.c...
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(9): warning: In file included from...
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(11): warning: In file included from...
+MCAL_Layer/INTERRUPT/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/INTERRUPT/../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(9): warning: In file included from...
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(294): warning: '/*' within block comment [-Wcomment]
+  294 | /*******************MACROS LIKE FUNCTIONS SECTION END  ***********/
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(311): warning: '/*' within block comment [-Wcomment]
+  311 | /*******************DATA TYPES DECLARATION SECTION END  **********/
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.h(319): warning: '/*' within block comment [-Wcomment]
+  319 | /*******************FUCNCTIONS PROTOTYPES (APIS) SECTION END  ****/
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(33): warning: '/*' within block comment [-Wcomment]
+   33 | /********************************DATA TYPES DEFINITIONS SECTION END****************************/
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(45): warning: '/*' within block comment [-Wcomment]
+   45 | /********************************HELPER FUNCTIONS PROTOTYPES SECTION END***********************/
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(87): warning: '/*' within block comment [-Wcomment]
+   87 | /********************************FUNCTIONS DEFINITIONS (APIS) SECTION END**********************/
+      | ^
+MCAL_Layer/INTERRUPT/MCAL_EXTERNAL_INTERRUPTS.c(515): warning: '/*' within block comment [-Wcomment]
+  515 | /********************************HELPER FUNCTIONS DEFINITIONS SECTION END**********************/
+      | ^
+10 warnings generated.
+compiling MCAL_EXTERNAL_INTERRUPTS.c...
+MCAL_Layer/INTERRUPT/MCAL_INTERNAL_INTERRUPTS.c(5): warning: In file included from...
+MCAL_Layer/INTERRUPT/MCAL_INTERNAL_INTERRUPTS.h(11): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+3 warnings generated.
+compiling MCAL_INTERNAL_INTERRUPTS.c...
+MCAL_Layer/UART/MCAL_UART.c(1): warning: In file included from...
+MCAL_Layer/UART/MCAL_UART.h(12): warning: In file included from...
+MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/UART/../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/UART/MCAL_UART.c(1): warning: In file included from...
+MCAL_Layer/UART/MCAL_UART.h(12): warning: In file included from...
+MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+MCAL_Layer/UART/../GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+MCAL_Layer/UART/MCAL_UART.c(8): warning: variable 'err_status' set but not used [-Wunused-but-set-variable]
+    8 |         Std_ReturnType_t err_status=0;
+      |                          ^
+MCAL_Layer/UART/MCAL_UART.c(131): warning: implicit conversion turns floating-point number into integer: 'double' to 'unsigned long' [-Wfloat-conversion]
+  131 |         dec = frac;
+      |             ~ ^~~~
+MCAL_Layer/UART/MCAL_UART.c(143): warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned short' [-Wimplicit-int-conversion]
+  143 |         final = (div<<4);
+      |               ~  ~~~^~~
+MCAL_Layer/UART/MCAL_UART.c(158): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+  158 |                         c = USART1->DR;
+      |                           ~ ~~~~~~~~^~
+MCAL_Layer/UART/MCAL_UART.c(164): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+  164 |                         c = USART2->DR;
+      |                           ~ ~~~~~~~~^~
+MCAL_Layer/UART/MCAL_UART.c(171): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'char' [-Wimplicit-int-conversion]
+  171 |                         c = USART3->DR;
+      |                           ~ ~~~~~~~~^~
+11 warnings generated.
+compiling MCAL_UART.c...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(9): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/SERVO_MOTOR/../../MCAL_Layer//TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   97 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(412): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint16_t' (aka 'unsigned short') [-Wfloat-conversion]
+  412 |                 servo_ptr->duty_cycle=map_to_range(0,180,500,2500,servo_ptr->curr_pos);
+      |                                      ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(405): warning: variable 'retval' set but not used [-Wunused-but-set-variable]
+  405 |         Std_ReturnType_t retval=E_OK;
+      |                          ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(414): warning: non-void function does not return a value [-Wreturn-type]
+  414 | }
+      | ^
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(386): warning: unused function 'servo_adjust_polarity' [-Wunused-function]
+  386 | static Std_ReturnType_t servo_adjust_polarity(Servo_t *servo_ptr)
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/SERVO_MOTOR/HAL_SERVO.c(403): warning: unused function 'servo_adjust_duty_cycle' [-Wunused-function]
+  403 | static Std_ReturnType_t servo_adjust_duty_cycle(Servo_t *servo_ptr)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+9 warnings generated.
+compiling HAL_SERVO.c...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   97 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(11): warning: In file included from...
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+HAL_Layer/DC_MOTOR/../../MCAL_Layer/TIMERS/General_Purpose_Timers/../../GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(9): warning: In file included from...
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.h(61): warning: padding size of 'Dc_motor_t' with 1 byte to alignment boundary [-Wpadded]
+   61 | typedef struct{
+      |         ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(97): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+   97 |                         speed=map_to_range(0,128,0,20000,speed);
+      |                              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(104): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+  104 |                         speed=map_to_range(0,127,0,20000,speed);
+      |                              ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(129): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  129 | }
+      | ^
+HAL_Layer/DC_MOTOR/HAL_DC_MOTOR.c(308): warning: unused parameter 'speed' [-Wunused-parameter]
+  308 | static Std_ReturnType_t DC_set_speed(Dc_motor_t *dc_motor_ptr,uint32_t speed)
+      |                                                                        ^
+11 warnings generated.
+compiling HAL_DC_MOTOR.c...
+compiling M4_Softwares.c...
+MCAL_Layer/SPI/MCAL_SPI1.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/SPI/MCAL_SPI1.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI1.h(60): warning: padding struct 'Spi1_t' with 1 byte to align 'SLAVE_SELECT' [-Wpadded]
+   60 |         Pin_Config_t SLAVE_SELECT;
+      |                      ^
+MCAL_Layer/SPI/MCAL_SPI1.c(128): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  128 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI1.c(162): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  162 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI1.c(204): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  204 |                 *(data++) = (SPI1->DR);
+      |                           ~  ~~~~~~^~
+MCAL_Layer/SPI/MCAL_SPI1.c(292): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  292 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/SPI/MCAL_SPI1.c(318): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  318 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(331): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  331 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(356): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  356 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(378): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  378 |                 uint8_t temp=(spi1_ptr->baud_rate)>>1;//11<<4   110000
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI1.c(391): warning: unused function 'SPI1_DISABLE' [-Wunused-function]
+  391 | static void SPI1_DISABLE(void){
+      |             ^~~~~~~~~~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(434): warning: unused function 'SPI1_DISABLE_SSM' [-Wunused-function]
+  434 | static void SPI1_DISABLE_SSM(void){
+      |             ^~~~~~~~~~~~~~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(441): warning: unused function 'SPI1_NSS_LOW' [-Wunused-function]
+  441 | static void SPI1_NSS_LOW(void){
+      |             ^~~~~~~~~~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(136): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  136 |                 SPI1->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(170): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  170 |                 SPI1->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(204): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  204 |                 *(data++) = (SPI1->DR);
+      |                   ^~~~
+MCAL_Layer/SPI/MCAL_SPI1.c(229): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  229 |                 *(data++) = (SPI1->DR);
+      |                   ^~~~
+21 warnings generated.
+compiling MCAL_SPI1.c...
+MCAL_Layer/SPI/MCAL_SPI2.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI2.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+MCAL_Layer/SPI/MCAL_SPI2.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI2.h(12): warning: In file included from...
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(9): warning: In file included from...
+MCAL_Layer/SPI/MCAL_SPI2.h(56): warning: padding struct 'Spi2_t' with 1 byte to align 'SLAVE_SELECT' [-Wpadded]
+   56 |         Pin_Config_t SLAVE_SELECT;
+      |                      ^
+MCAL_Layer/SPI/MCAL_SPI2.c(142): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  142 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI2.c(142): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+MCAL_Layer/SPI/MCAL_SPI2.c(160): warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+  160 |         uint16_t temp;
+      |                  ^
+MCAL_Layer/SPI/MCAL_SPI2.c(202): warning: implicit conversion loses integer precision: 'volatile uint16_t' (aka 'volatile unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  202 |                 *(data++) = (SPI2->DR);
+      |                           ~  ~~~~~~^~
+MCAL_Layer/SPI/MCAL_SPI2.c(290): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  290 |                                                 default:retval=E_NOT_OK;
+      |                                                 ^
+MCAL_Layer/SPI/MCAL_SPI2.c(316): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  316 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(329): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  329 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(354): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  354 |                         default:retval=E_NOT_OK;
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(376): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  376 |                 uint8_t temp=(spi2_ptr->baud_rate)>>1;//11<<4   110000
+      |                         ^
+MCAL_Layer/SPI/MCAL_SPI2.c(388): warning: unused function 'SPI2_DISABLE' [-Wunused-function]
+  388 | static void SPI2_DISABLE(void){
+      |             ^~~~~~~~~~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(431): warning: unused function 'SPI2_DISABLE_SSM' [-Wunused-function]
+  431 | static void SPI2_DISABLE_SSM(void){
+      |             ^~~~~~~~~~~~~~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(439): warning: unused function 'SPI2_NSS_LOW' [-Wunused-function]
+  439 | static void SPI2_NSS_LOW(void){
+      |             ^~~~~~~~~~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(134): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  134 |                 SPI2->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(168): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  168 |                 SPI2->DR = data[i];
+      |                            ^~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(202): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  202 |                 *(data++) = (SPI2->DR);
+      |                   ^~~~
+MCAL_Layer/SPI/MCAL_SPI2.c(227): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  227 |                 *(data++) = (SPI2->DR);
+      |                   ^~~~
+22 warnings generated.
+compiling MCAL_SPI2.c...
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/../RCC_CLOCK/MCAL_RCC.h(12): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(13): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMERS.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/TIMERS/General_Purpose_Timers/MCAL_TIMER1.h(97): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+   97 | uint64_t timer1_millis();
+      |                       ^
+      |                        void
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/MCAL_SPI1.h(12): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(102): warning: padding struct 'Pin_Config_t' with 1 byte to align 'pin_index' [-Wpadded]
+  102 |         Pin_Index_t     pin_index;
+      |                         ^
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/../GPIO/MCAL_GPIO.h(100): warning: padding size of 'Pin_Config_t' with 1 byte to alignment boundary [-Wpadded]
+  100 | typedef struct{
+      |         ^
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(11): warning: In file included from...
+HAL_Layer/NRF24L01/../../MCAL_Layer/SPI/MCAL_SPI1.h(60): warning: padding struct 'Spi1_t' with 1 byte to align 'SLAVE_SELECT' [-Wpadded]
+   60 |         Pin_Config_t SLAVE_SELECT;
+      |                      ^
+HAL_Layer/NRF24L01/NRF24L01.c(9): warning: In file included from...
+HAL_Layer/NRF24L01/NRF24L01.h(109): warning: padding struct 'NRF24L01_t' with 1 byte to align 'spi1' [-Wpadded]
+  109 |         Spi1_t spi1;
+      |                ^
+HAL_Layer/NRF24L01/NRF24L01.c(196): warning: unused parameter 'nrf_ptr' [-Wunused-parameter]
+  196 | void NRF24L01_read_all_reg(NRF24L01_t *nrf_ptr,uint8_t *data,uint8_t *data1,uint8_t *data2,
+      |                                        ^
+HAL_Layer/NRF24L01/NRF24L01.c(196): warning: unused parameter 'data' [-Wunused-parameter]
+  196 | void NRF24L01_read_all_reg(NRF24L01_t *nrf_ptr,uint8_t *data,uint8_t *data1,uint8_t *data2,
+      |                                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(196): warning: unused parameter 'data1' [-Wunused-parameter]
+  196 | void NRF24L01_read_all_reg(NRF24L01_t *nrf_ptr,uint8_t *data,uint8_t *data1,uint8_t *data2,
+      |                                                                       ^
+HAL_Layer/NRF24L01/NRF24L01.c(196): warning: unused parameter 'data2' [-Wunused-parameter]
+  196 | void NRF24L01_read_all_reg(NRF24L01_t *nrf_ptr,uint8_t *data,uint8_t *data1,uint8_t *data2,
+      |                                                                                      ^
+HAL_Layer/NRF24L01/NRF24L01.c(197): warning: unused parameter 'data3' [-Wunused-parameter]
+  197 |                                                                                                                 uint8_t *data3,uint8_t *data4,uint8_t *data5,
+      |                                                                                                                          ^
+HAL_Layer/NRF24L01/NRF24L01.c(197): warning: unused parameter 'data4' [-Wunused-parameter]
+  197 |                                                                                                                 uint8_t *data3,uint8_t *data4,uint8_t *data5,
+      |                                                                                                                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(197): warning: unused parameter 'data5' [-Wunused-parameter]
+  197 |                                                                                                                 uint8_t *data3,uint8_t *data4,uint8_t *data5,
+      |                                                                                                                                                        ^
+HAL_Layer/NRF24L01/NRF24L01.c(198): warning: unused parameter 'data6' [-Wunused-parameter]
+  198 |                                                                                                                 uint8_t *data6)
+      |                                                                                                                          ^
+HAL_Layer/NRF24L01/NRF24L01.c(387): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  387 |         uint8_t buf[2]={reg_address,data};
+      |                 ^
+HAL_Layer/NRF24L01/NRF24L01.c(537): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  537 |                                 uint8_t en_rxaddr = 0x03;
+      |                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(565): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+  565 |                         default:retval=E_NOT_OK;
+      |                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(631): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  631 |                                 uint8_t rx_addr_p0_def[5] = {0xE7, 0xE7, 0xE7, 0xE7, 0xE7};
+      |                                         ^
+HAL_Layer/NRF24L01/NRF24L01.c(14): warning: unused variable 'debug' [-Wunused-variable]
+   14 | static uint8_t debug;
+      |                ^~~~~
+HAL_Layer/NRF24L01/NRF24L01.c(469): warning: unused function 'NRF24L01_read_reg_multi' [-Wunused-function]
+  469 |  static Std_ReturnType_t        NRF24L01_read_reg_multi(NRF24L01_t *nrf_ptr,uint8_t reg_address,uint8_t *data,uint32_t size)
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~
+22 warnings generated.
+compiling NRF24L01.c...
+assembling startup_stm32f10x_md.s...
+RTE/Device/STM32F103C8/system_stm32f10x.c(64): warning: In file included from...
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   18 |   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+      |                                                ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   19 |   *                code will be based on direct access to peripheral<92>s registers 
+      |                                                                     ^
+C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   26 |   *           - Macros to access peripheral<92>s registers hardware
+      |                                            ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |             ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(166): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+  166 | __I uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      |     ^
+RTE/Device/STM32F103C8/system_stm32f10x.c(408): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  408 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+5 warnings generated.
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=6420 RO-data=268 RW-data=20 ZI-data=1680  
+FromELF: creating hex file...
+".\Objects\M4_Project.axf" - 0 Error(s), 342 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/dell/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/dell/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>
